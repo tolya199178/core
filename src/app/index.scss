@@ -1,0 +1,126 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+
+// custom style sheets.
+
+.navbar {
+  margin: 0;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  border: 0;
+  padding-top: 30px;
+
+  .navbar-nav {
+    margin-left: calc(50% - 300px);
+    font-size: x-small;
+    font-weight: 900;
+
+    a {
+      color: white !important;
+      &:hover {
+        background: transparent !important;
+        color: grey !important;
+      }
+    }
+
+    .active {
+      a {
+        background: transparent;
+      }
+    }
+    .social-icon {
+      border: 2px solid white;
+      border-radius: 50%;
+      color: white;
+      font-size: large;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      &:hover{
+        border-color: grey !important;
+      }
+      a {
+        margin-top: -17px;
+        margin-left: -17px;
+      }
+    }
+  }
+
+}
+
+//--------- Common Style Sheets ----------------------------------------------------------------------------------------------
+
+.padding-0 {
+  padding: 0;
+}
+
+.text-grey {
+  color: grey;
+}
+
+.text-white {
+  color: white;
+}
+.btn-white-border {
+  background: transparent;
+  border-radius: 0;
+  border: 2px solid white;
+  &:hover{
+    background: transparent;
+    border-color: grey;
+    color: grey;
+  }
+}
+//---------------- For Individual Pages ---------------------------------------------------------------------------------------
+
+.home-container {
+  .landing {
+    background: url("./../assets/images/home_bg_1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 50vw;
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+
+    h1 {
+      font-size: -webkit-xxx-large;
+      letter-spacing: 30px;
+    }
+  }
+}
