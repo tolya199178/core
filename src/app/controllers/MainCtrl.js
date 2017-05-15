@@ -6,7 +6,7 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController() {
+    function MainController($rootScope, $window) {
         var vm = this;
         vm.a =  1111321;
     }

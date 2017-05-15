@@ -88,13 +88,14 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   border: 2px solid white;
   border-radius: 50%;
   color: white;
-  font-size: small;
+  font-size: xx-small;
   padding: 5px;
-  padding-left: 22px;
-  width: 40px;
-  height: 40px;
+  padding-left: 21px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
   display: inline-block;
+  
   &:hover {
     border-color: grey !important;
   }
@@ -120,7 +121,7 @@ footer {
     li {
       a {
         color: white;
-        &:hover{
+        &:hover {
           background: transparent;
           color: grey;
         }
@@ -130,18 +131,22 @@ footer {
 }
 
 //--------- Common Style Sheets ----------------------------------------------------------------------------------------------
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
+
 .display-inline-block {
   display: inline-block;
 }
-.float-left{
+
+.float-left {
   float: left;
 }
-.float-right{
+
+.float-right {
   float: right;
 }
+
 .padding-0 {
   padding: 0;
 }
@@ -150,9 +155,22 @@ footer {
   padding: 10px;
 }
 
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.padding-right-10 {
+  padding-right: 10px;
+}
+
+.padding-40 {
+  padding: 40px;
+}
+
 .margin-auto {
   margin: auto;
 }
+
 .margin-20 {
   margin: 20px;
 }
@@ -165,8 +183,18 @@ footer {
   margin: 40px;
 }
 
-.padding-40 {
-  padding: 40px;
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+input, span, div, a, h1, h2, h3, h4, h5, h6, p {
+  &:focus, &:active {
+    outline: 0 !important;
+  }
 }
 
 .text-grey {
@@ -206,8 +234,9 @@ footer {
     background-repeat: no-repeat;
     height: 50vw;
     text-align: center;
-    padding-top: 200px;
+    padding-top: 250px;
     color: white;
+    min-height: 400px;
 
     h1 {
       font-size: 60px;
@@ -222,6 +251,8 @@ footer {
     text-align: center;
     padding-top: 100px;
     color: white;
+    min-height: 300px;
+
     h1 {
       font-size: 50px;
     }
@@ -232,6 +263,7 @@ footer {
     background-repeat: no-repeat;
     height: 30vw;
     text-align: center;
+    min-height: 300px;
     padding-top: 50px;
     color: white;
     h1 {
@@ -244,6 +276,7 @@ footer {
       border-bottom: 1px solid white;
       text-align: center;
       padding: 10px;
+      width: 300px;
       &:active, &:focus {
         outline: 0;
       }
@@ -261,10 +294,11 @@ footer {
     position: relative;
     margin-top: -15px;
     margin-bottom: -15px;
+    z-index: 1;
 
     .arrow-down {
       background: black;
-      color: white;
+      color: grey;
       width: 30px;
       height: 30px;
       font-size: x-large;
@@ -272,10 +306,61 @@ footer {
       padding-top: 4px;
       font-weight: bold;
       cursor: pointer;
+      &:hover {
+        color: white;
+      }
     }
   }
   .hr {
     border-style: dotted;
     border-color: grey;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-container {
+    .landing-section {
+      padding-top: 200px;
+      h1 {
+        font-size: 50px;
+        letter-spacing: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .home-container {
+    .landing-section {
+      padding-top: 150px;
+      h1 {
+        font-size: 40px;
+        letter-spacing: 10px;
+      }
+    }
+    .buy-section {
+      padding-top: 50px;
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-white-border {
+    font-size: 12px;
+  }
+  .home-container {
+    .landing-section {
+      padding-top: 100px;
+      h1 {
+        font-size: 30px;
+        letter-spacing: 0;
+      }
+    }
+    .newsletter-section {
+      padding-top: 20px;
+    }
   }
 }

@@ -6,39 +6,41 @@
         .controller('HomeController', HomeController);
 
     /** @ngInject */
-    function HomeController() {
+    function HomeController($window) {
         var vm = this;
+        vm.screenWidth = $window.innerWidth;
+
         vm.videos = [
             {
                 name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
                 duration: "25:46",
                 description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                url: "./assets/temp/video1.mp4"
+                code: "Q7HGmUBQOHM"
             }, {
                 name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
                 duration: "17:46",
                 description: "Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim",
-                url: "./assets/temp/video2.mp4"
+                code: "du1IFCWaD5k"
             }, {
                 name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
                 duration: "47:46",
                 description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-                url: "./assets/temp/video3.mp4"
-            },{
+                code: "C5Qp1hlXLko"
+            }, {
                 name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
                 duration: "25:46",
                 description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                url: "./assets/temp/video1.mp4"
+                code: "Q7HGmUBQOHM"
             }, {
                 name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
                 duration: "17:46",
                 description: "Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim",
-                url: "./assets/temp/video2.mp4"
+                code: "du1IFCWaD5k"
             }, {
                 name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
                 duration: "47:46",
                 description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-                url: "./assets/temp/video3.mp4"
+                code: "C5Qp1hlXLko"
             }
         ];
 
@@ -83,5 +85,9 @@
                 description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
             }
         ];
+
+        vm.scrollDown = function () {
+            $window.scrollTo(0, angular.element('.video-section').offset().top);
+        };
     }
 })();
