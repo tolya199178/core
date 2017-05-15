@@ -42,7 +42,24 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   position: fixed;
   width: 100%;
   border: 0;
-  padding-top: 30px;
+  padding-top: 10px;
+
+  @keyframes fade {
+    from {
+      background-color: transparent;
+      border-bottom: 1px solid transparent;
+    }
+    to {
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid darkgrey;
+    }
+  }
+  &.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid darkgrey;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
 
   .navbar-nav {
     margin-left: calc(50% - 300px);
@@ -62,38 +79,94 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
         background: transparent;
       }
     }
-    .social-icon {
-      border: 2px solid white;
-      border-radius: 50%;
-      color: white;
-      font-size: large;
-      padding: 10px;
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-      &:hover{
-        border-color: grey !important;
-      }
-      a {
-        margin-top: -17px;
-        margin-left: -17px;
-      }
-    }
+
   }
 
 }
 
-//--------- Common Style Sheets ----------------------------------------------------------------------------------------------
+.social-icon {
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: small;
+  padding: 5px;
+  padding-left: 22px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: inline-block;
+  &:hover {
+    border-color: grey !important;
+  }
+  a {
+    color: white;
+    margin-top: -17px;
+    margin-left: -17px;
+  }
+  &:hover {
+    a {
+      color: grey;
+    }
+  }
+}
 
+footer {
+  width: 100%;
+  background: black;
+  text-align: center;
+  display: inline-block;
+  .footer {
+    width: auto;
+    li {
+      a {
+        color: white;
+        &:hover{
+          background: transparent;
+          color: grey;
+        }
+      }
+    }
+  }
+}
+
+//--------- Common Style Sheets ----------------------------------------------------------------------------------------------
+.cursor-pointer{
+  cursor: pointer;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
 .padding-0 {
   padding: 0;
 }
 
+.padding-10 {
+  padding: 10px;
+}
+
+.margin-auto {
+  margin: auto;
+}
 .margin-20 {
   margin: 20px;
 }
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
 .margin-40 {
   margin: 40px;
+}
+
+.padding-40 {
+  padding: 40px;
 }
 
 .text-grey {
@@ -103,20 +176,31 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 .text-white {
   color: white;
 }
+
+.bg-black {
+  background: black;
+}
+
 .btn-white-border {
   background: transparent;
   border-radius: 0;
   border: 2px solid white;
-  &:hover{
+  &:hover {
     background: transparent;
     border-color: grey;
     color: grey;
   }
 }
+
+.video-responsive {
+  width: 100%;
+  height: auto;
+}
+
 //---------------- For Individual Pages ---------------------------------------------------------------------------------------
 
 .home-container {
-  .landing {
+  .landing-section {
     background: url("./../assets/images/home_bg_1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -126,8 +210,72 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
     color: white;
 
     h1 {
-      font-size: -webkit-xxx-large;
+      font-size: 60px;
       letter-spacing: 30px;
     }
+  }
+  .buy-section {
+    background: url("./../assets/images/home_bg_2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 35vw;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .newsletter-section {
+    background: url("./../assets/images/home_bg_3.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 30vw;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    h1 {
+      font-size: 50px;
+    }
+    .email-box {
+      background: transparent;
+      border: 0;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      text-align: center;
+      padding: 10px;
+      &:active, &:focus {
+        outline: 0;
+      }
+    }
+  }
+  .character-section {
+    .character-img {
+      max-height: 500px;
+    }
+  }
+  .social-section {
+    border-bottom: 1px solid grey;
+  }
+  .arrow-wrapper {
+    position: relative;
+    margin-top: -15px;
+    margin-bottom: -15px;
+
+    .arrow-down {
+      background: black;
+      color: white;
+      width: 30px;
+      height: 30px;
+      font-size: x-large;
+      border-radius: 50%;
+      padding-top: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  .hr {
+    border-style: dotted;
+    border-color: grey;
   }
 }

@@ -1,12 +1,97 @@
 <div class="container-fluid home-container">
     <div class="row">
         <div class="col-xs-12 padding-0">
-            <div class="landing">
+            <div class="landing-section">
                 <h1>SHADOWCORE</h1>
                 <h5>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h5>
                 <div class="margin-40">
                     <button class="btn btn-primary btn-white-border">BUY GAME ON STEAM</button>
                     <button class="btn btn-primary btn-white-border">WATCH GAMEPLAY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="arrow-wrapper cursor-pointer">
+            <i class="fa fa-angle-down arrow-down"></i>
+        </div>
+    </div>
+    <div class="row bg-black text-white">
+        <div class="col-xs-12 text-center padding-40">
+            <h2>V I D E O S</h2>
+        </div>
+        <div class="col-xs-12">
+            <div class="container">
+                <slick lazy-load="ondemand" slides-to-show="3" slides-to-scroll="1">
+                    <div class="text-center padding-10" ng-repeat="video in vm.videos">
+                        <video class="video-responsive" width="400" controls>
+                            <source ng-src="{{video.url}}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <div>
+                            <h5>{{video.name}}</h5>
+                            <div class="text-grey"><i class="fa fa-clock-o"></i> {{video.duration}}</div>
+                            <hr class="hr"/>
+                            <h5 class="text-grey">{{video.description}}</h5>
+                        </div>
+                    </div>
+                </slick>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 padding-0">
+            <div class="buy-section">
+                <h1>B U Y</h1>
+                <h3>SHADOWCORE ON STEAM</h3>
+                <h5 class="margin-40">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
+                <div class="margin-40">
+                    <button class="btn btn-primary btn-white-border">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-black character-section">
+        <div class="col-sm-5 col-sm-offset-1 padding-0">
+            <img class="character-img img-responsive margin-auto" ng-src="./assets/temp/character.jpg">
+        </div>
+        <div class="col-sm-5 padding-0">
+            <slick lazy-load="ondemand" slides-to-show="1" slides-to-scroll="1">
+                <div class="text-white" ng-repeat="character in vm.characters">
+                    <h3>{{character.title}}</h3>
+                    <div>Category: {{character.category}} <i class="fa fa-bolt"></i></div>
+                    <ul>
+                        <li ng-repeat="spec in character.specs track by $index">{{spec}}</li>
+                    </ul>
+                    <div>{{character.description}}</div>
+                </div>
+            </slick>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 padding-0">
+            <div class="newsletter-section">
+                <h3>N E W S L E T T E R</h3>
+                <h5 class="margin-20">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
+                <div class="margin-40">
+                    <div>
+                        <input type="text" class="email-box" placeholder="Your e-mail here">
+                    </div>
+                    <div class="margin-top-20">
+                        <button class="btn btn-primary btn-white-border">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 padding-0 bg-black">
+            <div class="social-section container text-center text-white padding-40">
+                <h3>SHADOWCORE SOCIAL</h3>
+                <div class="margin-40 text-center">
+                    <span class="social-icon"><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></span>
+                    <span class="social-icon"><a ng-href="#"><i class="fa fa-2x fa-twitter "></i></a></span>
+                    <span class="social-icon"><a ng-href="#"><i class="fa fa-2x fa-youtube-play"></i></a></span>
                 </div>
             </div>
         </div>

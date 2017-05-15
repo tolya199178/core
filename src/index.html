@@ -23,7 +23,7 @@
     <!-- endinject -->
     <!-- endbuild -->
 </head>
-<body>
+<body ng-controller="MainController as vm">
 <!--[if lt IE 10]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -33,8 +33,21 @@
     <acme-navbar creation-date="main.creationDate"></acme-navbar>
 </div>
 
-
 <div ui-view></div>
+
+<footer>
+    <div class="display-inline-block">
+        <ul class="nav navbar-nav footer">
+            <li class="active"><a ng-href="#">HOME</a></li>
+            <li><a ng-href="#">ABOUT</a></li>
+            <li><a ng-href="#">NEWS</a></li>
+            <li><a ng-href="#">CONTACT US</a></li>
+        </ul>
+    </div>
+    <div class="padding-20">
+        <h6 class="text-grey">@ 2017 SHADOWCORE</h6>
+    </div>
+</footer>
 
 <!-- build:js(src) scripts/vendor.js -->
 <!-- bower:js -->
