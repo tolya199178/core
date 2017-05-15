@@ -52,20 +52,31 @@
         </div>
     </div>
     <div class="row bg-black character-section">
-        <div class="col-sm-5 col-sm-offset-1 padding-0">
-            <img class="character-img img-responsive margin-auto" ng-src="./assets/temp/character.jpg">
-        </div>
-        <div class="col-sm-5 padding-0">
-            <slick lazy-load="ondemand" slides-to-show="1" slides-to-scroll="1">
-                <div class="text-white" ng-repeat="character in vm.characters">
-                    <h3>{{character.title}}</h3>
-                    <div>Category: {{character.category}} <i class="fa fa-bolt"></i></div>
-                    <ul>
-                        <li ng-repeat="spec in character.specs track by $index">{{spec}}</li>
-                    </ul>
-                    <div>{{character.description}}</div>
+        <div class="col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-grey text-center">
+                        o o o o o
+                    </div>
                 </div>
-            </slick>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img class="character-img img-responsive margin-auto" ng-src="./assets/temp/character.jpg">
+                    </div>
+                    <div class="col-sm-6">
+                        <slick lazy-load="ondemand" slides-to-show="1" slides-to-scroll="1">
+                            <div class="margin-top-20 text-white" ng-repeat="character in vm.characters">
+                                <h3>{{character.title}}</h3>
+                                <div>Category: {{character.category}} <i class="fa fa-bolt"></i></div>
+                                <ul>
+                                    <li ng-repeat="spec in character.specs track by $index">{{spec}}</li>
+                                </ul>
+                                <div>{{character.description}}</div>
+                            </div>
+                        </slick>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
