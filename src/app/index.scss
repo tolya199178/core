@@ -47,18 +47,18 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   @keyframes fade {
     from {
       background-color: transparent;
-      border-bottom: 1px solid transparent;
+      //border-bottom: 1px solid transparent;
     }
     to {
       background: rgba(0, 0, 0, 0.8);
-      border-bottom: 1px solid darkgrey;
+      //border-bottom: 1px solid darkgrey;
     }
   }
   &.scrolled {
     background: rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid darkgrey;
+    //border-bottom: 1px solid darkgrey;
     animation-name: fade;
-    animation-duration: 1s;
+    animation-duration: 2s;
   }
 
   .navbar-nav {
@@ -95,7 +95,7 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   height: 30px;
   margin-right: 10px;
   display: inline-block;
-  
+
   &:hover {
     border-color: grey !important;
   }
@@ -241,6 +241,11 @@ input, span, div, a, h1, h2, h3, h4, h5, h6, p {
     h1 {
       font-size: 60px;
       letter-spacing: 30px;
+    }
+  }
+  .video-section{
+    .slick-prev, .slick-next {
+      margin-top: -95px;
     }
   }
   .buy-section {
