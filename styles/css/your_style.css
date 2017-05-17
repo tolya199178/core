@@ -1,0 +1,66 @@
+.bg-black {
+    background: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-grey {
+    color: grey;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+/*---------------------------------------------------------------------------*/
+.header-section {
+    padding: 10px;
+}
+.social-icon {
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: xx-small;
+    padding: 5px;
+    padding-left: 21px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    border-color: grey !important;
+    color: grey !important;
+}
+
+.social-icon a {
+    color: inherit;
+    margin-top: -17px;
+    margin-left: -17px;
+}
+
+.header-section {
+    height: 50px;
+    background: black;
+}
+
+.logo-text {
+    width: 200px;
+    display: inline-block;
+}
+
+.top-menu {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.top-menu div a {
+    margin: 0px 10px;
+    color: white;
+    font-weight: 900;
+    font-size: smaller;
+}
