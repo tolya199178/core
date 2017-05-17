@@ -18,7 +18,7 @@
 .header-section {
     padding: 10px;
 }
-.social-icon {
+.social-icons div {
     border: 2px solid white;
     border-radius: 50%;
     color: white;
@@ -32,12 +32,12 @@
     cursor: pointer;
 }
 
-.social-icon:hover {
+.social-icons div:hover {
     border-color: grey !important;
     color: grey !important;
 }
 
-.social-icon a {
+.social-icons div a {
     color: inherit;
     margin-top: -17px;
     margin-left: -17px;
@@ -56,6 +56,7 @@
 .top-menu {
     display: inline-block;
     padding-top: 20px;
+    text-align: center;
 }
 
 .top-menu div a {
