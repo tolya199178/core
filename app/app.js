@@ -37,7 +37,8 @@ angular.module('app', [
     //'app.smartAdmin',
     //'app.eCommerce'
     'app.home',
-    'app.admin'
+    'app.admin',
+    'slick'
 ])
 .config(function ($provide, $httpProvider, RestangularProvider) {
 
