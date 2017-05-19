@@ -91,9 +91,8 @@ angular.module('app', [
     $rootScope.$stateParams = $stateParams;
     // editableOptions.theme = 'bs3';
 
-    angular.element($window).bind("scroll", function() {
+    angular.element($window).bind("scroll", function() {    // for the background of header bar.
         $rootScope.scrollTop = $window.pageYOffset;
-        console.log($rootScope.scrollTop)
         $rootScope.$apply();
     });
 
