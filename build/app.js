@@ -1190,7 +1190,7 @@ angular.module('app.home', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
-        .state('contact-us', {
+        .state('contactUs', {
             url: '/contact-us',
             views: {
                 root: {
