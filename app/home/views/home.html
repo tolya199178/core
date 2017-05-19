@@ -4,8 +4,8 @@
     <div class="row margin-0">
         <div class="col-xs-12 padding-0">
             <div class="landing-section">
-                <h1>SHADOWCORE</h1>
-                <h5 class="padding-left-10 padding-right-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h5>
+                <h1 class="text-condensed-light">SHADOWCORE</h1>
+                <h5 class="text-condensed-light padding-left-10 padding-right-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</h5>
                 <div class="margin-top-40 margin-bottom-40">
                     <button class="btn btn-primary btn-white-border">BUY GAME ON STEAM</button>
                     <button class="btn btn-primary btn-white-border">WATCH GAMEPLAY</button>
@@ -20,7 +20,7 @@
     </div>
     <div class="row margin-0 bg-black text-white video-section">
         <div class="col-xs-12 text-center padding-40">
-            <h2>V I D E O S</h2>
+            <h2 class="text-condensed-light">V I D E O S</h2>
         </div>
         <div class="col-xs-12">
             <div class="container">
@@ -28,10 +28,10 @@
                     <div class="text-center padding-10" ng-repeat="video in videos">
                         <youtube video="{{video.code}}"></youtube>
                         <div>
-                            <h5>{{video.name}}</h5>
-                            <div class="text-grey"><i class="fa fa-clock-o"></i> {{video.duration}}</div>
+                            <h4 class="text-condensed-light">{{video.name}}</h4>
+                            <div class="text-condensed-light text-grey"><i class="fa fa-clock-o"></i> {{video.duration}}</div>
                             <hr class="hr"/>
-                            <h5 class="text-grey">{{video.description}}</h5>
+                            <h5 class="text-condensed-light text-grey">{{video.description}}</h5>
                         </div>
                     </div>
                 </slick>
@@ -41,9 +41,9 @@
     <div class="row margin-0">
         <div class="col-xs-12 padding-0">
             <div class="buy-section">
-                <h1>B U Y</h1>
-                <h3>SHADOWCORE ON STEAM</h3>
-                <h5 class="margin-20">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
+                <h1 class="text-condensed-light">B U Y</h1>
+                <h3 class="text-condensed-light">SHADOWCORE ON STEAM</h3>
+                <h5 class="text-condensed-light margin-20">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
                 <div class="margin-bottom-40">
                     <button class="btn btn-primary btn-white-border">SHOP NOW</button>
                 </div>
@@ -55,7 +55,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center padding-20 text-white">
-                        <h2>C H A R A C T E R S</h2>
+                        <h2 class="text-condensed-light">C H A R A C T E R S</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -65,12 +65,12 @@
                     <div class="col-sm-6">
                         <slick lazy-load="ondemand" slides-to-show="1" slides-to-scroll="1">
                             <div class="margin-top-20 text-white" ng-repeat="character in characters">
-                                <h3>{{character.title}}</h3>
-                                <div>Category: {{character.category}} <i class="fa fa-bolt"></i></div>
-                                <ul>
+                                <h3 class="text-condensed-light">{{character.title}}</h3>
+                                <div class="text-condensed-light">Category: {{character.category}} <i class="fa fa-bolt"></i></div>
+                                <ul class="text-condensed-light">
                                     <li ng-repeat="spec in character.specs track by $index">{{spec}}</li>
                                 </ul>
-                                <div>{{character.description}}</div>
+                                <div class="text-condensed-light">{{character.description}}</div>
                             </div>
                         </slick>
                     </div>
@@ -81,11 +81,11 @@
     <div class="row margin-0">
         <div class="col-xs-12 padding-0">
             <div class="newsletter-section">
-                <h3>N E W S L E T T E R</h3>
-                <h5 class="margin-20">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
+                <h2 class="text-condensed-light">N E W S L E T T E R</h2>
+                <h5 class="text-condensed-light margin-20">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
                 <div class="margin-40">
                     <div>
-                        <input type="text" class="email-box" placeholder="Your e-mail here">
+                        <input type="text" class="text-condensed-light email-box" placeholder="Your e-mail here">
                     </div>
                     <div class="margin-top-20">
                         <button class="btn btn-primary btn-white-border">SUBMIT</button>
@@ -97,7 +97,7 @@
     <div class="row margin-0">
         <div class="col-xs-12 padding-0 bg-black">
             <div class="social-section container text-center text-white padding-20">
-                <h3>SHADOWCORE SOCIAL</h3>
+                <h2 class="text-condensed-light">SHADOWCORE SOCIAL</h2>
                 <div class="social-icons text-center">
                     <div><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
                     <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>

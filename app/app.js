@@ -86,12 +86,16 @@ angular.module('app', [
 })
 .constant('APP_CONFIG', window.appConfig)
 
-.run(function ($rootScope
-    , $state, $stateParams
-    ) {
+.run(function ($rootScope, $state, $stateParams, $window) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
     // editableOptions.theme = 'bs3';
+
+    angular.element($window).bind("scroll", function() {
+        $rootScope.scrollTop = $window.pageYOffset;
+        console.log($rootScope.scrollTop)
+        $rootScope.$apply();
+    });
 
 });
 

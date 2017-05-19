@@ -1,3 +1,28 @@
+@font-face {
+    font-family: "sf-transrobotics-extended";
+    src: url('../fonts/SFTransRoboticsExtended/SFTransRoboticsExtended.eot');
+    src: url('../fonts/SFTransRoboticsExtended/SFTransRoboticsExtended.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SFTransRoboticsExtended/SFTransRoboticsExtended.svg#SF TransRobotics Extended') format('svg'),
+    url('../fonts/SFTransRoboticsExtended/SFTransRoboticsExtended.woff') format('woff'),
+    url('../fonts/SFTransRoboticsExtended/SFTransRoboticsExtended.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('../fonts/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('../fonts/roboto_lightcondensed_macroman/RobotoCondensed-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .bg-black {
     background: black;
 }
@@ -50,6 +75,12 @@
     margin: 40px;
 }
 
+.margin-top-40 {
+    margin-top: 40px;
+}
+.margin-bottom-40 {
+    margin-bottom: 40px;
+}
 .margin-auto {
     margin: auto;
 }
@@ -92,12 +123,33 @@
 }
 
 .header-section {
-    height: 50px;
-    background: black;
+    height: 70px;
+    background: transparent;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+@keyframes fade {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background: rgba(0, 0, 0, 0.85);
+    }
+}
+
+.header-section.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    animation-name: fade;
+    animation-duration: 1s;
 }
 
 .logo-text {
     /*width: 200px;*/
+    padding-top: 15px;
+    padding-left: 10px;
+    font-family: "sf-transrobotics-extended";
     display: inline-block;
 }
 
@@ -112,6 +164,13 @@
     color: white;
     font-weight: 900;
     font-size: smaller;
+    font-family: 'roboto_condensedregular';
+    letter-spacing: 0.2em;
+}
+
+.top-menu .active a, .bottom-menu .active a {
+    color: grey;
+    font-weight: bold;
 }
 
 .bottom-menu {
@@ -124,12 +183,16 @@
     color: white;
     font-weight: 900;
     font-size: smaller;
+    font-family: 'roboto_condensedregular';
+    letter-spacing: 0.2em;
 }
 
 .btn-white-border {
     background: transparent;
     border-radius: 0;
     border: 2px solid white;
+    font-family: 'roboto_condensedlight';
+    letter-spacing: 0.1em;
 }
 
 .btn-white-border:hover {
@@ -151,9 +214,14 @@
 }
 
 .landing-section h1 {
-    font-size: 60px;
+    font-size: 80px;
     letter-spacing: 30px;
     text-indent: 30px;
+}
+
+.text-condensed-light {
+    font-family: 'roboto_condensedlight';
+    letter-spacing: 0.1em;
 }
 
 .arrow-wrapper {
@@ -239,7 +307,7 @@
     }
 
     .home-container h1 {
-        font-size: 50px;
+        font-size: 60px;
         letter-spacing: 20px;
     }
 }
