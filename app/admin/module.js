@@ -29,27 +29,15 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
-        .state('app.admin.videos', {
-            url: '/videos',
+        .state('app.admin.buyers', {
+            url: '/buyers',
             data: {
-                title: 'Video Management'
+                title: 'Buyers'
             },
             views: {
                 "content@app": {
-                    templateUrl: 'app/admin/views/videos.html',
-                    controller: 'VideosController'
-                }
-            }
-        })
-        .state('app.admin.images', {
-            url: '/images',
-            data: {
-                title: 'Image Management'
-            },
-            views: {
-                "content@app": {
-                    templateUrl: 'app/admin/views/images.html',
-                    controller: 'ImagesController'
+                    templateUrl: 'app/admin/views/buyers.html',
+                    controller: 'BuyersController'
                 }
             }
         })

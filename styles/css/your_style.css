@@ -91,6 +91,33 @@ body:not(.menu-on-top).desktop-detected {
     margin: auto;
 }
 
+.loading-sheath {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 4000;
+    height: 100%;
+}
+
+.loading-sheath .icon {
+    color: grey;
+    margin-top: 150px;
+    margin-left: calc(50% - 23px);
+}
+
+.st-sort-ascent:before {
+    content: '\25B2';
+}
+
+.st-sort-descent:before {
+    content: '\25BC';
+}
+
+.st-selected {
+    background-color: #69d2f5;
+}
+
 /*---------------------------------------------------------------------------*/
 .header-section {
     padding: 10px;
