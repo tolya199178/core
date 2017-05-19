@@ -23,6 +23,10 @@
     font-style: normal;
 }
 
+body:not(.menu-on-top).desktop-detected {
+    min-height: inherit !important;
+}
+
 .bg-black {
     background: black;
 }
@@ -78,9 +82,11 @@
 .margin-top-40 {
     margin-top: 40px;
 }
+
 .margin-bottom-40 {
     margin-bottom: 40px;
 }
+
 .margin-auto {
     margin: auto;
 }
