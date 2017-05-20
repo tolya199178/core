@@ -110,4 +110,13 @@ angular.module('app.home', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
+        .state('joinTeam', {
+            url: '/join-team',
+            views: {
+                root: {
+                    templateUrl: 'app/home/views/join-team.html',
+                    controller: 'HomeJoinTeamController'
+                }
+            }
+        })
 });

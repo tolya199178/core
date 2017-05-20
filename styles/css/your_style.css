@@ -107,6 +107,10 @@ body:not(.menu-on-top).desktop-detected {
     margin: auto;
 }
 
+.width-full {
+    width: 100%;
+}
+
 .font-roboto-condensed {
     font-family: 'roboto_condensedregular' !important;
 }
@@ -224,7 +228,7 @@ body:not(.menu-on-top).desktop-detected {
 }
 
 .top-menu div a {
-    margin: 0px 10px;
+    margin: 0px 20px;
     color: white;
     font-weight: 900;
     font-size: smaller;
@@ -350,7 +354,8 @@ body:not(.menu-on-top).desktop-detected {
     border-bottom: 1px solid white;
     text-align: center;
     padding: 10px;
-    width: 240px;
+    width: 500px;
+    max-width: calc(100vw - 60px);
 
 }
 
@@ -401,6 +406,10 @@ body:not(.menu-on-top).desktop-detected {
     list-style: inside;
     font-weight: bold;
     color: white;
+}
+
+.about-container .about-menu-item.active a {
+    display: inline;
 }
 
 /*--------------- news ----------------------------*/
@@ -455,10 +464,33 @@ body:not(.menu-on-top).desktop-detected {
     padding: 6px;
 }
 
+/*--------------- join team ----------------------------*/
+
+.join-team-section {
+    background: url("../img/temp/join_bg_1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 35vw;
+    text-align: center;
+    padding-top: 250px;
+    color: white;
+    min-height: 300px;
+}
+
+.join-team-section h1 {
+    font-size: 80px;
+    letter-spacing: 30px;
+    text-indent: 30px;
+}
+
 /*--------------- media queries ----------------------------*/
 
 @media only screen and (max-width: 1200px) {
-    .home-container .landing-section, .about-container .about-section, .news-container .news-section, .contact-us-container .contact-us-section {
+    .home-container .landing-section,
+    .about-container .about-section,
+    .news-container .news-section,
+    .contact-us-container .contact-us-section
+    .join-team-container .join-team-section {
         padding-top: 200px;
     }
 
@@ -473,11 +505,12 @@ body:not(.menu-on-top).desktop-detected {
     .home-container .landing-section,
     .about-container .about-section,
     .news-container .news-section,
-    .contact-us-container .contact-us-section {
+    .contact-us-container .contact-us-section,
+    .join-team-container .join-team-section {
         padding-top: 150px;
     }
 
-    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1 {
+    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1, .join-team-section h1 {
         font-size: 40px;
         letter-spacing: 10px;
         text-indent: 10px;
@@ -497,11 +530,11 @@ body:not(.menu-on-top).desktop-detected {
         font-size: 12px;
     }
 
-    .home-container .landing-section, .about-container .about-section, .news-container .news-section, .contact-us-container .contact-us-section {
+    .home-container .landing-section, .about-container .about-section, .news-container .news-section, .contact-us-container .contact-us-section, .join-team-container .join-team-section {
         padding-top: 100px;
     }
 
-    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1 {
+    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1, .join-team-section h1 {
         font-size: 30px;
         letter-spacing: 0;
     }
@@ -512,5 +545,8 @@ body:not(.menu-on-top).desktop-detected {
 
     .social-icons {
         display: none;
+    }
+    .top-menu div a {
+        margin: 0px 5px;
     }
 }

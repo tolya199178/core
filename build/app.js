@@ -1264,6 +1264,15 @@ angular.module('app.home', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
+        .state('joinTeam', {
+            url: '/join-team',
+            views: {
+                root: {
+                    templateUrl: 'app/home/views/join-team.html',
+                    controller: 'HomeJoinTeamController'
+                }
+            }
+        })
 });
 
 'use strict';
@@ -3934,7 +3943,9 @@ angular.module('app.home').controller('HomeAboutController', function ($scope, $
 "use strict";
 
 angular.module('app.home').controller('HomeContactUsController', function ($scope, $window) {
-
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.contact-ways').offset().top - 100);
+    };
 })
 
 "use strict";
@@ -4021,7 +4032,21 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
     $scope.scrollDown = function () {
         $window.scrollTo(0, angular.element('.video-section').offset().top - 100);
     };
-})
+});
+
+"use strict";
+
+angular.module('app.home').controller('HomeJoinTeamController', function ($scope, $window) {
+    $scope.items = [
+        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"},
+        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"},
+        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"}
+    ];
+
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.questions-div').offset().top - 100);
+    };
+});
 
 "use strict";
 

@@ -82,4 +82,4 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
     $scope.scrollDown = function () {
         $window.scrollTo(0, angular.element('.video-section').offset().top - 100);
     };
-})
+});
