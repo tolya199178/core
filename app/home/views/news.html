@@ -1,7 +1,70 @@
 <div data-smart-include="app/home/partials/header.html" class="placeholder-header"></div>
 
 <div class="container-fluid news-container padding-0">
-    news
+    <div class="row margin-0">
+        <div class="col-xs-12 padding-0">
+            <div class="news-section">
+                <h1 class="text-condensed-light">NEWS</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-0 text-center">
+        <div class="arrow-wrapper cursor-pointer" ng-click="scrollDown();">
+            <i class="fa fa-angle-down arrow-down"></i>
+        </div>
+    </div>
+    <div class="row margin-0 padding-20 bg-black">
+        <div class="col-xs-12 text-center">
+            <div class="container padding-20 months-wrapper">
+                <span class="cursor-pointer padding-10 text-white" ng-repeat="item in months" ng-click="getData(item)">{{item.str}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-0 padding-20 bg-black">
+        <div class="col-xs-12">
+            <div class="container">
+                <div class="row padding-top-10 padding-bottom-10" ng-repeat="item in news">
+                    <div class="col-sm-5">
+                        <img class="img-responsive" ng-src="{{item.image}}">
+                    </div>
+                    <div class="col-sm-7 text-grey">
+                        <h4>{{item.title}}</h4>
+                        <p><i class="fa fa-clock-o"></i> {{item.posted_date}}</p>
+                        <p class="text-justify">{{item.content}}</p>
+                        <p><a class="cursor-pointer">Read more...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-0">
+        <div class="col-xs-12 padding-0">
+            <div class="newsletter-section">
+                <h2 class="text-condensed-light">N E W S L E T T E R</h2>
+                <h5 class="text-condensed-light margin-20">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5>
+                <div class="margin-bottom-40 margin-top-0">
+                    <div>
+                        <input type="text" class="text-condensed-light email-box" placeholder="Your e-mail here">
+                    </div>
+                    <div class="margin-top-20">
+                        <button class="btn btn-primary btn-white-border">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-0">
+        <div class="col-xs-12 padding-0 bg-black">
+            <div class="social-section container text-center text-white padding-20">
+                <h2 class="text-condensed-light">SHADOWCORE SOCIAL</h2>
+                <div class="social-icons text-center">
+                    <div><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
+                    <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
+                    <div><a ng-href="#"><i class="fa fa-2x fa-youtube-play"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
