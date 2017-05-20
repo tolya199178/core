@@ -16,7 +16,7 @@ angular.module('app.home', ['ui.router']).config(function ($stateProvider) {
             views: {
                 root: {
                     templateUrl: 'app/home/views/about.html',
-                    controller: 'AboutController'
+                    controller: 'HomeAboutController'
                 }
             }
         })
@@ -92,14 +92,12 @@ angular.module('app.home', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
-
-
         .state('news', {
             url: '/news',
             views: {
                 root: {
                     templateUrl: 'app/home/views/news.html',
-                    controller: 'NewsController'
+                    controller: 'HomeNewsController'
                 }
             }
         })
@@ -108,7 +106,7 @@ angular.module('app.home', ['ui.router']).config(function ($stateProvider) {
             views: {
                 root: {
                     templateUrl: 'app/home/views/contact-us.html',
-                    controller: 'ContactUsController'
+                    controller: 'HomeContactUsController'
                 }
             }
         })

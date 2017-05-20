@@ -242,6 +242,7 @@ body:not(.menu-on-top).desktop-detected {
     color: grey;
 }
 
+/*--------------- home ----------------------------*/
 .landing-section {
     background: url("../img/temp/home_bg_1.png");
     background-size: 100% 100%;
@@ -342,6 +343,8 @@ body:not(.menu-on-top).desktop-detected {
     margin-top: -95px;
 }
 
+/*--------------- about ----------------------------*/
+
 .about-section {
     background: url("../img/temp/about_bg_1.jpg");
     background-size: 100% 100%;
@@ -377,8 +380,35 @@ body:not(.menu-on-top).desktop-detected {
     color: white;
 }
 
+/*--------------- news ----------------------------*/
+
+.news-section {
+    background: url("../img/temp/news_bg_1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 35vw;
+    text-align: center;
+    padding-top: 250px;
+    color: white;
+    min-height: 300px;
+}
+
+.news-section h1 {
+    font-size: 80px;
+    letter-spacing: 30px;
+    text-indent: 30px;
+}
+
+.news-container .months-wrapper {
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    font-family: 'roboto_condensedbold';
+}
+
+/*--------------- media queries ----------------------------*/
+
 @media only screen and (max-width: 1200px) {
-    .home-container .landing-section, .about-container .about-section {
+    .home-container .landing-section, .about-container .about-section, .news-container .news-section {
         padding-top: 200px;
     }
 
@@ -390,7 +420,7 @@ body:not(.menu-on-top).desktop-detected {
 }
 
 @media only screen and (max-width: 960px) {
-    .home-container .landing-section, .about-container .about-section {
+    .home-container .landing-section, .about-container .about-section, .news-container .news-section {
         padding-top: 150px;
     }
 
@@ -414,7 +444,7 @@ body:not(.menu-on-top).desktop-detected {
         font-size: 12px;
     }
 
-    .home-container .landing-section, .about-container .about-section {
+    .home-container .landing-section, .about-container .about-section, .news-container .news-section {
         padding-top: 100px;
     }
 
