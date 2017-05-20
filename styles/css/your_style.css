@@ -27,8 +27,30 @@ body:not(.menu-on-top).desktop-detected {
     min-height: inherit !important;
 }
 
+.main.ng-enter {
+    transition: 0.25s;
+    opacity: 0;
+}
+
+.main.ng-enter-active {
+    opacity: 1;
+}
+
+.main.ng-leave {
+    transition: 0.25s;
+    opacity: 1;
+}
+
+.main.ng-leave-active {
+    opacity: 0;
+}
+
 .bg-black {
     background: black;
+}
+
+.bg-white {
+    background: white;
 }
 
 .text-white {
@@ -546,6 +568,7 @@ body:not(.menu-on-top).desktop-detected {
     .social-icons {
         display: none;
     }
+
     .top-menu div a {
         margin: 0px 5px;
     }
