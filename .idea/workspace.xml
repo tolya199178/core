@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1680ec65-f80e-4459-89ca-811c845bf968" name="Default" comment="">
 <<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/module.js" afterPath="$PROJECT_DIR$/app/admin/module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/layout/partials/navigation.tpl.html" afterPath="$PROJECT_DIR$/app/layout/partials/navigation.tpl.html" />
+=======
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/config/custom_config.php" afterPath="$PROJECT_DIR$/api/application/config/custom_config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/controllers/Buyers.php" afterPath="$PROJECT_DIR$/api/application/controllers/Buyers.php" />
@@ -19,6 +23,7 @@
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views/users.html" afterPath="$PROJECT_DIR$/app/admin/views/users.html" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,6 +35,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+      <file leaf-file-name="navigation.tpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/layout/partials/navigation.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+=======
 <<<<<<< HEAD
       <file leaf-file-name="News_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/application/models/News_model.php">
@@ -43,11 +55,19 @@
             <state relative-caret-position="136">
               <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+=======
 <<<<<<< HEAD
       <file leaf-file-name="Buyers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/application/controllers/Buyers.php">
@@ -112,11 +132,39 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="51" />
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="mails.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/views/mails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buttons.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ui/views/buttons.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="563" column="42" lean-forward="true" selection-start-line="563" selection-start-column="42" selection-end-line="563" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MailsCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin/controllers/MailsCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+=======
       <file leaf-file-name="custom_config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/application/config/custom_config.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,6 +177,7 @@
             <state relative-caret-position="255">
               <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
               <folding />
             </state>
           </provider>
@@ -139,12 +188,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <find>slick</find>
       <find>top-m</find>
       <find>margin-au</find>
 =======
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
       <find>&lt;youtube</find>
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
       <find>characters</find>
       <find>rapha</find>
       <find>SHADOWCORE</find>
@@ -175,11 +227,15 @@
 =======
       <find>jquery</find>
       <find>efault text input with maxlength</find>
-      <find>Error states for elemen</find>
       <find>bg-</find>
       <find>efault Form Elements</find>
       <find>#profileForm</find>
+<<<<<<< HEAD
+      <find>Error states for elemen</find>
+      <find>efault button dropdown</find>
+=======
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,8 +252,6 @@
         <option value="$PROJECT_DIR$/app/home/directives/youtube.directive.js" />
         <option value="$PROJECT_DIR$/app/layout/partials/header.tpl.html" />
         <option value="$PROJECT_DIR$/app/layout/partials/footer.tpl.html" />
-        <option value="$PROJECT_DIR$/app/admin/module.js" />
-        <option value="$PROJECT_DIR$/app/layout/partials/navigation.tpl.html" />
         <option value="$PROJECT_DIR$/app.scripts.json" />
         <option value="$PROJECT_DIR$/app/admin/directives/loading.js" />
         <option value="$PROJECT_DIR$/app/admin/services/NewsService.js" />
@@ -246,7 +300,14 @@
         <option value="$PROJECT_DIR$/styles/css/your_style.css" />
         <option value="$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js" />
         <option value="$PROJECT_DIR$/app/admin/views/users.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/layout/partials/navigation.tpl.html" />
+        <option value="$PROJECT_DIR$/app/admin/module.js" />
+        <option value="$PROJECT_DIR$/app/admin/views/mails.html" />
+        <option value="$PROJECT_DIR$/app/admin/controllers/MailsCtrl.js" />
+=======
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
       </list>
     </option>
   </component>
@@ -329,6 +390,8 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
+=======
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="shadowcore" />
@@ -585,6 +648,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -595,7 +659,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value=".gi&#9;FILE&#9;file://C:/wamp/www/shadowcore/.gitignore&#10;usersctr&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/UsersCtrl.js&#10;you&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;bower&#9;FILE&#9;file://C:/wamp/www/shadowcore/bower.json&#10;your&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;join&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/JoinTeamCtrl.js&#10;about&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;hea&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;modu&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;header&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;abouh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;high_conc&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about-templates/high_concept.html&#10;home&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/HomeCtrl.js&#10;FOOTER&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;na&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;buyse&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/services/BuyersService.js&#10;news&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/NewsCtrl.js&#10;buye&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/BuyersCtrl.js&#10;loading.js&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/directives/loading.js&#10;script&#9;FILE&#9;file://C:/wamp/www/shadowcore/app.scripts.json&#10;buyeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/views/buyers.html&#10;module&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/module.js&#10;footerh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;modul&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;footer&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/footer.tpl.html&#10;index&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html&#10;app&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/app.js&#10;headerht&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;headtp&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/header.tpl.html&#10;navi&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;indeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html" />
+    <property name="SearchEverywhereHistoryKey" value="buttonsh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/ui/views/buttons.html&#10;mails&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/MailsCtrl.js&#10;module&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/module.js&#10;na&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;.gi&#9;FILE&#9;file://C:/wamp/www/shadowcore/.gitignore&#10;usersctr&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/UsersCtrl.js&#10;you&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;bower&#9;FILE&#9;file://C:/wamp/www/shadowcore/bower.json&#10;your&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;join&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/JoinTeamCtrl.js&#10;about&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;hea&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;modu&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;header&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;abouh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;high_conc&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about-templates/high_concept.html&#10;home&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/HomeCtrl.js&#10;FOOTER&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;buyse&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/services/BuyersService.js&#10;news&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/NewsCtrl.js&#10;buye&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/BuyersCtrl.js&#10;loading.js&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/directives/loading.js&#10;script&#9;FILE&#9;file://C:/wamp/www/shadowcore/app.scripts.json&#10;buyeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/views/buyers.html&#10;footerh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;modul&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;footer&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/footer.tpl.html&#10;index&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html&#10;app&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/app.js&#10;headerht&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;headtp&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/header.tpl.html&#10;navi&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;indeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
   </component>
   <component name="RunDashboard">
@@ -703,17 +767,25 @@
       <workItem from="1495276627501" duration="7369000" />
 =======
       <workItem from="1495254255053" duration="17343000" />
+<<<<<<< HEAD
+      <workItem from="1495275994884" duration="8086000" />
+=======
       <workItem from="1495275994884" duration="6467000" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="57835000" />
+=======
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="56988000" />
 =======
     <option name="totallyTimeSpent" value="56216000" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -737,7 +809,7 @@
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17697228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17697228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -764,6 +836,8 @@
   <component name="editorHistoryManager">
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/app/layout/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -786,6 +860,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
     <entry file="file://$PROJECT_DIR$/app/graphs/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -834,13 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -982,6 +1050,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/home/views/about-templates/high_concept.html">
+=======
     <entry file="file://$PROJECT_DIR$/app/home/views/join-team.html">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -996,6 +1067,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/application/controllers/Users.php">
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="408">
@@ -1291,11 +1363,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/admin/views/users.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="459">
+          <caret line="27" column="97" lean-forward="true" selection-start-line="27" selection-start-column="97" selection-end-line="27" selection-end-column="97" />
+=======
         <state relative-caret-position="255">
           <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
           <folding />
         </state>
       </provider>
@@ -1312,11 +1389,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views/users.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/layout/partials/navigation.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ui/views/buttons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="563" column="42" lean-forward="true" selection-start-line="563" selection-start-column="42" selection-end-line="563" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/views/mails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controllers/MailsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+=======
         <state relative-caret-position="136">
           <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
 >>>>>>> e04163efd44bc7b6da435597fb4f30256fea1233
+>>>>>>> 2da655cd5feebc701ad1a2aaf49f79e72b1887dd
           <folding />
         </state>
       </provider>

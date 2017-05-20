@@ -77,4 +77,16 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
+        .state('app.admin.mails', {
+            url: '/mails',
+            data: {
+                title: 'Mail Manage'
+            },
+            views: {
+                "content@app": {
+                    templateUrl: 'app/admin/views/mails.html',
+                    controller: 'MailsController'
+                }
+            }
+        })
 });
