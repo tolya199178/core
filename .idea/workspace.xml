@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1680ec65-f80e-4459-89ca-811c845bf968" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/controllers/AboutCtrl.js" afterPath="$PROJECT_DIR$/app/home/controllers/AboutCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/module.js" afterPath="$PROJECT_DIR$/app/home/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/partials/footer.html" afterPath="$PROJECT_DIR$/app/home/partials/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/partials/header.html" afterPath="$PROJECT_DIR$/app/home/partials/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views/about.html" afterPath="$PROJECT_DIR$/app/home/views/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views/about-templates/gameplay.html" afterPath="$PROJECT_DIR$/app/home/views/about-templates/gameplay.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/app.js" afterPath="$PROJECT_DIR$/build/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/your_style.css" afterPath="$PROJECT_DIR$/styles/css/your_style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +29,8 @@
       <file leaf-file-name="gameplay.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/home/views/about-templates/gameplay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-174">
-              <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -443,12 +438,12 @@
       <workItem from="1495169540426" duration="7887000" />
       <workItem from="1495178185779" duration="2977000" />
       <workItem from="1495185048625" duration="3025000" />
-      <workItem from="1495254255053" duration="6409000" />
+      <workItem from="1495254255053" duration="6742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38815000" />
+    <option name="totallyTimeSpent" value="39148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="959" extended-state="6" />
@@ -849,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/home/views/about-templates/gameplay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174">
-          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="374">
+          <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
           <folding />
         </state>
       </provider>
