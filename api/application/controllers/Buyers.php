@@ -21,11 +21,38 @@ class Buyers extends Base_Controller
 
     public function index_post()
     {
-        $data = [];
-        $data['id'] = $_REQUEST['id'];
-        $data['email'] = $_REQUEST['email'];
-        $result = $this->model->saveRow($data);
-        $this->set_response($result, 200);
+        $data = json_decode(file_get_contents('php://input'), true);
+        $emailstr = '';
+        $flag = false;
+        foreach($data['emails'] as $email){
+            $to      = $email;
+            $subject = $data['subject'];
+            $message = $data['content'];
+            $headers = 'From: admin@shadowcore.com' . "\r\n" .
+                    'Reply-To: admin@shadowcore.com' . "\r\n";
+
+            $emailOptions = [
+                    'to' => $to,
+                    'message' => $message,
+                    'subject' => $subject
+            ];
+            if (send_email($emailOptions)) {
+                $flag = true;
+            } else {
+                $flag = false;
+                break;
+            }
+            $emailstr .= ','. $email;
+        }
+        if($flag){
+            $emailstr = substr($emailstr, 1);
+            $data['emailstr'] = $emailstr;
+            $this->model->saveMail($data);
+            $this->set_response($flag, 200);
+        } else {
+            $this->set_response($flag, 401);
+        }
+
     }
 
     public function index_delete()

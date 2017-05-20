@@ -6,23 +6,12 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
     $scope.loading = true;
     $scope.allCheck = false;
     $scope.email = {
-        title: '',
+        subject: '',
         content: ''
     };
 
     $scope.getData = function () {
         $scope.loading = true;
-
-        $timeout(function () {
-            $scope.loading = false;
-            $scope.tableData = $scope.safeData = [
-                {id: 1, email: 'abc', purchased_date: '2017-05-19'},
-                {id: 2, email: 'abc', purchased_date: '2017-05-19'},
-                {id: 3, email: 'abc', purchased_date: '2017-05-19'},
-                {id: 4, email: 'abc', purchased_date: '2017-05-19'}
-            ];
-        }, 500);
-        return;
 
         BuyersService.get().then(function (response) {
             $scope.tableData = $scope.safeData = response.data;
@@ -31,11 +20,12 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
     };
     $scope.getData();
 
-    $scope.deleteRow = function (rowId) {
+    $scope.deleteRow = function (rowId, rowInd) {
         if (confirm('Are you sure want to delete this?')) {
             $scope.loading = true;
             BuyersService.delete(rowId).then(function () {
-                $scope.getData();
+                $scope.tableData.splice(rowInd, 1);
+                $scope.loading = false;
             });
         }
     };
@@ -55,7 +45,7 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
     };
 
     $scope.initMail = function () {
-        $scope.email.title = '';
+        $scope.email.subject = '';
         $scope.email.content = '';
     };
 
@@ -63,12 +53,13 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
         $scope.loading = true;
         var data = {
             emails: $scope.getCheckedEmails(),
-            title: $scope.email.title,
+            subject: $scope.email.subject,
             content: $scope.email.content
         };
         BuyersService.sendMail(data).then(function () {
             $('#myModal').modal('hide');
-            $scope.getData();
+            $scope.loading = false;
+            //$scope.getData();
         });
     };
 });

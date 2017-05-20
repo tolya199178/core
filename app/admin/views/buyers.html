@@ -37,9 +37,9 @@
                                         <td>{{$index + 1}}</td>
                                         <td><input type="checkbox" ng-model="row.checked"></td>
                                         <td>{{row.email}}</td>
-                                        <td>{{row.purchased_date}}</td>
+                                        <td>{{row.purchased}}</td>
                                         <td class="text-center controls-td">
-                                            <a ng-click="deleteRow(row.id)">Delete</a>
+                                            <a ng-click="deleteRow(row.id, $index)">Delete</a>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -77,9 +77,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Title</label>
+                        <label class="col-md-3 control-label">Subject</label>
                         <div class="col-md-9">
-                            <input class="form-control" placeholder="Title" type="text" ng-model="email.title">
+                            <input class="form-control" placeholder="Title" type="text" ng-model="email.subject">
                         </div>
                     </div>
                     <div class="form-group">
@@ -91,7 +91,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" ng-click="sendMail()" ng-disabled="!getCheckedEmails().length || email.title=='' || email.content==''">Send</button>
+                <button type="button" class="btn btn-primary" ng-click="sendMail()" ng-disabled="!getCheckedEmails().length || email.subject=='' || email.content==''">Send</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
             </div>
         </div>

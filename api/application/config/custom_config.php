@@ -3,7 +3,7 @@
 /*from email address */
 define('SITE_FROM_EMAIL', 'edmondd729@gmail.com');
 /*site name */
-define('SITE_NAME', 'EZSport Info');
+define('SITE_NAME', 'Shadow Core');
 /*smtp host setting */
 define('SMTP_HOST', 'smtp.sendgrid.net');
 /*set smtp port */

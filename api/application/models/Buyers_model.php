@@ -16,8 +16,21 @@ class Buyers_model extends CI_Model
     {
         $this->db->select("*");
         $this->db->from($this->table);
+        $this->db->order_by("purchased", "desc");
         $query = $this->db->get();
         return $query->result();
+    }
+
+    public function saveMail($data)
+    {
+        //$row['purchased'] = date('Y-m-d h:i:s');
+        $insertData = [
+                'subject' => $data['subject'],
+                'content' => $data['content'],
+                'senddate' => date('Y-m-d h:i:s'),
+                'receive_emails' => $data['emailstr']
+        ];
+        $result = $this->db->insert('sendmails', $insertData);
     }
 
     public function saveRow($data)
@@ -31,7 +44,7 @@ class Buyers_model extends CI_Model
             $row[$col] = isset($data[$col]) ? $data[$col] : '';
         }
 
-        if ($rowId != 'new') {
+        if ($rowId != '0') {
             $this->db->where('id', $rowId);
             $result = $this->db->update($this->table, $row);
         } else {
