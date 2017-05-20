@@ -51,6 +51,10 @@ body:not(.menu-on-top).desktop-detected {
     padding-left: 10px;
 }
 
+.padding-right-0 {
+    padding-right: 0;
+}
+
 .padding-right-10 {
     padding-right: 10px;
 }
@@ -89,6 +93,10 @@ body:not(.menu-on-top).desktop-detected {
 
 .margin-auto {
     margin: auto;
+}
+
+.font-roboto-condensed {
+    font-family: 'roboto_condensedregular' !important;
 }
 
 .loading-sheath {
@@ -334,8 +342,43 @@ body:not(.menu-on-top).desktop-detected {
     margin-top: -95px;
 }
 
+.about-section {
+    background: url("../img/temp/about_bg_1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 35vw;
+    text-align: center;
+    padding-top: 250px;
+    color: white;
+    min-height: 300px;
+}
+
+.about-section h1 {
+    font-size: 80px;
+    letter-spacing: 30px;
+    text-indent: 30px;
+}
+
+.about-container .about-content {
+    border-left: 1px solid #252525;
+    font-family: 'roboto_condensedregular';
+}
+
+.about-container .about-menu-item {
+    border-bottom: 1px solid #252525;
+    list-style-position: inside;
+    list-style: none;
+    font-family: 'roboto_condensedregular';
+}
+
+.about-container .about-menu-item.active, .about-container .about-menu-item.active a {
+    list-style: inside;
+    font-weight: bold;
+    color: white;
+}
+
 @media only screen and (max-width: 1200px) {
-    .home-container .landing-section {
+    .home-container .landing-section, .about-container .about-section {
         padding-top: 200px;
     }
 
@@ -347,7 +390,7 @@ body:not(.menu-on-top).desktop-detected {
 }
 
 @media only screen and (max-width: 960px) {
-    .home-container .landing-section {
+    .home-container .landing-section, .about-container .about-section {
         padding-top: 150px;
     }
 
@@ -371,7 +414,7 @@ body:not(.menu-on-top).desktop-detected {
         font-size: 12px;
     }
 
-    .home-container .landing-section {
+    .home-container .landing-section, .about-container .about-section {
         padding-top: 100px;
     }
 
