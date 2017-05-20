@@ -175,7 +175,12 @@ body:not(.menu-on-top).desktop-detected {
     background-color: #69d2f5;
 }
 
+nav ul li.active > a:before {
+    content: "";
+}
+
 /*---------------------------------------------------------------------------*/
+
 .header-section {
     padding: 10px;
 }
