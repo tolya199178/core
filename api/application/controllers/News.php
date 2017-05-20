@@ -10,8 +10,8 @@ class News extends Base_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('buyers_model');
-        $this->model = $this->buyers_model;
+        $this->load->model('news_model');
+        $this->model = $this->news_model;
     }
     public function index_get()
     {
@@ -21,11 +21,8 @@ class News extends Base_Controller
 
     public function index_post()
     {
-        $data = [];
-        $data['id'] = $_REQUEST['id'];
-        $data['title'] = $_REQUEST['title'];
-        $data['content'] = $_REQUEST['content'];
-        $data['imageurl'] = $_REQUEST['imageurl'];
+        $data = json_decode(file_get_contents('php://input'), true);
+
         $result = $this->model->saveRow($data);
         $this->set_response($result, 200);
     }

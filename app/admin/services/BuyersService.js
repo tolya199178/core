@@ -5,7 +5,7 @@
         .factory('BuyersService', ['$http', '$q', 'ServerURL', function ($http, $q, ServerURL) {
             return {
                 get: function () {
-                    var url = ServerURL + 'news';
+                    var url = ServerURL + 'buyers';
                     var deferred = $q.defer();
                     $http.get(url).then(function (res) {
                         deferred.resolve(res);
@@ -16,7 +16,7 @@
                 },
                 delete: function (rowId) {
                     var deferred = $q.defer();
-                    var url = ServerURL + 'news?id=' + rowId;
+                    var url = ServerURL + 'buyers?id=' + rowId;
                     $http.delete(url).then(function (res) {
                         deferred.resolve(res);
                     }, function (err) {
@@ -25,7 +25,7 @@
                     return deferred.promise;
                 },
                 sendMail: function (data) {
-                    var url = ServerURL + 'news';
+                    var url = ServerURL + 'buyers';
                     var deferred = $q.defer();
                     $http({
                         method: 'POST',
