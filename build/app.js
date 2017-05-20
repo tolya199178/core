@@ -3912,20 +3912,6 @@ angular.module('app.graphs').controller('FlotCtrl', function ($scope) {
         label : "Site visitors"
     }];
 });
-angular.module('app').directive('youtube', function ($sce) {
-    return {
-        restrict: 'EA',
-        template: "<iframe class='video-responsive' src='{{url}}' frameborder='0' allowfullscreen></iframe>",
-        scope: {
-            video: '@video'
-        },
-        link: function (scope) {
-            scope.$watch('video', function (video_id) {
-                scope.url = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + video_id);
-            });
-        }
-    };
-});
 "use strict";
 
 angular.module('app.home').controller('HomeAboutController', function ($scope, $window) {
@@ -3947,7 +3933,7 @@ angular.module('app.home').controller('HomeAboutController', function ($scope, $
 
 "use strict";
 
-angular.module('app.home').controller('ContactUsController', function ($scope, $window) {
+angular.module('app.home').controller('HomeContactUsController', function ($scope, $window) {
 
 })
 
@@ -4081,6 +4067,20 @@ angular.module('app.home').controller('HomeNewsController', function ($scope, $w
     };
 })
 
+angular.module('app').directive('youtube', function ($sce) {
+    return {
+        restrict: 'EA',
+        template: "<iframe class='video-responsive' src='{{url}}' frameborder='0' allowfullscreen></iframe>",
+        scope: {
+            video: '@video'
+        },
+        link: function (scope) {
+            scope.$watch('video', function (video_id) {
+                scope.url = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + video_id);
+            });
+        }
+    };
+});
 "use strict";
 
 angular.module('app.inbox').directive('messageLabels', function (InboxConfig) {

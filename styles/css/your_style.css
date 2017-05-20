@@ -63,6 +63,14 @@ body:not(.menu-on-top).desktop-detected {
     padding: 20px;
 }
 
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
 .padding-40 {
     padding: 40px;
 }
@@ -77,6 +85,10 @@ body:not(.menu-on-top).desktop-detected {
 
 .margin-top-20 {
     margin-top: 20px;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
 }
 
 .margin-40 {
@@ -99,6 +111,17 @@ body:not(.menu-on-top).desktop-detected {
     font-family: 'roboto_condensedregular' !important;
 }
 
+.input2 {
+    border: 1px solid grey;
+    text-align: center;
+    background: transparent;
+    padding: 7px;
+    width: 500px;
+    max-width: calc(100vw - 60px);
+    color: white;
+}
+
+/* for directives */
 .loading-sheath {
     background: rgba(255, 255, 255, 0.7);
     width: 100%;
@@ -189,7 +212,7 @@ body:not(.menu-on-top).desktop-detected {
 .logo-text {
     /*width: 200px;*/
     padding-top: 15px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     font-family: "sf-transrobotics-extended";
     display: inline-block;
 }
@@ -405,10 +428,37 @@ body:not(.menu-on-top).desktop-detected {
     font-family: 'roboto_condensedbold';
 }
 
+/*--------------- contact us ----------------------------*/
+
+.contact-us-section {
+    background: url("../img/temp/contact_us_bg_1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 35vw;
+    text-align: center;
+    padding-top: 250px;
+    color: white;
+    min-height: 300px;
+}
+
+.contact-us-section h1 {
+    font-size: 80px;
+    letter-spacing: 30px;
+    text-indent: 30px;
+}
+
+.contact-ways i {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+}
+
 /*--------------- media queries ----------------------------*/
 
 @media only screen and (max-width: 1200px) {
-    .home-container .landing-section, .about-container .about-section, .news-container .news-section {
+    .home-container .landing-section, .about-container .about-section, .news-container .news-section, .contact-us-container .contact-us-section {
         padding-top: 200px;
     }
 
@@ -420,11 +470,14 @@ body:not(.menu-on-top).desktop-detected {
 }
 
 @media only screen and (max-width: 960px) {
-    .home-container .landing-section, .about-container .about-section, .news-container .news-section {
+    .home-container .landing-section,
+    .about-container .about-section,
+    .news-container .news-section,
+    .contact-us-container .contact-us-section {
         padding-top: 150px;
     }
 
-    .home-container h1 {
+    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1 {
         font-size: 40px;
         letter-spacing: 10px;
         text-indent: 10px;
@@ -444,11 +497,11 @@ body:not(.menu-on-top).desktop-detected {
         font-size: 12px;
     }
 
-    .home-container .landing-section, .about-container .about-section, .news-container .news-section {
+    .home-container .landing-section, .about-container .about-section, .news-container .news-section, .contact-us-container .contact-us-section {
         padding-top: 100px;
     }
 
-    .home-container h1 {
+    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1 {
         font-size: 30px;
         letter-spacing: 0;
     }
