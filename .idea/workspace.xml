@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1680ec65-f80e-4459-89ca-811c845bf968" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js" afterPath="$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views/users.html" afterPath="$PROJECT_DIR$/app/admin/views/users.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/your_style.css" afterPath="$PROJECT_DIR$/styles/css/your_style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,21 +14,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="users.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views/users.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="42" column="193" lean-forward="false" selection-start-line="42" selection-start-column="193" selection-end-line="42" selection-end-column="193" />
+            <state relative-caret-position="136">
+              <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -118,8 +124,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/styles/css/your_style.css" />
-        <option value="$PROJECT_DIR$/app/admin/views/users.html" />
         <option value="$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js" />
+        <option value="$PROJECT_DIR$/app/admin/views/users.html" />
       </list>
     </option>
   </component>
@@ -398,7 +404,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="usersctr&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/UsersCtrl.js&#10;you&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;bower&#9;FILE&#9;file://C:/wamp/www/shadowcore/bower.json&#10;your&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;join&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/JoinTeamCtrl.js&#10;about&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;hea&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;modu&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;header&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;abouh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;high_conc&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about-templates/high_concept.html&#10;home&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/HomeCtrl.js&#10;FOOTER&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;na&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;buyse&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/services/BuyersService.js&#10;news&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/NewsCtrl.js&#10;buye&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/BuyersCtrl.js&#10;loading.js&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/directives/loading.js&#10;script&#9;FILE&#9;file://C:/wamp/www/shadowcore/app.scripts.json&#10;buyeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/views/buyers.html&#10;module&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/module.js&#10;footerh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;modul&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;footer&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/footer.tpl.html&#10;index&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html&#10;app&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/app.js&#10;headerht&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;headtp&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/header.tpl.html&#10;navi&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;indeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html" />
+    <property name="SearchEverywhereHistoryKey" value=".gi&#9;FILE&#9;file://C:/wamp/www/shadowcore/.gitignore&#10;usersctr&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/UsersCtrl.js&#10;you&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;bower&#9;FILE&#9;file://C:/wamp/www/shadowcore/bower.json&#10;your&#9;FILE&#9;file://C:/wamp/www/shadowcore/styles/css/your_style.css&#10;join&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/JoinTeamCtrl.js&#10;about&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;hea&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;modu&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;header&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;abouh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about.html&#10;high_conc&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/views/about-templates/high_concept.html&#10;home&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/controllers/HomeCtrl.js&#10;FOOTER&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;na&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;buyse&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/services/BuyersService.js&#10;news&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/NewsCtrl.js&#10;buye&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/controllers/BuyersCtrl.js&#10;loading.js&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/directives/loading.js&#10;script&#9;FILE&#9;file://C:/wamp/www/shadowcore/app.scripts.json&#10;buyeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/views/buyers.html&#10;module&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/admin/module.js&#10;footerh&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/footer.html&#10;modul&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/module.js&#10;footer&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/footer.tpl.html&#10;index&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html&#10;app&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/app.js&#10;headerht&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/home/partials/header.html&#10;headtp&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/header.tpl.html&#10;navi&#9;FILE&#9;file://C:/wamp/www/shadowcore/app/layout/partials/navigation.tpl.html&#10;indeh&#9;FILE&#9;file://C:/wamp/www/shadowcore/index.html" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
   </component>
   <component name="RunDashboard">
@@ -502,15 +508,15 @@
       <workItem from="1495178185779" duration="2977000" />
       <workItem from="1495185048625" duration="3025000" />
       <workItem from="1495254255053" duration="17343000" />
-      <workItem from="1495275994884" duration="6392000" />
+      <workItem from="1495275994884" duration="6467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56141000" />
+    <option name="totallyTimeSpent" value="56216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="959" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="959" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -781,14 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/home/controllers/JoinTeamCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -901,18 +899,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views/users.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="42" column="193" lean-forward="false" selection-start-line="42" selection-start-column="193" selection-end-line="42" selection-end-column="193" />
+        <state relative-caret-position="255">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controllers/UsersCtrl.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state relative-caret-position="51">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/views/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding />
         </state>
       </provider>
