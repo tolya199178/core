@@ -60,6 +60,8 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();
+        }, function(){
+            $scope.loading = false;
         });
     };
 });

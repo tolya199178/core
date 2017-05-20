@@ -1,5 +1,69 @@
-<div class="container-fluid">
-    <!-- content -->
-    Contact Us
+<loading visible="loading"></loading>
+<div id="content">
+    <div class="text-right margin-bottom-10">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="addRow()">Add New</button>
+    </div>
+    <section widget-grid id="widget-grid">
+        <div class="row">
+            <article class="col-sm-12">
+                <div jarvis-widget id="standard-datatable-widget" data-widget-color="darken" data-widget-editbutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                        <h2>ContactUs Management</h2>
+                    </header>
+                    <div>
+                        <div class="widget-body no-padding">
+                            <div class="table-responsive">
+                                <table st-table="tableData" st-safe-src="safeData" st-select-mode="multiple" class="table table-bordered">
+                                    <thead>
+                                    <tr style="text-align: center;">
+                                        <th rowspan="2">No</th>
+                                        <th st-sort="email">email</th>
+                                        <th st-sort="firstname">First Name</th>
+                                        <th st-sort="lastname">Last Name</th>
+                                        <th rowspan="2">Content</th>
+                                        <th rowspan="2">Contact Date</th>
+                                        <th rowspan="2">Action</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="email"/>
+                                        </th>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="firstname"/>
+                                        </th>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="lastname"/>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr st-select-row="row" st-select-mode="single" ng-repeat="row in tableData" ng-dblclick="editRow(row)">
+                                        <td>{{$index + 1}}</td>
+                                        <td>{{row.email}}</td>
+                                        <td>{{row.firstname}}</td>
+                                        <td>{{row.lastname}}</td>
+                                        <td>{{row.content}}</td>
+                                        <td>{{row.contacted}}</td>
+                                        <td class="text-center controls-td">
+                                            <a ng-click="deleteRow(row.id,$index)">Delete</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td colspan="7" class="text-center">
+                                            <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 </div>
-	
+
