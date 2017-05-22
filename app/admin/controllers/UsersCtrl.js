@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.admin').controller('UsersController', function ($scope, $timeout) {
+angular.module('app.admin').controller('UsersController', function ($scope, $timeout, UsersService) {
     $scope.oldPwd = '';
     $scope.newPwd = '';
     $scope.retypePwd = '';
@@ -8,12 +8,16 @@ angular.module('app.admin').controller('UsersController', function ($scope, $tim
     $scope.save = function () {
         if (confirm('Are you sure want to change password?')) {
             $scope.loading = true;
-            $timeout(function () {
+            var data = {
+                oldPwd: $scope.oldPwd,
+                newPwd: $scope.newPwd
+            };
+            UsersService.setPassword(data).then(function () {
                 $scope.loading = false;
-                $timeout(function () {
-                    alert('Success!!!');
-                }, 100);
-            }, 500);
+                //$scope.getData();
+            }, function(){
+                $scope.loading = false;
+            });
         }
     };
 });

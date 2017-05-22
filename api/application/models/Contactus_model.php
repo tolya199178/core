@@ -21,6 +21,36 @@ class Contactus_model extends CI_Model
         return $query->result();
     }
 
+    public function addRow($data)
+    {
+
+
+        $cols = array('email','firstname', 'lastname', 'content');
+        $row = array();
+        foreach ($cols as $col) {
+            $row[$col] = isset($data[$col]) ? $data[$col] : '';
+        }
+
+        $row['contacted'] = date('Y-m-d h:i:s');
+        $this->db->insert($this->table, $row);
+        $row['id'] = $this->db->insert_id();
+
+        return $row;
+    }
+
+    public function saveMail($data)
+    {
+        //$row['purchased'] = date('Y-m-d h:i:s');
+        $insertData = [
+                'subject' => $data['subject'],
+                'content' => $data['content'],
+                'mail_flag' => 'contactus',
+                'senddate' => date('Y-m-d h:i:s'),
+                'receive_emails' => $data['emailstr']
+        ];
+        $result = $this->db->insert('sendmails', $insertData);
+    }
+
     public function saveRow($data)
     {
 

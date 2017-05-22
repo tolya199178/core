@@ -21,12 +21,21 @@ class Buyers_model extends CI_Model
         return $query->result();
     }
 
+    public function addRow($email){
+
+        $data = ['email'=>$email, 'purchased'=>date('Y-m-d h:i:s')];
+        $this->db->insert($this->table, $data);
+        $result = ['id'=>$this->db->insert_id(), 'posted'=>$data['purchased']];
+        return $result;
+    }
+
     public function saveMail($data)
     {
         //$row['purchased'] = date('Y-m-d h:i:s');
         $insertData = [
                 'subject' => $data['subject'],
                 'content' => $data['content'],
+                'mail_flag' => 'buyers',
                 'senddate' => date('Y-m-d h:i:s'),
                 'receive_emails' => $data['emailstr']
         ];

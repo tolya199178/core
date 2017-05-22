@@ -25,7 +25,7 @@
                     return deferred.promise;
                 },
                 sendMail: function (data) {
-                    var url = ServerURL + 'buyers';
+                    var url = ServerURL + 'buyers/sendmail';
                     var deferred = $q.defer();
                     $http({
                         method: 'POST',
