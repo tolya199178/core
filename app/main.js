@@ -10,5 +10,5 @@ $(function () {
     moment.locale('en')
 
     angular.bootstrap(document, ['app']);
- 
+
 });

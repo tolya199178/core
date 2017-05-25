@@ -102,6 +102,5 @@ angular.module('app', [
             $rootScope.$apply();
         });
 
-    });
-
-
+    })
+;

@@ -7,75 +7,64 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
         {
             name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
             duration: "25:46",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
             code: "Q7HGmUBQOHM"
         }, {
             name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
             duration: "17:46",
-            description: "Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim",
+            description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
             code: "du1IFCWaD5k"
         }, {
             name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
             duration: "47:46",
-            description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+            description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
             code: "C5Qp1hlXLko"
         }, {
             name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
             duration: "25:46",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
             code: "Q7HGmUBQOHM"
         }, {
             name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
             duration: "17:46",
-            description: "Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim",
+            description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
             code: "du1IFCWaD5k"
         }, {
             name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
             duration: "47:46",
-            description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+            description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
             code: "C5Qp1hlXLko"
         }
     ];
 
     $scope.characters = [
         {
-            title: "ASSAULT",
+            category: "Assault",
+            specs: [
+                "Standard mercenary",
+                "Armed with assault rifle and grenade launcher",
+                "Efficient at medium-range assaults",
+                "Medium teleport countdown"
+            ],
+            description: "Choose the assault character if your playing style is aggressive and dynamic. The standard soldier is equipped to move quickly through the game environment. You are armed with an assault rifle and a grenade launcher for maximum damage at medium range.  With a medium amount of armour and a medium teleport cooldown for immersive gameplay."
+        },{
             category: "Consecteur",
             specs: [
-                "Nemo enim ipsam",
-                "Voluptatem quia voluptas",
-                "Sit aspernatur",
-                "Aut odit aut fugit",
-                "Sed quia consequuntur",
-                "Magni dolores eos qu"
+                "Slow-moving and heavily armoured",
+                "Strong defence and strategy kills",
+                "Equipped with shotgun and EMP cannon for close-range assault",
+                "Slow teleport cooldown"
             ],
-            description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-        },
-        {
-            title: "TESLA",
-            category: "Consecteur",
+            description: "Join the ranks of the support team for one of the international conglomerates battling for control of Earth’s resources and territories. Your character is heavily armoured and adept at taking and holding territory. Utilize your augmented body and the cybernetic implants that give you enhanced abilities. Support characters are capable of massive damage at close range with their shotgun. They are also equipped with an EMP cannon that doesn’t do any damage at all, but can temporarily stun enemies, preventing them from teleporting or shooting back."
+        },{
+            category: "Recon",
             specs: [
-                "Nemo enim ipsam",
-                "Voluptatem quia voluptas",
-                "Sit aspernatur",
-                "Aut odit aut fugit",
-                "Sed quia consequuntur",
-                "Magni dolores eos qu"
+                "Fast and mobile",
+                "Minimal amount of body armour",
+                "Short teleport countdown",
+                "Efficient at short range assault"
             ],
-            description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-        },
-        {
-            title: "RECON",
-            category: "Consecteur",
-            specs: [
-                "Nemo enim ipsam",
-                "Voluptatem quia voluptas",
-                "Sit aspernatur",
-                "Aut odit aut fugit",
-                "Sed quia consequuntur",
-                "Magni dolores eos qu"
-            ],
-            description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            description: "Recon characters strike a balance between mobility and assault capabilities. More lightly armoured than other characters, they are fast and hard to hit. You benefit from a shorter teleport cooldown and high-damage railgun and a machine pistol.  Move quickly and efficiently between locations and launch surprise attacks on your unsuspecting enemies."
         }
     ];
 
