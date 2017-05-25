@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('app.home').controller('HomeController', function ($scope, $window) {
+angular.module('app.home').controller('HomeController', function ($scope, $window, ServerURL) {
     $scope.screenWidth = $window.innerWidth;
 
     $scope.videos = [
@@ -81,5 +81,9 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
 
     $scope.scrollDown = function () {
         $window.scrollTo(0, angular.element('.video-section').offset().top - 100);
+    };
+
+    $scope.shop = function () {
+        $window.open(ServerURL + "paypal/order", "_self");
     };
 });
