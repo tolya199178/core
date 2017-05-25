@@ -102,5 +102,9 @@ angular.module('app', [
             $rootScope.$apply();
         });
 
+        $rootScope.$on('$stateChangeSuccess', function() {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        });
+
     })
 ;
