@@ -28,7 +28,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost') {
 //    $config['base_url'] = 'http://127.0.0.5/shadowcore/api/';
     $config['base_url'] = 'http://127.0.0.5/';
 } else {
-    $config['base_url'] = 'http://ezsportrpt.com/server/';
+    $config['base_url'] = 'http://127.0.0.5/';
 }
 
 /*
@@ -517,3 +517,14 @@ $config['rewrite_short_tags'] = FALSE;
   | Array:		array('10.0.1.200', '192.168.5.0/24')
  */
 $config['proxy_ips'] = '';
+
+
+$config['paypal'] = array(
+        'clientId' => 'AVf1WAcr6szn1D7UnB4BdC23xc4GzfgvLA_pYkm2-HBYcky-NSD4MnKJP56MJH_SbW6Hc9jlPBlgNjzh',
+        'clientSecret' => 'EJTZyqn72V6MQN3_DE5aNx8sHQxeEc6PqDdcJZ_sCPfRgbTyJRhV0S_hN3eSZhMhQWTLsALQFXchCBle',
+        'appName' => 'shadowcore',
+        'price' => 42
+);
+
+$config['app'] = array('path' => '/app/apple-971117_1920.zip');
+

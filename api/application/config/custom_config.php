@@ -19,4 +19,4 @@ define('ROLE_ADMIN', 2);
 define('ROLE_AUTHOR', 3);
 define('ROLE_PRESENTER', 4);
 
-define('UPLOAD_PATH', FCPATH . 'assets' . DIRECTORY_SEPARATOR . 'uploads');
+define('UPLOAD_PATH', FCPATH . 'uploads' . DIRECTORY_SEPARATOR);
