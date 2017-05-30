@@ -89,4 +89,16 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
+        .state('app.admin.udids', {
+            url: '/udid',
+            data: {
+                title: 'UDID'
+            },
+            views: {
+                "content@app": {
+                    templateUrl: 'app/admin/views/udids.html',
+                    controller: 'UdidsController'
+                }
+            }
+        })
 });

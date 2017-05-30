@@ -25,12 +25,13 @@ date_default_timezone_set('America/Los_Angeles');
   |
  */
 if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    $config['base_url'] = 'http://localhost/shadowcore/';
+} else if ($_SERVER['SERVER_NAME'] === '127.0.0.5') {
     $config['base_url'] = 'http://127.0.0.5/';
-//    $config['base_url'] = 'http://localhost/shadowcore/api/';
 } else {
-    $config['base_url'] = 'http://127.0.0.5/';
-//    $config['base_url'] = 'http://localhost/shadowcore/api/';
+    $config['base_url'] = 'http://serebrumlab.com/api/';
 }
+
 
 /*
   |--------------------------------------------------------------------------
