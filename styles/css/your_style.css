@@ -85,6 +85,10 @@ body:not(.menu-on-top).desktop-detected {
     padding: 20px;
 }
 
+.padding-top-5 {
+    padding-top: 5px;
+}
+
 .padding-top-20 {
     padding-top: 20px;
 }
@@ -108,9 +112,15 @@ body:not(.menu-on-top).desktop-detected {
 .margin-top-20 {
     margin-top: 20px;
 }
-
+.margin-top-30 {
+    margin-top: 30px;
+}
 .margin-left-10 {
     margin-left: 10px;
+}
+
+.margin-left-40 {
+    margin-left: 40px;
 }
 
 .margin-40 {
@@ -135,6 +145,10 @@ body:not(.menu-on-top).desktop-detected {
 
 .font-roboto-condensed {
     font-family: 'roboto_condensedregular' !important;
+}
+
+.font-14px {
+    font-size: 14px;
 }
 
 .input2 {
@@ -192,15 +206,19 @@ nav ul li.active > a:before {
     border-top: 1px solid grey;
 }
 
+.social-icons {
+    margin-top: 32px;
+    margin-right: 40px;
+}
+
 .social-icons div {
     border: 2px solid white;
     border-radius: 50%;
     color: white;
-    font-size: xx-small;
-    padding: 5px;
-    padding-left: 21px;
-    width: 30px;
-    height: 30px;
+    font-size: x-small;
+    padding: 8px 5px 5px 21px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
     display: inline-block;
     cursor: pointer;
@@ -242,15 +260,21 @@ nav ul li.active > a:before {
 
 .logo-text {
     /*width: 200px;*/
-    padding-top: 15px;
-    /*padding-left: 10px;*/
+    padding-top: 32px;
+    padding-left: 40px;
     font-family: "sf-transrobotics-extended";
+    font-size: 14px;
+    display: inline-block;
+}
+
+.logo-text span {
+    transform: scaleX(1.7);
     display: inline-block;
 }
 
 .top-menu {
     display: inline-block;
-    padding-top: 20px;
+    padding-top: 47px;
     text-align: center;
 }
 
@@ -258,13 +282,13 @@ nav ul li.active > a:before {
     margin: 0px 20px;
     color: white;
     font-weight: 900;
-    font-size: smaller;
+    font-size: 14px;
     font-family: 'roboto_condensedregular';
     letter-spacing: 0.2em;
 }
 
 .top-menu .active a, .bottom-menu .active a {
-    color: grey;
+    color: #959595;
     font-weight: bold;
 }
 
@@ -286,14 +310,22 @@ nav ul li.active > a:before {
     background: transparent;
     border-radius: 0;
     border: 2px solid white;
-    font-family: 'roboto_condensedlight';
-    letter-spacing: 0.1em;
+    font-family: 'roboto_condensedregular';
+    font-weight: bold;
+    font-size: 13px;
+    padding: 17px;
+    width: 216px;
 }
 
 .btn-white-border:hover {
     background: transparent;
     border-color: grey;
     color: grey;
+}
+
+.sub-title {
+    font-size: 38px;
+    font-family: 'roboto_condensedlight';
 }
 
 /*--------------- home ----------------------------*/
@@ -303,16 +335,15 @@ nav ul li.active > a:before {
     background-repeat: no-repeat;
     height: 50vw;
     text-align: center;
-    padding-top: 250px;
+    padding-top: 400px;
     color: white;
     min-height: 400px;
-
 }
 
 .landing-section h1 {
-    font-size: 80px;
-    letter-spacing: 30px;
-    text-indent: 30px;
+    font-size: 102px;
+    letter-spacing: 66px;
+    text-indent: 66px;
 }
 
 .text-condensed-light {
@@ -322,19 +353,19 @@ nav ul li.active > a:before {
 
 .arrow-wrapper {
     position: relative;
-    margin-top: -15px;
-    margin-bottom: -15px;
+    margin-top: -25px;
+    margin-bottom: -25px;
     z-index: 1;
 }
 
 .arrow-wrapper .arrow-down {
     background: black;
-    color: grey;
-    width: 30px;
-    height: 30px;
+    color: white;
+    width: 50px;
+    height: 50px;
     font-size: x-large;
     border-radius: 50%;
-    padding-top: 4px;
+    padding-top: 12px;
     font-weight: bold;
     cursor: pointer;
 }
