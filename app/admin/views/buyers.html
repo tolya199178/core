@@ -20,6 +20,9 @@
                                         <th rowspan="2">No</th>
                                         <th rowspan="2"><input type="checkbox" ng-change="checkAll();" ng-model="allCheck"></th>
                                         <th st-sort="email">Email</th>
+                                        <th st-sort="first_name" rowspan="2">Name</th>
+                                        <th st-sort="country_code" rowspan="2">Country</th>
+                                        <th st-sort="city" rowspan="2">City</th>
                                         <th st-sort="purchased_date">Purchased Date</th>
                                         <th rowspan="2">Action</th>
                                     </tr>
@@ -37,6 +40,9 @@
                                         <td>{{$index + 1}}</td>
                                         <td><input type="checkbox" ng-model="row.checked"></td>
                                         <td>{{row.email}}</td>
+                                        <td>{{row.first_name + ' ' + row.last_name}}</td>
+                                        <td>{{row.country_code}}</td>
+                                        <td>{{row.city}}</td>
                                         <td>{{row.purchased}}</td>
                                         <td class="text-center controls-td">
                                             <a ng-click="deleteRow(row.id, $index)">Delete</a>
@@ -45,7 +51,7 @@
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <td colspan="5" class="text-center">
+                                        <td colspan="8" class="text-center">
                                             <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
                                         </td>
                                     </tr>

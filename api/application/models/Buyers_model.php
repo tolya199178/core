@@ -21,11 +21,26 @@ class Buyers_model extends CI_Model
         return $query->result();
     }
 
-    public function addRow($email){
+    public function addRow($payerInfo){
 
-        $data = ['email'=>$email, 'purchased'=>date('Y-m-d h:i:s')];
-        $this->db->insert($this->table, $data);
-        $result = ['id'=>$this->db->insert_id(), 'posted'=>$data['purchased']];
+        $this->db->insert($this->table, $payerInfo);
+        $result = ['id'=>$this->db->insert_id(), 'posted'=>$payerInfo['purchased']];
+
+        $to      = $payerInfo['email'];
+        $subject = 'Welcome to shadowcore !!!';
+        $message = '';
+
+        $emailOptions = [
+                'to' => $to,
+                'message' => $message,
+                'subject' => $subject
+        ];
+        if (send_email($emailOptions)) {
+            $emailOptions['emailstr'] = $emailOptions['to'];
+            $this->saveMail($emailOptions);
+        }
+
+
         return $result;
     }
 

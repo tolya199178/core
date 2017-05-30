@@ -24,8 +24,10 @@ date_default_timezone_set('America/Los_Angeles');
   | a PHP script and you can easily do that on your own.
   |
  */
+$config['server_url'] = 'http://localhost:8888';
+
 if ($_SERVER['SERVER_NAME'] === 'localhost') {
-    $config['base_url'] = 'http://localhost/shadowcore/';
+    $config['base_url'] = 'http://localhost/shadowcore/api/';
 } else if ($_SERVER['SERVER_NAME'] === '127.0.0.5') {
     $config['base_url'] = 'http://127.0.0.5/';
 } else {

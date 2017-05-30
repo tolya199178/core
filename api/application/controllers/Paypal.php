@@ -5,7 +5,6 @@ if (!defined('BASEPATH'))
 
 
 require_once(dirname(__DIR__) . '/libraries/PayPal/autoload.php');
-//require dirname(__FILE__) . '/Base_Controller.php';
 
 use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Rest\ApiContext;
@@ -17,14 +16,23 @@ use PayPal\Api\Payer;
 use PayPal\Api\Payment;
 use PayPal\Api\RedirectUrls;
 use PayPal\Api\Transaction;
+use PayPal\Api\ResultPrinter;
 
-class Paypal extends CI_Controller {
 
-    public function __construct() {
+use PayPal\Api\ExecutePayment;
+use PayPal\Api\PaymentExecution;
+
+
+class paypal extends CI_Controller
+{
+
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function order() {
+    public function order()
+    {
         $paypalConf = $this->config->item('paypal');
         $clientId = $paypalConf['clientId'];
         $clientSecret = $paypalConf['clientSecret'];
@@ -36,20 +44,18 @@ class Paypal extends CI_Controller {
 
         $apiContext = new ApiContext(
                 new OAuthTokenCredential(
-                $clientId, $clientSecret
+                        $clientId, $clientSecret
                 )
         );
         $apiContext->setConfig(
                 array(
-                    'mode' => $mode,
-                    'log.LogEnabled' => false
+                        'mode' => $mode,
+                        'log.LogEnabled' => false
                 )
         );
 
         $payer = new Payer();
         $payer->setPaymentMethod("paypal");
-
-        $payerinfo = $payer->getPayerInfo();
 
 
         $item1 = new Item();
@@ -79,8 +85,8 @@ class Paypal extends CI_Controller {
         $baseUrl = $this->config->item('base_url');
         $redirectUrls = new RedirectUrls();
 
-        $redirectUrls->setReturnUrl($baseUrl."paypal/ordersucess?success=true&tk1=" . $token[0] . "&tk2=" . $token[1])
-                ->setCancelUrl($baseUrl."paypal/orderfailed?success=false");
+        $redirectUrls->setReturnUrl($baseUrl . "paypal/ordersucess?success=true&tk1=" . $token[0] . "&tk2=" . $token[1])
+                ->setCancelUrl($baseUrl . "paypal/orderfailed?success=false");
 
         $payment = new Payment();
         $payment->setIntent("order")
@@ -103,17 +109,70 @@ class Paypal extends CI_Controller {
         die();
     }
 
-    public function ordersucess() {
-        $tk1 = (isset($params['tk1'])) ? $params['tk1'] : '' ;
-        $tk2 = (isset($params['tk2'])) ? $params['tk2'] : '' ;
+    public function ordersucess()
+    {
+        $params = $_GET;
+        $tk1 = $params['tk1'];
+        $tk2 = $params['tk2'];
+        $mode = "sandbox"; //or live
+
+
+        $paypalConf = $this->config->item('paypal');
+        $clientId = $paypalConf['clientId'];
+        $clientSecret = $paypalConf['clientSecret'];
+        $appName = $paypalConf['appName'];
+        $apiContext = new ApiContext(
+                new OAuthTokenCredential(
+                        $clientId, $clientSecret
+                )
+        );
+        $apiContext->setConfig(
+                array(
+                        'mode' => $mode,
+                        'log.LogEnabled' => false
+                )
+        );
+
+
+        $paymentId = $_GET['paymentId'];
+        $payment = Payment::get($paymentId, $apiContext);
+        $payerId = $_GET['PayerID'];
+
+        $execution = new PaymentExecution();
+        $execution->setPayerId($payerId);
+        $paypalInfo = null;
+        try {
+            // Execute payment
+            $result = $payment->execute($execution, $apiContext);
+            $paypalInfo = $result->payer->payer_info;
+        } catch (PayPal\Exception\PayPalConnectionException $ex) {
+            echo $ex->getCode();
+            echo $ex->getData();
+            die($ex);
+        } catch (Exception $ex) {
+            die($ex);
+        }
+
         if ($this->checkToken($tk1, $tk2)) {
             $this->session->set_userdata(array('paymentSucess' => true));
+
+            $this->load->model('buyers_model');
+            $payerInfo = [
+                    'email'=>$paypalInfo->email,
+                    'first_name'=>$paypalInfo->first_name,
+                    'last_name'=>$paypalInfo->last_name,
+                    'payer_id'=>$paypalInfo->payer_id,
+                    'country_code'=>$paypalInfo->shipping_address->country_code,
+                    'city'=>$paypalInfo->shipping_address->city,
+                    'purchased'=>date('Y-m-d h:i:s')
+            ];
+            $this->buyers_model->addRow($payerInfo);
 
             $file = UPLOAD_PATH . 'apps/shadowcore.exe';
             if (file_exists($file)) {
                 header('Content-Description: File Transfer');
                 header('Content-Type: application/octet-stream');
-                header('Content-Disposition: attachment; filename="'.basename($file).'"');
+                header('Content-Disposition: attachment; filename="' . basename($file) . '"');
                 header('Expires: 0');
                 header('Cache-Control: must-revalidate');
                 header('Pragma: public');
@@ -121,25 +180,26 @@ class Paypal extends CI_Controller {
                 readfile($file);
                 exit;
             }
-
-
             die("Payment Sucess");
         } else {
             die("Token Is Invailed");
         }
     }
 
-    public function orderfailed() {
+    public function orderfailed()
+    {
         die("Payement Failed");
     }
 
-    private function createToken() {
+    private function createToken()
+    {
         $tk1 = substr(md5(uniqid(rand(), true)), 0, 12);
         $tk2 = substr($tk1, 0, 12);
         return array($tk1, $tk2);
     }
 
-    private function checkToken($tk1, $tk2) {
+    private function checkToken($tk1, $tk2)
+    {
         return substr($tk1, 0, 12) == $tk2;
     }
 
