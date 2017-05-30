@@ -50,8 +50,6 @@ class Paypal extends CI_Controller {
         $payer->setPaymentMethod("paypal");
 
         $payerinfo = $payer->getPayerInfo();
-        print_r($payerinfo);
-        exit();
 
 
         $item1 = new Item();
@@ -77,11 +75,10 @@ class Paypal extends CI_Controller {
                 ->setDescription("Payment description")
                 ->setInvoiceNumber(uniqid());
 
-
-
         $token = $this->createToken();
         $baseUrl = $this->config->item('base_url');
         $redirectUrls = new RedirectUrls();
+
         $redirectUrls->setReturnUrl($baseUrl."paypal/ordersucess?success=true&tk1=" . $token[0] . "&tk2=" . $token[1])
                 ->setCancelUrl($baseUrl."paypal/orderfailed?success=false");
 
@@ -107,9 +104,6 @@ class Paypal extends CI_Controller {
     }
 
     public function ordersucess() {
-        $params = $_GET;
-        print_r($_GET);
-        exit;
         $tk1 = (isset($params['tk1'])) ? $params['tk1'] : '' ;
         $tk2 = (isset($params['tk2'])) ? $params['tk2'] : '' ;
         if ($this->checkToken($tk1, $tk2)) {
