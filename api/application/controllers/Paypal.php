@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 
-require_once(dirname(__DIR__) . '/libraries/PayPal/autoload.php');
+require_once(dirname(__DIR__) . '/libraries/vendor/autoload.php');
 
 use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Rest\ApiContext;
