@@ -60,11 +60,18 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <img class="character-img img-responsive margin-auto" ng-src="{{currCharacter.image}}">
+                        <img class="character-img img-responsive margin-auto" ng-src="{{characters[currSlideInd].image}}">
                     </div>
                     <div class="col-sm-6">
-                        <h3 class="font-roboto-condensed text-white">TESLA</h3>
-                        <slick lazy-load="ondemand" slides-to-show="1" slides-to-scroll="1" dots="true">
+                        <h3 class="font-roboto-condensed text-white">TESLA</h3> {{slickConfig}}
+                        <slick lazy-load="ondemand"
+                               slides-to-show="1"
+                               slides-to-scroll="1"
+                               dots="true"
+                               prev-arrow=".slick-prev-label"
+                               next-arrow=".slick-next-label"
+                               current-index="currSlideInd"
+                               on-after-change="getCurrentSlide()">
                             <div class="text-white" ng-repeat="character in characters">
                                 <div class="font-roboto-condensed font-15px text-grey">Category: <span class="text-white">{{character.category}}</span> <i class="fa fa-bolt bolt"></i></div>
                                 <hr class="border-dashed"/>
@@ -75,6 +82,18 @@
                                 <div class="font-roboto-condensed font-15px text-grey">{{character.description}}</div>
                             </div>
                         </slick>
+                        <div>
+                            <div class="font-roboto-condensed font-15px text-grey pull-left cursor-pointer slick-prev-label">
+                                <img ng-src="./styles/img/temp/arrow_left.png" class="margin-right-13">
+                                PREVIOUS:
+                                <span class="text-white">{{characters[currSlideInd - 1 < 0 ? characters.length - 1 : currSlideInd - 1]['category']}}</span>
+                            </div>
+                            <div class="font-roboto-condensed font-15px text-grey pull-right cursor-pointer slick-next-label">
+                                NEXT:
+                                <span class="text-white margin-right-13">{{characters[currSlideInd > characters.length - 2 ? 0 : currSlideInd + 1]['category']}}</span>
+                                <img ng-src="./styles/img/temp/arrow_right.png">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -597,6 +597,23 @@ nav ul li.active > a:before {
     color: transparent;
 }
 
+.slick-prev-label {
+    opacity: .9;
+}
+
+.slick-prev-label:hover {
+    opacity: 1;
+}
+
+.slick-next-label {
+    opacity: .8;
+}
+
+.slick-next-label:hover {
+    opacity: 1;
+}
+
+
 youtube {
     position: relative;
 }
