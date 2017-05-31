@@ -89,6 +89,6 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
     };
 
     $scope.shop = function () {
-        $window.open(ServerURL + "paypal/order", "_self");
+        $window.open(ServerURL + "paypal/order", "_blank");
     };
 });
