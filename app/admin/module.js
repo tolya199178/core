@@ -29,6 +29,18 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
+        .state('app.admin.newsletter', {
+            url: '/newsletter',
+            data: {
+                title: 'Newsletter User'
+            },
+            views: {
+                "content@app": {
+                    templateUrl: 'app/admin/views/newsletter.html',
+                    controller: 'NewsletterController'
+                }
+            }
+        })
         .state('app.admin.buyers', {
             url: '/buyers',
             data: {

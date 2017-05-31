@@ -9,6 +9,7 @@ class Udid_model extends CI_Model
     function __construct()
     {
         /* Call the Model constructor */
+        $this->load->library('encrypt');
         parent::__construct();
     }
 
@@ -18,7 +19,13 @@ class Udid_model extends CI_Model
         $this->db->from($this->table);
         $this->db->order_by("created", "desc");
         $query = $this->db->get();
-        return $query->result();
+        $results = $query->result();
+        $newData = [];
+        foreach ($results as $row){
+            $row->udid = $this->encrypt->decode($row->udid);
+            $newData[] = $row;
+        }
+        return $newData;
     }
 
     public function saveRow($data)
@@ -30,6 +37,9 @@ class Udid_model extends CI_Model
         $row = array();
         foreach ($cols as $col) {
             $row[$col] = isset($data[$col]) ? $data[$col] : '';
+            if($col == 'udid'){
+                $row[$col] = $this->encrypt->encode($row[$col]);
+            }
         }
 
         if ($rowId != '0') {
