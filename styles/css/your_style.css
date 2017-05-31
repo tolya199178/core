@@ -73,12 +73,20 @@ body:not(.menu-on-top).desktop-detected {
     padding-left: 10px;
 }
 
+.padding-left-50 {
+    padding-left: 50px;
+}
+
 .padding-right-0 {
     padding-right: 0;
 }
 
 .padding-right-10 {
     padding-right: 10px;
+}
+
+.padding-right-50 {
+    padding-right: 50px;
 }
 
 .padding-20 {
@@ -157,6 +165,10 @@ body:not(.menu-on-top).desktop-detected {
     font-size: 14px;
 }
 
+.font-15px {
+    font-size: 15px;
+}
+
 .input2 {
     border: 1px solid grey;
     text-align: center;
@@ -209,6 +221,10 @@ nav ul li.active > a:before {
 
 .slick-dots li button:before, .slick-dots li.slick-active button:before {
     color: white;
+}
+
+.letter-spacing-8px {
+    letter-spacing: 8px;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -346,8 +362,24 @@ nav ul li.active > a:before {
     font-family: 'roboto_condensedlight';
 }
 
-.letter-spacing-8px {
-    letter-spacing: 8px;
+.scroll-top {
+    bottom: 24px;
+    right: 34px;
+    background: darkgrey;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: white!important;
+    font-size: x-large;
+    padding-top: 2px;
+    cursor: pointer;
+    opacity: .2;
+    position: fixed;
+}
+
+.scroll-top:hover {
+    opacity: .5;
+    color: white!important;
 }
 
 /*--------------- home ----------------------------*/
@@ -375,8 +407,6 @@ nav ul li.active > a:before {
 
 .arrow-wrapper {
     position: relative;
-    margin-top: -25px;
-    margin-bottom: -25px;
     z-index: 1;
 }
 
@@ -390,10 +420,23 @@ nav ul li.active > a:before {
     padding-top: 12px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: -25px;
+    margin-bottom: -25px;
 }
 
 .arrow-wrapper .arrow-down:hover {
     color: white;
+}
+
+.bolt {
+    background: #636363;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 3px;
 }
 
 .buy-section {
@@ -436,7 +479,12 @@ nav ul li.active > a:before {
     padding: 10px;
     width: 500px;
     max-width: calc(100vw - 60px);
+    height: 60px;
 
+}
+
+.newsletter-section .email-box::-webkit-input-placeholder {
+    color: #aaa;
 }
 
 .newsletter-section .email-box:active, .newsletter-section .email-box:focus {

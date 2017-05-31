@@ -39,7 +39,8 @@ angular.module('app', [
     'app.home',
     'app.admin',
     'slick',
-    'smart-table'
+    'smart-table',
+    'duScroll'
 ])
     .config(function ($provide, $httpProvider, RestangularProvider) {
 

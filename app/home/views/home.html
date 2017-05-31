@@ -1,6 +1,6 @@
 <div data-smart-include="app/home/partials/header.html" class="placeholder-header"></div>
 
-<div class="container-fluid home-container padding-0">
+<div class="container-fluid home-container padding-0" id="section1">
     <div class="row margin-0">
         <div class="col-xs-12 padding-0">
             <div class="landing-section">
@@ -14,11 +14,11 @@
         </div>
     </div>
     <div class="row margin-0 text-center">
-        <div class="arrow-wrapper cursor-pointer" ng-click="scrollDown();">
+        <a class="arrow-wrapper cursor-pointer" href="#section2" du-smooth-scroll="" du-scrollspy="" offset="30" class="">
             <i class="fa fa-angle-down arrow-down"></i>
-        </div>
+        </a>
     </div>
-    <div class="row margin-0 bg-black text-white video-section">
+    <div class="row margin-0 bg-black text-white video-section" id="section2">
         <div class="col-xs-12 text-center padding-40 margin-top-30">
             <h2 class="sub-title">V I D E O S</h2>
         </div>
@@ -63,14 +63,16 @@
                         <img class="character-img img-responsive margin-auto" ng-src="{{currCharacter.image}}">
                     </div>
                     <div class="col-sm-6">
-                        <h3 class="text-condensed-light text-white">TESLA</h3>
+                        <h3 class="font-roboto-condensed text-white">TESLA</h3>
                         <slick lazy-load="ondemand" slides-to-show="1" slides-to-scroll="1" dots="true">
                             <div class="text-white" ng-repeat="character in characters">
-                                <div class="text-condensed-light h3">Category: {{character.category}} <i class="fa fa-bolt"></i></div>
-                                <ul class="text-condensed-light">
+                                <div class="font-roboto-condensed font-15px text-grey">Category: <span class="text-white">{{character.category}}</span> <i class="fa fa-bolt bolt"></i></div>
+                                <hr class="border-dashed"/>
+                                <ul class="font-roboto-condensed font-15px text-grey">
                                     <li ng-repeat="spec in character.specs track by $index">{{spec}}</li>
                                 </ul>
-                                <div class="text-condensed-light">{{character.description}}</div>
+                                <hr class="border-dashed"/>
+                                <div class="font-roboto-condensed font-15px text-grey">{{character.description}}</div>
                             </div>
                         </slick>
                     </div>
@@ -96,9 +98,9 @@
     </div>
     <div class="row margin-0">
         <div class="col-xs-12 padding-0 bg-black">
-            <div class="social-section container text-center text-white padding-20 ">
-                <h2 class="text-condensed-light">SHADOWCORE SOCIAL</h2>
-                <div class="social-icons text-center">
+            <div class="social-section container text-center text-white padding-20 margin-top-20 margin-bottom-40">
+                <h2 class="text-condensed-light margin-top-40 margin-bottom-40">SHADOWCORE SOCIAL</h2>
+                <div class="social-icons text-center padding-left-50">
                     <div><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
                     <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
                     <div><a ng-href="#"><i class="fa fa-2x fa-youtube-play"></i></a></div>
