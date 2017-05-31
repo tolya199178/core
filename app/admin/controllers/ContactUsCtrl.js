@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('app.admin').controller('ContactUsController', function ($scope, $timeout, ContactUsService, $filter) {
+angular.module('app.admin').controller('ContactUsController', function ($scope, $timeout, ContactUsService, $filter, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
     $scope.email = {
         subject: '',
-        content: ''
+        message: ''
     };
 
     $scope.getData = function () {
@@ -46,17 +46,19 @@ angular.module('app.admin').controller('ContactUsController', function ($scope, 
 
     $scope.initMail = function () {
         $scope.email.subject = '';
-        $scope.email.content = '';
+        $scope.email.message = '';
     };
 
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            message: $scope.email.message,
+            mail_flag: 'contactus'
         };
-        ContactUsService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();

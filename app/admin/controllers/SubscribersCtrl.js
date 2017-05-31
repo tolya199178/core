@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('app.admin').controller('SubscribersController', function ($scope, $timeout, SubscribersService, $filter) {
+angular.module('app.admin').controller('SubscribersController', function ($scope, $filter, $timeout, SubscribersService, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
+    $scope.allCheck = false;
     $scope.email = {
         subject: '',
-        content: ''
+        message: ''
     };
 
     $scope.getData = function () {
@@ -23,7 +24,6 @@ angular.module('app.admin').controller('SubscribersController', function ($scope
         if (confirm('Are you sure want to delete this?')) {
             $scope.loading = true;
             SubscribersService.delete(rowId).then(function () {
-                //$scope.getData();
                 $scope.tableData.splice(rowInd, 1);
                 $scope.loading = false;
             });
@@ -46,17 +46,19 @@ angular.module('app.admin').controller('SubscribersController', function ($scope
 
     $scope.initMail = function () {
         $scope.email.subject = '';
-        $scope.email.content = '';
+        $scope.email.message = '';
     };
 
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            message: $scope.email.message,
+            mail_flag: 'subscribers'
         };
-        SubscribersService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();

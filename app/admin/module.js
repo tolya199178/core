@@ -29,15 +29,15 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
-        .state('app.admin.newsletter', {
-            url: '/newsletter',
+        .state('app.admin.subscribers', {
+            url: '/subscribers',
             data: {
-                title: 'Newsletter User'
+                title: 'Subscribe User'
             },
             views: {
                 "content@app": {
-                    templateUrl: 'app/admin/views/newsletter.html',
-                    controller: 'NewsletterController'
+                    templateUrl: 'app/admin/views/subscribers.html',
+                    controller: 'SubscribersController'
                 }
             }
         })
@@ -74,18 +74,6 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 "content@app": {
                     templateUrl: 'app/admin/views/contact-us.html',
                     controller: 'ContactUsController'
-                }
-            }
-        })
-        .state('app.admin.subscribers', {
-            url: '/subscribers',
-            data: {
-                title: 'Subscribers'
-            },
-            views: {
-                "content@app": {
-                    templateUrl: 'app/admin/views/subscribers.html',
-                    controller: 'SubscribersController'
                 }
             }
         })
