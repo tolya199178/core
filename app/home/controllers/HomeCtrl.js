@@ -51,7 +51,7 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
 
     $scope.characters = [
         {
-            category: "Assault",
+            category: "ASSAULT",
             image: "./styles/img/temp/home/character1.jpg",
             specs: [
                 "Standard mercenary",
@@ -61,7 +61,7 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
             ],
             description: "Choose the assault character if your playing style is aggressive and dynamic. The standard soldier is equipped to move quickly through the game environment. You are armed with an assault rifle and a grenade launcher for maximum damage at medium range.  With a medium amount of armour and a medium teleport cooldown for immersive gameplay."
         }, {
-            category: "Consecteur",
+            category: "CONSECTEUR",
             image: "./styles/img/temp/home/character2.jpg",
             specs: [
                 "Slow-moving and heavily armoured",
@@ -71,7 +71,7 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
             ],
             description: "Join the ranks of the support team for one of the international conglomerates battling for control of Earth’s resources and territories. Your character is heavily armoured and adept at taking and holding territory. Utilize your augmented body and the cybernetic implants that give you enhanced abilities. Support characters are capable of massive damage at close range with their shotgun. They are also equipped with an EMP cannon that doesn’t do any damage at all, but can temporarily stun enemies, preventing them from teleporting or shooting back."
         }, {
-            category: "Recon",
+            category: "RECON",
             image: "./styles/img/temp/home/character3.jpg",
             specs: [
                 "Fast and mobile",
