@@ -380,7 +380,7 @@ angular.module('app', [
     .constant('APP_CONFIG', window.appConfig)
 
     .constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
-    .constant('ServerURL', 'http://localhost/shadowcore/api/')
+    // .constant('ServerURL', 'http://localhost/shadowcore/api/')
     // .constant('ServerURL', 'http://127.0.0.5/')
 
     .run(function ($rootScope, $state, $stateParams, $window) {
@@ -430,15 +430,15 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
-        .state('app.admin.newsletter', {
-            url: '/newsletter',
+        .state('app.admin.subscribers', {
+            url: '/subscribers',
             data: {
-                title: 'Newsletter User'
+                title: 'Subscribe User'
             },
             views: {
                 "content@app": {
-                    templateUrl: 'app/admin/views/newsletter.html',
-                    controller: 'NewsletterController'
+                    templateUrl: 'app/admin/views/subscribers.html',
+                    controller: 'SubscribersController'
                 }
             }
         })
@@ -475,18 +475,6 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 "content@app": {
                     templateUrl: 'app/admin/views/contact-us.html',
                     controller: 'ContactUsController'
-                }
-            }
-        })
-        .state('app.admin.subscribers', {
-            url: '/subscribers',
-            data: {
-                title: 'Subscribers'
-            },
-            views: {
-                "content@app": {
-                    templateUrl: 'app/admin/views/subscribers.html',
-                    controller: 'SubscribersController'
                 }
             }
         })
@@ -2274,7 +2262,7 @@ $templateCache.put("app/dashboard/todo/todo-widget.tpl.html","<div id=\"todo-wid
 $templateCache.put("app/layout/language/language-selector.tpl.html","<ul class=\"header-dropdown-list hidden-xs ng-cloak\" ng-controller=\"LanguagesCtrl\">\r\n    <li class=\"dropdown\" dropdown>\r\n        <a class=\"dropdown-toggle\"  data-toggle=\"dropdown\" href> <img src=\"styles/img/blank.gif\" class=\"flag flag-{{currentLanguage.key}}\" alt=\"{{currentLanguage.alt}}\"> <span> {{currentLanguage.title}} </span>\r\n            <i class=\"fa fa-angle-down\"></i> </a>\r\n        <ul class=\"dropdown-menu pull-right\">\r\n            <li ng-class=\"{active: language==currentLanguage}\" ng-repeat=\"language in languages\">\r\n                <a ng-click=\"selectLanguage(language)\" ><img src=\"styles/img/blank.gif\" class=\"flag flag-{{language.key}}\"\r\n                                                   alt=\"{{language.alt}}\"> {{language.title}}</a>\r\n            </li>\r\n        </ul>\r\n    </li>\r\n</ul>");
 $templateCache.put("app/layout/partials/footer.tpl.html","<div class=\"page-footer\">\r\n    <div class=\"row\">\r\n        <div class=\"col-xs-12 col-sm-6\">\r\n            <span class=\"txt-color-white\">ShadowCore © 2017</span>\r\n        </div>\r\n\r\n        <div class=\"col-xs-6 col-sm-6 text-right hidden-xs hide\">\r\n            <div class=\"txt-color-white inline-block\">\r\n                <i class=\"txt-color-blueLight hidden-mobile\">Last account activity <i class=\"fa fa-clock-o\"></i>\r\n                    <strong>52 mins ago &nbsp;</strong> </i>\r\n\r\n                <div class=\"btn-group dropup\">\r\n                    <button class=\"btn btn-xs dropdown-toggle bg-color-blue txt-color-white\" data-toggle=\"dropdown\">\r\n                        <i class=\"fa fa-link\"></i> <span class=\"caret\"></span>\r\n                    </button>\r\n                    <ul class=\"dropdown-menu pull-right text-left\">\r\n                        <li>\r\n                            <div class=\"padding-5\">\r\n                                <p class=\"txt-color-darken font-sm no-margin\">Download Progress</p>\r\n\r\n                                <div class=\"progress progress-micro no-margin\">\r\n                                    <div class=\"progress-bar progress-bar-success\" style=\"width: 50%;\"></div>\r\n                                </div>\r\n                            </div>\r\n                        </li>\r\n                        <li class=\"divider\"></li>\r\n                        <li>\r\n                            <div class=\"padding-5\">\r\n                                <p class=\"txt-color-darken font-sm no-margin\">Server Load</p>\r\n\r\n                                <div class=\"progress progress-micro no-margin\">\r\n                                    <div class=\"progress-bar progress-bar-success\" style=\"width: 20%;\"></div>\r\n                                </div>\r\n                            </div>\r\n                        </li>\r\n                        <li class=\"divider\"></li>\r\n                        <li>\r\n                            <div class=\"padding-5\">\r\n                                <p class=\"txt-color-darken font-sm no-margin\">Memory Load <span class=\"text-danger\">*critical*</span>\r\n                                </p>\r\n\r\n                                <div class=\"progress progress-micro no-margin\">\r\n                                    <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%;\"></div>\r\n                                </div>\r\n                            </div>\r\n                        </li>\r\n                        <li class=\"divider\"></li>\r\n                        <li>\r\n                            <div class=\"padding-5\">\r\n                                <button class=\"btn btn-block btn-default\">refresh</button>\r\n                            </div>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>");
 $templateCache.put("app/layout/partials/header.tpl.html","<header id=\"header\">\r\n<div id=\"logo-group\">\r\n\r\n    <!-- PLACE YOUR LOGO HERE -->\r\n    <span id=\"logo\"> <img src=\"styles/img/logo.png\" alt=\"SmartAdmin\"> </span>\r\n    <!-- END LOGO PLACEHOLDER -->\r\n\r\n    <!-- Note: The activity badge color changes when clicked and resets the number to 0\r\n    Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->\r\n    <!--<span id=\"activity\" class=\"activity-dropdown\" activities-dropdown-toggle>\r\n        <i class=\"fa fa-user\"></i> \r\n        <b class=\"badge bg-color-red\">21</b> \r\n    </span>-->\r\n    <!--<div smart-include=\"app/dashboard/activities/activities.html\"></div>-->\r\n</div>\r\n\r\n\r\n<!--<recent-projects></recent-projects>-->\r\n\r\n\r\n\r\n<!-- pulled right: nav area -->\r\n<div class=\"pull-right\">\r\n\r\n    <!-- collapse menu button -->\r\n    <div id=\"hide-menu\" class=\"btn-header pull-right\">\r\n        <span> <a toggle-menu title=\"Collapse Menu\"><i\r\n                class=\"fa fa-reorder\"></i></a> </span>\r\n    </div>\r\n    <!-- end collapse menu -->\r\n\r\n    <!-- #MOBILE -->\r\n    <!-- Top menu profile link : this shows only when top menu is active -->\r\n    <ul id=\"mobile-profile-img\" class=\"header-dropdown-list hidden-xs padding-5\">\r\n        <li class=\"\">\r\n            <a href=\"#\" class=\"dropdown-toggle no-margin userdropdown\" data-toggle=\"dropdown\">\r\n                <img src=\"styles/img/avatars/sunny.png\" alt=\"John Doe\" class=\"online\"/>\r\n            </a>\r\n            <ul class=\"dropdown-menu pull-right\">\r\n                <li>\r\n                    <a href-void class=\"padding-10 padding-top-0 padding-bottom-0\"><i\r\n                            class=\"fa fa-cog\"></i> Setting</a>\r\n                </li>\r\n                <li class=\"divider\"></li>\r\n                <li>\r\n                    <a ui-sref=\"app.appViews.profileDemo\" class=\"padding-10 padding-top-0 padding-bottom-0\"> <i class=\"fa fa-user\"></i>\r\n                        <u>P</u>rofile</a>\r\n                </li>\r\n                <li class=\"divider\"></li>\r\n                <li>\r\n                    <a href-void class=\"padding-10 padding-top-0 padding-bottom-0\"\r\n                       data-action=\"toggleShortcut\"><i class=\"fa fa-arrow-down\"></i> <u>S</u>hortcut</a>\r\n                </li>\r\n                <li class=\"divider\"></li>\r\n                <li>\r\n                    <a href-void class=\"padding-10 padding-top-0 padding-bottom-0\"\r\n                       data-action=\"launchFullscreen\"><i class=\"fa fa-arrows-alt\"></i> Full <u>S</u>creen</a>\r\n                </li>\r\n                <li class=\"divider\"></li>\r\n                <li>\r\n                    <a href=\"#/login\" class=\"padding-10 padding-top-5 padding-bottom-5\" data-action=\"userLogout\"><i\r\n                            class=\"fa fa-sign-out fa-lg\"></i> <strong><u>L</u>ogout</strong></a>\r\n                </li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n\r\n    <!-- logout button -->\r\n    <div id=\"logout\" class=\"btn-header transparent pull-right\">\r\n        <span> <a ui-sref=\"login\" title=\"Sign Out\" data-action=\"userLogout\"\r\n                  data-logout-msg=\"You can improve your security further after logging out by closing this opened browser\"><i\r\n                class=\"fa fa-sign-out\"></i></a> </span>\r\n    </div>\r\n    <!-- end logout button -->\r\n\r\n    <!-- search mobile button (this is hidden till mobile view port) -->\r\n    <div id=\"search-mobile\" class=\"btn-header transparent pull-right\" data-search-mobile>\r\n        <span> <a href=\"#\" title=\"Search\"><i class=\"fa fa-search\"></i></a> </span>\r\n    </div>\r\n    <!-- end search mobile button -->\r\n\r\n    <!-- input: search field -->\r\n    <!--<form action=\"#/search\" class=\"header-search pull-right\">\r\n        <input id=\"search-fld\" type=\"text\" name=\"param\" placeholder=\"Find reports and more\" data-autocomplete=\'[\r\n					\"ActionScript\",\r\n					\"AppleScript\",\r\n					\"Asp\",\r\n					\"BASIC\",\r\n					\"C\",\r\n					\"C++\",\r\n					\"Clojure\",\r\n					\"COBOL\",\r\n					\"ColdFusion\",\r\n					\"Erlang\",\r\n					\"Fortran\",\r\n					\"Groovy\",\r\n					\"Haskell\",\r\n					\"Java\",\r\n					\"JavaScript\",\r\n					\"Lisp\",\r\n					\"Perl\",\r\n					\"PHP\",\r\n					\"Python\",\r\n					\"Ruby\",\r\n					\"Scala\",\r\n					\"Scheme\"]\'>\r\n        <button type=\"submit\">\r\n            <i class=\"fa fa-search\"></i>\r\n        </button>\r\n        <a href=\"$\" id=\"cancel-search-js\" title=\"Cancel Search\"><i class=\"fa fa-times\"></i></a>\r\n    </form>-->\r\n    <!-- end input: search field -->\r\n\r\n    <!-- fullscreen button -->\r\n    <div id=\"fullscreen\" class=\"btn-header transparent pull-right\">\r\n        <span> <a full-screen title=\"Full Screen\"><i\r\n                class=\"fa fa-arrows-alt\"></i></a> </span>\r\n    </div>\r\n    <!-- end fullscreen button -->\r\n\r\n\r\n    <!-- multiple lang dropdown : find all flags in the flags page -->\r\n    <!--<language-selector></language-selector>-->\r\n    <!-- end multiple lang -->\r\n\r\n</div>\r\n<!-- end pulled right: nav area -->\r\n\r\n</header>");
-$templateCache.put("app/layout/partials/navigation.tpl.html","<aside id=\"left-panel\">\r\n\r\n    <!-- User info -->\r\n    <!--<div login-info></div>-->\r\n    <!-- end user info -->\r\n\r\n    <nav>\r\n        <!-- NOTE: Notice the gaps after each icon usage <i></i>..\r\n        Please note that these links work a bit different than\r\n        traditional href=\"\" links. See documentation for details.\r\n        -->\r\n\r\n        <ul data-smart-menu>\r\n\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.news\">\r\n                    <i class=\"fa fa-lg fa-fw fa-file\"></i> <span class=\"menu-item-parent\">News</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.buyers\">\r\n                    <i class=\"fa fa-lg fa-fw fa-shopping-cart\"></i> <span class=\"menu-item-parent\">Buy User</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.newsletter\">\r\n                    <i class=\"fa fa-lg fa-fw fa-shopping-cart\"></i> <span class=\"menu-item-parent\">Newsletter User</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.contactUs\">\r\n                    <i class=\"fa fa-lg fa-fw fa-phone\"></i> <span class=\"menu-item-parent\">Contact Us</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.subscribers\">\r\n                    <i class=\"fa fa-lg fa-fw fa-edit\"></i> <span class=\"menu-item-parent\">Subscribers</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.mails\">\r\n                    <i class=\"fa fa-lg fa-fw fa-envelope\"></i> <span class=\"menu-item-parent\">Mail Manage</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.users\">\r\n                    <i class=\"fa fa-lg fa-fw fa-lock\"></i> <span class=\"menu-item-parent\">Security</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.udids\">\r\n                    <i class=\"fa fa-lg fa-fw fa-sort-numeric-asc\"></i> <span class=\"menu-item-parent\">UDID</span></a>\r\n            </li>\r\n        </ul>\r\n\r\n        <!-- NOTE: This allows you to pull menu items from server -->\r\n        <!-- <ul data-smart-menu-items=\"/api/menu-items.json\"></ul> -->\r\n    </nav>\r\n\r\n  <span class=\"minifyme\" data-action=\"minifyMenu\" minify-menu>\r\n    <i class=\"fa fa-arrow-circle-left hit\"></i>\r\n  </span>\r\n\r\n</aside>");
+$templateCache.put("app/layout/partials/navigation.tpl.html","<aside id=\"left-panel\">\r\n\r\n    <!-- User info -->\r\n    <!--<div login-info></div>-->\r\n    <!-- end user info -->\r\n\r\n    <nav>\r\n        <!-- NOTE: Notice the gaps after each icon usage <i></i>..\r\n        Please note that these links work a bit different than\r\n        traditional href=\"\" links. See documentation for details.\r\n        -->\r\n\r\n        <ul data-smart-menu>\r\n\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.news\">\r\n                    <i class=\"fa fa-lg fa-fw fa-file\"></i> <span class=\"menu-item-parent\">News</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.buyers\">\r\n                    <i class=\"fa fa-lg fa-fw fa-users\"></i> <span class=\"menu-item-parent\">Buy User</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.subscribers\">\r\n                    <i class=\"fa fa-lg fa-fw fa-user\"></i> <span class=\"menu-item-parent\">Subscribe User</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.contactUs\">\r\n                    <i class=\"fa fa-lg fa-fw fa-phone\"></i> <span class=\"menu-item-parent\">Contact Us</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.mails\">\r\n                    <i class=\"fa fa-lg fa-fw fa-envelope\"></i> <span class=\"menu-item-parent\">Mail Manage</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.users\">\r\n                    <i class=\"fa fa-lg fa-fw fa-lock\"></i> <span class=\"menu-item-parent\">Security</span></a>\r\n            </li>\r\n            <li data-ui-sref-active=\"active\">\r\n                <a data-ui-sref=\"app.admin.udids\">\r\n                    <i class=\"fa fa-lg fa-fw fa-sort-numeric-asc\"></i> <span class=\"menu-item-parent\">UDID</span></a>\r\n            </li>\r\n        </ul>\r\n\r\n        <!-- NOTE: This allows you to pull menu items from server -->\r\n        <!-- <ul data-smart-menu-items=\"/api/menu-items.json\"></ul> -->\r\n    </nav>\r\n\r\n  <span class=\"minifyme\" data-action=\"minifyMenu\" minify-menu>\r\n    <i class=\"fa fa-arrow-circle-left hit\"></i>\r\n  </span>\r\n\r\n</aside>");
 $templateCache.put("app/layout/partials/sub-header.tpl.html","<div class=\"col-xs-12 col-sm-5 col-md-5 col-lg-8\" data-sparkline-container>\r\n    <ul id=\"sparks\" class=\"\">\r\n        <li class=\"sparks-info\">\r\n            <h5> My Income <span class=\"txt-color-blue\">$47,171</span></h5>\r\n            <div class=\"sparkline txt-color-blue hidden-mobile hidden-md hidden-sm\">\r\n                1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471\r\n            </div>\r\n        </li>\r\n        <li class=\"sparks-info\">\r\n            <h5> Site Traffic <span class=\"txt-color-purple\"><i class=\"fa fa-arrow-circle-up\"></i>&nbsp;45%</span></h5>\r\n            <div class=\"sparkline txt-color-purple hidden-mobile hidden-md hidden-sm\">\r\n                110,150,300,130,400,240,220,310,220,300, 270, 210\r\n            </div>\r\n        </li>\r\n        <li class=\"sparks-info\">\r\n            <h5> Site Orders <span class=\"txt-color-greenDark\"><i class=\"fa fa-shopping-cart\"></i>&nbsp;2447</span></h5>\r\n            <div class=\"sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm\">\r\n                110,150,300,130,400,240,220,310,220,300, 270, 210\r\n            </div>\r\n        </li>\r\n    </ul>\r\n</div>\r\n			");
 $templateCache.put("app/layout/partials/voice-commands.tpl.html","<!-- TRIGGER BUTTON:\r\n<a href=\"/my-ajax-page.html\" data-toggle=\"modal\" data-target=\"#remoteModal\" class=\"btn btn-default\">Open Modal</a>  -->\r\n\r\n<!-- MODAL PLACE HOLDER\r\n<div class=\"modal fade\" id=\"remoteModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"remoteModalLabel\" aria-hidden=\"true\">\r\n<div class=\"modal-dialog\">\r\n<div class=\"modal-content\"></div>\r\n</div>\r\n</div>   -->\r\n<!--////////////////////////////////////-->\r\n\r\n<!--<div class=\"modal-header\">\r\n<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">\r\n&times;\r\n</button>\r\n<h4 class=\"modal-title\" id=\"myModalLabel\">Command List</h4>\r\n</div>-->\r\n<div class=\"modal-body\">\r\n\r\n	<h1><i class=\"fa fa-microphone text-muted\"></i>&nbsp;&nbsp; SmartAdmin Voice Command</h1>\r\n	<hr class=\"simple\">\r\n	<h5>Instruction</h5>\r\n\r\n	Click <span class=\"text-success\">\"Allow\"</span> to access your microphone and activate Voice Command.\r\n	You will notice a <span class=\"text-primary\"><strong>BLUE</strong> Flash</span> on the microphone icon indicating activation.\r\n	The icon will appear <span class=\"text-danger\"><strong>RED</strong></span> <span class=\"label label-danger\"><i class=\"fa fa-microphone fa-lg\"></i></span> if you <span class=\"text-danger\">\"Deny\"</span> access or don\'t have any microphone installed.\r\n	<br>\r\n	<br>\r\n	As a security precaution, your browser will disconnect the microphone every 60 to 120 seconds (sooner if not being used). In which case Voice Command will prompt you again to <span class=\"text-success\">\"Allow\"</span> or <span class=\"text-danger\">\"Deny\"</span> access to your microphone.\r\n	<br>\r\n	<br>\r\n	If you host your page over <strong>http<span class=\"text-success\">s</span></strong> (secure socket layer) protocol you can wave this security measure and have an unintrupted Voice Command.\r\n	<br>\r\n	<br>\r\n	<h5>Commands</h5>\r\n	<ul>\r\n		<li>\r\n			<strong>\'show\' </strong> then say the <strong>*page*</strong> you want to go to. For example <strong>\"show inbox\"</strong> or <strong>\"show calendar\"</strong>\r\n		</li>\r\n		<li>\r\n			<strong>\'mute\' </strong> - mutes all sound effects for the theme.\r\n		</li>\r\n		<li>\r\n			<strong>\'sound on\'</strong> - unmutes all sound effects for the theme.\r\n		</li>\r\n		<li>\r\n			<span class=\"text-danger\"><strong>\'stop\'</strong></span> - deactivates voice command.\r\n		</li>\r\n		<li>\r\n			<span class=\"text-primary\"><strong>\'help\'</strong></span> - brings up the command list\r\n		</li>\r\n		<li>\r\n			<span class=\"text-danger\"><strong>\'got it\'</strong></span> - closes help modal\r\n		</li>\r\n		<li>\r\n			<strong>\'hide navigation\'</strong> - toggle navigation collapse\r\n		</li>\r\n		<li>\r\n			<strong>\'show navigation\'</strong> - toggle navigation to open (can be used again to close)\r\n		</li>\r\n		<li>\r\n			<strong>\'scroll up\'</strong> - scrolls to the top of the page\r\n		</li>\r\n		<li>\r\n			<strong>\'scroll down\'</strong> - scrollts to the bottom of the page\r\n		</li>\r\n		<li>\r\n			<strong>\'go back\' </strong> - goes back in history (history -1 click)\r\n		</li>\r\n		<li>\r\n			<strong>\'logout\'</strong> - logs you out\r\n		</li>\r\n	</ul>\r\n	<br>\r\n	<h5>Adding your own commands</h5>\r\n	Voice Command supports up to 80 languages. Adding your own commands is extreamly easy. All commands are stored inside <strong>app.config.js</strong> file under the <code>var commands = {...}</code>. \r\n\r\n	<hr class=\"simple\">\r\n	<div class=\"text-right\">\r\n		<button type=\"button\" class=\"btn btn-success btn-lg\" data-dismiss=\"modal\">\r\n			Got it!\r\n		</button>\r\n	</div>\r\n\r\n</div>\r\n<!--<div class=\"modal-footer\">\r\n<button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Got it!</button>\r\n</div> -->");
 $templateCache.put("app/layout/shortcut/shortcut.tpl.html","<div id=\"shortcut\">\r\n	<ul>\r\n		<li>\r\n			<a href=\"#/inbox/\" class=\"jarvismetro-tile big-cubes bg-color-blue\"> <span class=\"iconbox\"> <i class=\"fa fa-envelope fa-4x\"></i> <span>Mail <span class=\"label pull-right bg-color-darken\">14</span></span> </span> </a>\r\n		</li>\r\n		<li>\r\n			<a href=\"#/calendar\" class=\"jarvismetro-tile big-cubes bg-color-orangeDark\"> <span class=\"iconbox\"> <i class=\"fa fa-calendar fa-4x\"></i> <span>Calendar</span> </span> </a>\r\n		</li>\r\n		<li>\r\n			<a href=\"#/maps\" class=\"jarvismetro-tile big-cubes bg-color-purple\"> <span class=\"iconbox\"> <i class=\"fa fa-map-marker fa-4x\"></i> <span>Maps</span> </span> </a>\r\n		</li>\r\n		<li>\r\n			<a href=\"#/invoice\" class=\"jarvismetro-tile big-cubes bg-color-blueDark\"> <span class=\"iconbox\"> <i class=\"fa fa-book fa-4x\"></i> <span>Invoice <span class=\"label pull-right bg-color-darken\">99</span></span> </span> </a>\r\n		</li>\r\n		<li>\r\n			<a href=\"#/gallery\" class=\"jarvismetro-tile big-cubes bg-color-greenLight\"> <span class=\"iconbox\"> <i class=\"fa fa-picture-o fa-4x\"></i> <span>Gallery </span> </span> </a>\r\n		</li>\r\n		<li>\r\n			<a href=\"#/profile\" class=\"jarvismetro-tile big-cubes selected bg-color-pinkDark\"> <span class=\"iconbox\"> <i class=\"fa fa-user fa-4x\"></i> <span>My Profile </span> </span> </a>\r\n		</li>\r\n	</ul>\r\n</div>");
@@ -2563,14 +2551,14 @@ angular.module('app.forms').value('formsCommon', {
     });
 'use strict';
 
-angular.module('app.admin').controller('BuyersController', function ($scope, $filter, $timeout, BuyersService) {
+angular.module('app.admin').controller('BuyersController', function ($scope, $filter, $timeout, BuyersService, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
     $scope.allCheck = false;
     $scope.email = {
         subject: '',
-        content: ''
+        message: ''
     };
 
     $scope.getData = function () {
@@ -2609,17 +2597,19 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
 
     $scope.initMail = function () {
         $scope.email.subject = '';
-        $scope.email.content = '';
+        $scope.email.message = '';
     };
 
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            message: $scope.email.message,
+            mail_flag: 'buyers'
         };
-        BuyersService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();
@@ -2630,13 +2620,13 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
 });
 'use strict';
 
-angular.module('app.admin').controller('ContactUsController', function ($scope, $timeout, ContactUsService, $filter) {
+angular.module('app.admin').controller('ContactUsController', function ($scope, $timeout, ContactUsService, $filter, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
     $scope.email = {
         subject: '',
-        content: ''
+        message: ''
     };
 
     $scope.getData = function () {
@@ -2676,17 +2666,19 @@ angular.module('app.admin').controller('ContactUsController', function ($scope, 
 
     $scope.initMail = function () {
         $scope.email.subject = '';
-        $scope.email.content = '';
+        $scope.email.message = '';
     };
 
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            message: $scope.email.message,
+            mail_flag: 'contactus'
         };
-        ContactUsService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();
@@ -2847,82 +2839,14 @@ angular.module('app.admin').controller('NewsController', function ($scope, $time
 });
 'use strict';
 
-angular.module('app.admin').controller('NewsletterController', function ($scope, $filter, $timeout, NewsletterService, MailboxService) {
+angular.module('app.admin').controller('SubscribersController', function ($scope, $filter, $timeout, SubscribersService, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
     $scope.allCheck = false;
     $scope.email = {
         subject: '',
-        content: ''
-    };
-
-    $scope.getData = function () {
-        $scope.loading = true;
-
-        NewsletterService.get().then(function (response) {
-            $scope.tableData = $scope.safeData = response.data;
-            $scope.loading = false;
-        });
-    };
-    $scope.getData();
-
-    $scope.deleteRow = function (rowId, rowInd) {
-        if (confirm('Are you sure want to delete this?')) {
-            $scope.loading = true;
-            NewsletterService.delete(rowId).then(function () {
-                $scope.tableData.splice(rowInd, 1);
-                $scope.loading = false;
-            });
-        }
-    };
-
-    $scope.checkAll = function () {
-        angular.forEach($scope.tableData, function (val) {
-            val.checked = $scope.allCheck;
-        })
-    };
-
-    $scope.getCheckedEmails = function () {
-        var emails = [];
-        angular.forEach($filter('filter')($scope.tableData, {checked: true}), function (val) {
-            emails[emails.length] = val.email;
-        });
-        return emails;
-    };
-
-    $scope.initMail = function () {
-        $scope.email.subject = '';
-        $scope.email.content = '';
-    };
-
-    $scope.sendMail = function () {
-        $scope.loading = true;
-        var data = {
-            to_emails: $scope.getCheckedEmails(),
-            from_email: MailboxService.supportEmail,
-            subject: $scope.email.subject,
-            content: $scope.email.content,
-            mail_flag: 'newsletter'
-        };
-        MailboxService.post(data).then(function () {
-            $('#myModal').modal('hide');
-            $scope.loading = false;
-            //$scope.getData();
-        }, function(){
-            $scope.loading = false;
-        });
-    };
-});
-'use strict';
-
-angular.module('app.admin').controller('SubscribersController', function ($scope, $timeout, SubscribersService, $filter) {
-    $scope.tableData = $scope.safeData = [];
-    $scope.currRow = {};
-    $scope.loading = true;
-    $scope.email = {
-        subject: '',
-        content: ''
+        message: ''
     };
 
     $scope.getData = function () {
@@ -2939,7 +2863,6 @@ angular.module('app.admin').controller('SubscribersController', function ($scope
         if (confirm('Are you sure want to delete this?')) {
             $scope.loading = true;
             SubscribersService.delete(rowId).then(function () {
-                //$scope.getData();
                 $scope.tableData.splice(rowInd, 1);
                 $scope.loading = false;
             });
@@ -2962,17 +2885,19 @@ angular.module('app.admin').controller('SubscribersController', function ($scope
 
     $scope.initMail = function () {
         $scope.email.subject = '';
-        $scope.email.content = '';
+        $scope.email.message = '';
     };
 
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            message: $scope.email.message,
+            mail_flag: 'subscribers'
         };
-        SubscribersService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();
@@ -3103,21 +3028,6 @@ angular
                         deferred.reject(err);
                     });
                     return deferred.promise;
-                },
-                sendMail: function (data) {
-                    var url = ServerURL + 'buyers/sendmail';
-                    var deferred = $q.defer();
-                    $http({
-                        method: 'POST',
-                        url: url,
-                        headers: {'Content-Type': 'multipart/form-data'},
-                        data: data
-                    }).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
                 }
             };
         }]);
@@ -3138,18 +3048,8 @@ angular
                     });
                     return deferred.promise;
                 },
-                delete: function (rowId) {
-                    var deferred = $q.defer();
-                    var url = ServerURL + 'contactus?id=' + rowId;
-                    $http.delete(url).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
-                },
-                sendMail: function (data) {
-                    var url = ServerURL + 'contactus/sendmail';
+                post: function (data) {
+                    var url = ServerURL + 'contactus';
                     var deferred = $q.defer();
                     $http({
                         method: 'POST',
@@ -3157,6 +3057,16 @@ angular
                         headers: {'Content-Type': 'multipart/form-data'},
                         data: data
                     }).then(function (res) {
+                        deferred.resolve(res);
+                    }, function (err) {
+                        deferred.reject(err);
+                    });
+                    return deferred.promise;
+                },
+                delete: function (rowId) {
+                    var deferred = $q.defer();
+                    var url = ServerURL + 'contactus?id=' + rowId;
+                    $http.delete(url).then(function (res) {
                         deferred.resolve(res);
                     }, function (err) {
                         deferred.reject(err);
@@ -3208,50 +3118,6 @@ angular
                     return deferred.promise;
                 },
                 supportEmail: 'contact@serebrumlab.com'
-            };
-        }]);
-})();
-(function () {
-    'use strict';
-
-    angular.module('app.admin')
-        .factory('NewsletterService', ['$http', '$q', 'ServerURL', function ($http, $q, ServerURL) {
-            return {
-                get: function () {
-                    var url = ServerURL + 'newsletter';
-                    var deferred = $q.defer();
-                    $http.get(url).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
-                },
-                post: function (data) {
-                    var url = ServerURL + 'newsletter';
-                    var deferred = $q.defer();
-                    $http({
-                        method: 'POST',
-                        url: url,
-                        headers: {'Content-Type': 'multipart/form-data'},
-                        data: data
-                    }).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
-                },
-                delete: function (rowId) {
-                    var deferred = $q.defer();
-                    var url = ServerURL + 'newsletter?id=' + rowId;
-                    $http.delete(url).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
-                }
             };
         }]);
 })();
@@ -3315,17 +3181,7 @@ angular
                     });
                     return deferred.promise;
                 },
-                delete: function (rowId) {
-                    var deferred = $q.defer();
-                    var url = ServerURL + 'subscribers?id=' + rowId;
-                    $http.delete(url).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
-                },
-                sendMail: function (data) {
+                post: function (data) {
                     var url = ServerURL + 'subscribers';
                     var deferred = $q.defer();
                     $http({
@@ -3334,6 +3190,16 @@ angular
                         headers: {'Content-Type': 'multipart/form-data'},
                         data: data
                     }).then(function (res) {
+                        deferred.resolve(res);
+                    }, function (err) {
+                        deferred.reject(err);
+                    });
+                    return deferred.promise;
+                },
+                delete: function (rowId) {
+                    var deferred = $q.defer();
+                    var url = ServerURL + 'subscribers?id=' + rowId;
+                    $http.delete(url).then(function (res) {
                         deferred.resolve(res);
                     }, function (err) {
                         deferred.reject(err);
@@ -4243,213 +4109,6 @@ angular.module('app.forms').controller('ModalDemoCtrl', function($scope, $modalI
 });
 "use strict";
 
-angular.module('app.home').controller('HomeAboutController', function ($scope, $window) {
-    $scope.leftMenus = [
-        {id: 1, title: "High Concept", state: "high_concept"},
-        {id: 2, title: "Visual Style", state: "visual_style"},
-        {id: 3, title: "World", state: "world"},
-        {id: 4, title: "Game Play", state: "gameplay"},
-        {id: 5, title: "Character Classes", state: "character_classes"},
-        {id: 6, title: "Missions", state: "missions"},
-        {id: 7, title: "Tech", state: "tech"},
-        {id: 8, title: "Risks", state: "risks"},
-        {id: 9, title: "Extras", state: "extras"}
-    ];
-    $scope.scrollDown = function () {
-        $window.scrollTo(0, angular.element('.content-section').offset().top - 100);
-    };
-})
-
-"use strict";
-
-angular.module('app.home').controller('HomeContactUsController', function ($scope, $window) {
-    $scope.scrollDown = function () {
-        $window.scrollTo(0, angular.element('.contact-ways').offset().top - 100);
-    };
-})
-
-"use strict";
-
-angular.module('app.home').controller('HomeController', function ($scope, $window, ServerURL) {
-    $scope.screenWidth = $window.innerWidth;
-
-    $scope.videos = [
-        {
-            id: 1,
-            name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
-            duration: "25:46",
-            description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
-            image: "./styles/img/temp/home/video_overlay1.jpg",
-            code: "Q7HGmUBQOHM"
-        }, {
-            id: 2,
-            name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
-            duration: "17:46",
-            description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
-            image: "./styles/img/temp/home/video_overlay2.jpg",
-            code: "du1IFCWaD5k"
-        }, {
-            id: 3,
-            name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
-            duration: "47:46",
-            description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
-            image: "./styles/img/temp/home/video_overlay3.jpg",
-            code: "C5Qp1hlXLko"
-        }, {
-            id: 4,
-            name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
-            duration: "25:46",
-            description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
-            image: "./styles/img/temp/home/video_overlay1.jpg",
-            code: "Q7HGmUBQOHM"
-        }, {
-            id: 5,
-            name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
-            duration: "17:46",
-            description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
-            image: "./styles/img/temp/home/video_overlay2.jpg",
-            code: "du1IFCWaD5k"
-        }, {
-            id: 6,
-            name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
-            duration: "47:46",
-            description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
-            image: "./styles/img/temp/home/video_overlay3.jpg",
-            code: "C5Qp1hlXLko"
-        }
-    ];
-
-    $scope.characters = [
-        {
-            category: "Assault",
-            image: "./styles/img/temp/home/character1.jpg",
-            specs: [
-                "Standard mercenary",
-                "Armed with assault rifle and grenade launcher",
-                "Efficient at medium-range assaults",
-                "Medium teleport countdown"
-            ],
-            description: "Choose the assault character if your playing style is aggressive and dynamic. The standard soldier is equipped to move quickly through the game environment. You are armed with an assault rifle and a grenade launcher for maximum damage at medium range.  With a medium amount of armour and a medium teleport cooldown for immersive gameplay."
-        }, {
-            category: "Consecteur",
-            image: "./styles/img/temp/home/character2.jpg",
-            specs: [
-                "Slow-moving and heavily armoured",
-                "Strong defence and strategy kills",
-                "Equipped with shotgun and EMP cannon for close-range assault",
-                "Slow teleport cooldown"
-            ],
-            description: "Join the ranks of the support team for one of the international conglomerates battling for control of Earth’s resources and territories. Your character is heavily armoured and adept at taking and holding territory. Utilize your augmented body and the cybernetic implants that give you enhanced abilities. Support characters are capable of massive damage at close range with their shotgun. They are also equipped with an EMP cannon that doesn’t do any damage at all, but can temporarily stun enemies, preventing them from teleporting or shooting back."
-        }, {
-            category: "Recon",
-            image: "./styles/img/temp/home/character3.jpg",
-            specs: [
-                "Fast and mobile",
-                "Minimal amount of body armour",
-                "Short teleport countdown",
-                "Efficient at short range assault"
-            ],
-            description: "Recon characters strike a balance between mobility and assault capabilities. More lightly armoured than other characters, they are fast and hard to hit. You benefit from a shorter teleport cooldown and high-damage railgun and a machine pistol.  Move quickly and efficiently between locations and launch surprise attacks on your unsuspecting enemies."
-        }
-    ];
-    $scope.currCharacter = $scope.characters[0];
-
-    $scope.scrollDown = function () {
-        $window.scrollTo(0, angular.element('.video-section').offset().top - 100);
-    };
-
-    $scope.shop = function () {
-        $window.open(ServerURL + "paypal/order", "_blank");
-    };
-
-    $scope.currSlideInd = 0;
-});
-
-"use strict";
-
-angular.module('app.home').controller('HomeJoinTeamController', function ($scope, $window) {
-    $scope.items = [
-        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"},
-        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"},
-        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"}
-    ];
-
-    $scope.scrollDown = function () {
-        $window.scrollTo(0, angular.element('.questions-div').offset().top - 100);
-    };
-});
-
-"use strict";
-
-angular.module('app.home').controller('HomeNewsController', function ($scope, $window, NewsService) {
-    $scope.months = [];
-    $scope.getMonthStrings = function () {
-        var now = new Date();
-        var y = now.getFullYear();
-        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        for (var m = now.getMonth() + 1; m >= 1; m--) {
-            var startDate = moment([y, m - 1]);
-            var endDate = moment(startDate).endOf('month');
-
-            $scope.months[$scope.months.length] = {
-                str: monthNames[m - 1],
-                sdate: startDate.format("YYYY-MM-DD"),
-                edate: endDate.format("YYYY-MM-DD")
-            };
-        }
-        var preYear = y - 1;
-        $scope.months[$scope.months.length] = {
-            str: preYear,
-            sdate: preYear + "-01-01",
-            edate: preYear + "-12-31"
-        };
-    };
-    $scope.getMonthStrings();
-
-    $scope.getData = function (item) {
-        item = item || $scope.months[0];
-        NewsService.get(item.sdate, item.edate).then(function (response) {
-            $scope.news = response.data;
-            console.log(response.data);
-            angular.forEach($scope.news, function (val, key) {
-                val.image = "../styles/img/temp/news/item" + (key % 2 + 1) + ".jpg";
-            });
-        });
-    };
-    $scope.getData();
-
-    $scope.scrollDown = function () {
-        $window.scrollTo(0, angular.element('.months-wrapper').offset().top - 100);
-    };
-})
-
-angular.module('app').directive('youtube', function ($sce) {
-    return {
-        restrict: 'EA',
-        template: '<div id="overlay{{id}}" class="video-overlay" ng-click="play(id);">' +
-        '<img class="" ng-src="{{image}}"/>' +
-        '<div class="play-button"></div>' +
-        '</div>' +
-        '<iframe id="video{{id}}" class="video-responsive" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
-        scope: {
-            id: '=id',
-            image: '=image',
-            video: '@video'
-        },
-        link: function (scope) {
-            scope.$watch('video', function (code) {
-                scope.url = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + code + "?showinfo=0");
-            });
-            scope.play = function (videoId) {
-                $("#video" + videoId)[0].src += "&autoplay=1";
-                $("#overlay" + videoId).hide();
-                event.preventDefault();
-            };
-        }
-    };
-});
-"use strict";
-
 angular.module('app.graphs').controller('FlotCtrl', function ($scope) {
 
 
@@ -4752,6 +4411,213 @@ angular.module('app.graphs').controller('FlotCtrl', function ($scope) {
         data : visitors,
         label : "Site visitors"
     }];
+});
+"use strict";
+
+angular.module('app.home').controller('HomeAboutController', function ($scope, $window) {
+    $scope.leftMenus = [
+        {id: 1, title: "High Concept", state: "high_concept"},
+        {id: 2, title: "Visual Style", state: "visual_style"},
+        {id: 3, title: "World", state: "world"},
+        {id: 4, title: "Game Play", state: "gameplay"},
+        {id: 5, title: "Character Classes", state: "character_classes"},
+        {id: 6, title: "Missions", state: "missions"},
+        {id: 7, title: "Tech", state: "tech"},
+        {id: 8, title: "Risks", state: "risks"},
+        {id: 9, title: "Extras", state: "extras"}
+    ];
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.content-section').offset().top - 100);
+    };
+})
+
+"use strict";
+
+angular.module('app.home').controller('HomeContactUsController', function ($scope, $window) {
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.contact-ways').offset().top - 100);
+    };
+})
+
+"use strict";
+
+angular.module('app.home').controller('HomeController', function ($scope, $window, ServerURL) {
+    $scope.screenWidth = $window.innerWidth;
+
+    $scope.videos = [
+        {
+            id: 1,
+            name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
+            duration: "25:46",
+            description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
+            image: "./styles/img/temp/home/video_overlay1.jpg",
+            code: "Q7HGmUBQOHM"
+        }, {
+            id: 2,
+            name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
+            duration: "17:46",
+            description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
+            image: "./styles/img/temp/home/video_overlay2.jpg",
+            code: "du1IFCWaD5k"
+        }, {
+            id: 3,
+            name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
+            duration: "47:46",
+            description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
+            image: "./styles/img/temp/home/video_overlay3.jpg",
+            code: "C5Qp1hlXLko"
+        }, {
+            id: 4,
+            name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
+            duration: "25:46",
+            description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
+            image: "./styles/img/temp/home/video_overlay1.jpg",
+            code: "Q7HGmUBQOHM"
+        }, {
+            id: 5,
+            name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
+            duration: "17:46",
+            description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
+            image: "./styles/img/temp/home/video_overlay2.jpg",
+            code: "du1IFCWaD5k"
+        }, {
+            id: 6,
+            name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
+            duration: "47:46",
+            description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
+            image: "./styles/img/temp/home/video_overlay3.jpg",
+            code: "C5Qp1hlXLko"
+        }
+    ];
+
+    $scope.characters = [
+        {
+            category: "Assault",
+            image: "./styles/img/temp/home/character1.jpg",
+            specs: [
+                "Standard mercenary",
+                "Armed with assault rifle and grenade launcher",
+                "Efficient at medium-range assaults",
+                "Medium teleport countdown"
+            ],
+            description: "Choose the assault character if your playing style is aggressive and dynamic. The standard soldier is equipped to move quickly through the game environment. You are armed with an assault rifle and a grenade launcher for maximum damage at medium range.  With a medium amount of armour and a medium teleport cooldown for immersive gameplay."
+        }, {
+            category: "Consecteur",
+            image: "./styles/img/temp/home/character2.jpg",
+            specs: [
+                "Slow-moving and heavily armoured",
+                "Strong defence and strategy kills",
+                "Equipped with shotgun and EMP cannon for close-range assault",
+                "Slow teleport cooldown"
+            ],
+            description: "Join the ranks of the support team for one of the international conglomerates battling for control of Earth’s resources and territories. Your character is heavily armoured and adept at taking and holding territory. Utilize your augmented body and the cybernetic implants that give you enhanced abilities. Support characters are capable of massive damage at close range with their shotgun. They are also equipped with an EMP cannon that doesn’t do any damage at all, but can temporarily stun enemies, preventing them from teleporting or shooting back."
+        }, {
+            category: "Recon",
+            image: "./styles/img/temp/home/character3.jpg",
+            specs: [
+                "Fast and mobile",
+                "Minimal amount of body armour",
+                "Short teleport countdown",
+                "Efficient at short range assault"
+            ],
+            description: "Recon characters strike a balance between mobility and assault capabilities. More lightly armoured than other characters, they are fast and hard to hit. You benefit from a shorter teleport cooldown and high-damage railgun and a machine pistol.  Move quickly and efficiently between locations and launch surprise attacks on your unsuspecting enemies."
+        }
+    ];
+    $scope.currCharacter = $scope.characters[0];
+
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.video-section').offset().top - 100);
+    };
+
+    $scope.shop = function () {
+        $window.open(ServerURL + "paypal/order", "_blank");
+    };
+
+    $scope.currSlideInd = 0;
+});
+
+"use strict";
+
+angular.module('app.home').controller('HomeJoinTeamController', function ($scope, $window) {
+    $scope.items = [
+        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"},
+        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"},
+        {id: 1, title: "Are You a developer? We need You!", image: "../styles/img/temp/join/item1.jpg", ymd: "16.05.2017"}
+    ];
+
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.questions-div').offset().top - 100);
+    };
+});
+
+"use strict";
+
+angular.module('app.home').controller('HomeNewsController', function ($scope, $window, NewsService) {
+    $scope.months = [];
+    $scope.getMonthStrings = function () {
+        var now = new Date();
+        var y = now.getFullYear();
+        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        for (var m = now.getMonth() + 1; m >= 1; m--) {
+            var startDate = moment([y, m - 1]);
+            var endDate = moment(startDate).endOf('month');
+
+            $scope.months[$scope.months.length] = {
+                str: monthNames[m - 1],
+                sdate: startDate.format("YYYY-MM-DD"),
+                edate: endDate.format("YYYY-MM-DD")
+            };
+        }
+        var preYear = y - 1;
+        $scope.months[$scope.months.length] = {
+            str: preYear,
+            sdate: preYear + "-01-01",
+            edate: preYear + "-12-31"
+        };
+    };
+    $scope.getMonthStrings();
+
+    $scope.getData = function (item) {
+        item = item || $scope.months[0];
+        NewsService.get(item.sdate, item.edate).then(function (response) {
+            $scope.news = response.data;
+            console.log(response.data);
+            angular.forEach($scope.news, function (val, key) {
+                val.image = "../styles/img/temp/news/item" + (key % 2 + 1) + ".jpg";
+            });
+        });
+    };
+    $scope.getData();
+
+    $scope.scrollDown = function () {
+        $window.scrollTo(0, angular.element('.months-wrapper').offset().top - 100);
+    };
+})
+
+angular.module('app').directive('youtube', function ($sce) {
+    return {
+        restrict: 'EA',
+        template: '<div id="overlay{{id}}" class="video-overlay" ng-click="play(id);">' +
+        '<img class="" ng-src="{{image}}"/>' +
+        '<div class="play-button"></div>' +
+        '</div>' +
+        '<iframe id="video{{id}}" class="video-responsive" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
+        scope: {
+            id: '=id',
+            image: '=image',
+            video: '@video'
+        },
+        link: function (scope) {
+            scope.$watch('video', function (code) {
+                scope.url = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + code + "?showinfo=0");
+            });
+            scope.play = function (videoId) {
+                $("#video" + videoId)[0].src += "&autoplay=1";
+                $("#overlay" + videoId).hide();
+                event.preventDefault();
+            };
+        }
+    };
 });
 "use strict";
 
@@ -5062,6 +4928,259 @@ angular.module('app.maps').factory('SmartMapStyle', function ($q, $http, APP_CON
 
 
 
+});
+/**
+ * Created by griga on 2/9/16.
+ */
+
+
+angular.module('app.tables').controller('DatatablesCtrl', function(DTOptionsBuilder, DTColumnBuilder){
+
+
+    this.standardOptions = DTOptionsBuilder
+        .fromSource('api/tables/datatables.standard.json')
+         //Add Bootstrap compatibility
+        .withDOM("<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>" +
+            "t" +
+            "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>")
+        .withBootstrap();
+    this.standardColumns = [
+        DTColumnBuilder.newColumn('id').withClass('text-danger'),
+        DTColumnBuilder.newColumn('name'),
+        DTColumnBuilder.newColumn('phone'),
+        DTColumnBuilder.newColumn('company'),
+        DTColumnBuilder.newColumn('zip'),
+        DTColumnBuilder.newColumn('city'),
+        DTColumnBuilder.newColumn('date')
+    ];
+
+
+});
+'use strict';
+
+angular.module('app.tables').controller('JqGridCtrl', function ($scope) {
+    $scope.gridData = {
+        data: [
+            {
+                id: "1",
+                date: "2007-10-01",
+                name: "test",
+                note: "note",
+                amount: "200.00",
+                tax: "10.00",
+                total: "210.00"
+            },
+            {
+                id: "2",
+                date: "2007-10-02",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                total: "320.00"
+            },
+            {
+                id: "3",
+                date: "2007-09-01",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                total: "430.00"
+            },
+            {
+                id: "4",
+                date: "2007-10-04",
+                name: "test",
+                note: "note",
+                amount: "200.00",
+                tax: "10.00",
+                total: "210.00"
+            },
+            {
+                id: "5",
+                date: "2007-10-05",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                total: "320.00"
+            },
+            {
+                id: "6",
+                date: "2007-09-06",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                total: "430.00"
+            },
+            {
+                id: "7",
+                date: "2007-10-04",
+                name: "test",
+                note: "note",
+                amount: "200.00",
+                tax: "10.00",
+                total: "210.00"
+            },
+            {
+                id: "8",
+                date: "2007-10-03",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                total: "320.00"
+            },
+            {
+                id: "9",
+                date: "2007-09-01",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                total: "430.00"
+            },
+            {
+                id: "10",
+                date: "2007-10-01",
+                name: "test",
+                note: "note",
+                amount: "200.00",
+                tax: "10.00",
+                total: "210.00"
+            },
+            {
+                id: "11",
+                date: "2007-10-02",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                total: "320.00"
+            },
+            {
+                id: "12",
+                date: "2007-09-01",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                total: "430.00"
+            },
+            {
+                id: "13",
+                date: "2007-10-04",
+                name: "test",
+                note: "note",
+                amount: "200.00",
+                tax: "10.00",
+                total: "210.00"
+            },
+            {
+                id: "14",
+                date: "2007-10-05",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                total: "320.00"
+            },
+            {
+                id: "15",
+                date: "2007-09-06",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                total: "430.00"
+            },
+            {
+                id: "16",
+                date: "2007-10-04",
+                name: "test",
+                note: "note",
+                amount: "200.00",
+                tax: "10.00",
+                total: "210.00"
+            },
+            {
+                id: "17",
+                date: "2007-10-03",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                total: "320.00"
+            },
+            {
+                id: "18",
+                date: "2007-09-01",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                total: "430.00"
+            }
+        ],
+        colNames: ['Actions', 'Inv No', 'Date', 'Client', 'Amount', 'Tax', 'Total', 'Notes'],
+        colModel: [
+            {
+                name: 'act',
+                index: 'act',
+                sortable: false
+            },
+            {
+                name: 'id',
+                index: 'id'
+            },
+            {
+                name: 'date',
+                index: 'date',
+                editable: true
+            },
+            {
+                name: 'name',
+                index: 'name',
+                editable: true
+            },
+            {
+                name: 'amount',
+                index: 'amount',
+                align: "right",
+                editable: true
+            },
+            {
+                name: 'tax',
+                index: 'tax',
+                align: "right",
+                editable: true
+            },
+            {
+                name: 'total',
+                index: 'total',
+                align: "right",
+                editable: true
+            },
+            {
+                name: 'note',
+                index: 'note',
+                sortable: false,
+                editable: true
+            }
+        ]
+    }
+
+
+    $scope.getSelection = function(){
+        alert(jQuery('table').jqGrid('getGridParam', 'selarrrow'));
+    };
+
+    $scope.selectRow = function(row){
+       jQuery('table').jqGrid('setSelection', row);
+
+    }
 });
 "use strict";
 
@@ -5872,259 +5991,6 @@ angular.module('app.ui').directive('smartTreeview', function ($compile, $sce) {
             };
         }
     };
-});
-/**
- * Created by griga on 2/9/16.
- */
-
-
-angular.module('app.tables').controller('DatatablesCtrl', function(DTOptionsBuilder, DTColumnBuilder){
-
-
-    this.standardOptions = DTOptionsBuilder
-        .fromSource('api/tables/datatables.standard.json')
-         //Add Bootstrap compatibility
-        .withDOM("<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>" +
-            "t" +
-            "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>")
-        .withBootstrap();
-    this.standardColumns = [
-        DTColumnBuilder.newColumn('id').withClass('text-danger'),
-        DTColumnBuilder.newColumn('name'),
-        DTColumnBuilder.newColumn('phone'),
-        DTColumnBuilder.newColumn('company'),
-        DTColumnBuilder.newColumn('zip'),
-        DTColumnBuilder.newColumn('city'),
-        DTColumnBuilder.newColumn('date')
-    ];
-
-
-});
-'use strict';
-
-angular.module('app.tables').controller('JqGridCtrl', function ($scope) {
-    $scope.gridData = {
-        data: [
-            {
-                id: "1",
-                date: "2007-10-01",
-                name: "test",
-                note: "note",
-                amount: "200.00",
-                tax: "10.00",
-                total: "210.00"
-            },
-            {
-                id: "2",
-                date: "2007-10-02",
-                name: "test2",
-                note: "note2",
-                amount: "300.00",
-                tax: "20.00",
-                total: "320.00"
-            },
-            {
-                id: "3",
-                date: "2007-09-01",
-                name: "test3",
-                note: "note3",
-                amount: "400.00",
-                tax: "30.00",
-                total: "430.00"
-            },
-            {
-                id: "4",
-                date: "2007-10-04",
-                name: "test",
-                note: "note",
-                amount: "200.00",
-                tax: "10.00",
-                total: "210.00"
-            },
-            {
-                id: "5",
-                date: "2007-10-05",
-                name: "test2",
-                note: "note2",
-                amount: "300.00",
-                tax: "20.00",
-                total: "320.00"
-            },
-            {
-                id: "6",
-                date: "2007-09-06",
-                name: "test3",
-                note: "note3",
-                amount: "400.00",
-                tax: "30.00",
-                total: "430.00"
-            },
-            {
-                id: "7",
-                date: "2007-10-04",
-                name: "test",
-                note: "note",
-                amount: "200.00",
-                tax: "10.00",
-                total: "210.00"
-            },
-            {
-                id: "8",
-                date: "2007-10-03",
-                name: "test2",
-                note: "note2",
-                amount: "300.00",
-                tax: "20.00",
-                total: "320.00"
-            },
-            {
-                id: "9",
-                date: "2007-09-01",
-                name: "test3",
-                note: "note3",
-                amount: "400.00",
-                tax: "30.00",
-                total: "430.00"
-            },
-            {
-                id: "10",
-                date: "2007-10-01",
-                name: "test",
-                note: "note",
-                amount: "200.00",
-                tax: "10.00",
-                total: "210.00"
-            },
-            {
-                id: "11",
-                date: "2007-10-02",
-                name: "test2",
-                note: "note2",
-                amount: "300.00",
-                tax: "20.00",
-                total: "320.00"
-            },
-            {
-                id: "12",
-                date: "2007-09-01",
-                name: "test3",
-                note: "note3",
-                amount: "400.00",
-                tax: "30.00",
-                total: "430.00"
-            },
-            {
-                id: "13",
-                date: "2007-10-04",
-                name: "test",
-                note: "note",
-                amount: "200.00",
-                tax: "10.00",
-                total: "210.00"
-            },
-            {
-                id: "14",
-                date: "2007-10-05",
-                name: "test2",
-                note: "note2",
-                amount: "300.00",
-                tax: "20.00",
-                total: "320.00"
-            },
-            {
-                id: "15",
-                date: "2007-09-06",
-                name: "test3",
-                note: "note3",
-                amount: "400.00",
-                tax: "30.00",
-                total: "430.00"
-            },
-            {
-                id: "16",
-                date: "2007-10-04",
-                name: "test",
-                note: "note",
-                amount: "200.00",
-                tax: "10.00",
-                total: "210.00"
-            },
-            {
-                id: "17",
-                date: "2007-10-03",
-                name: "test2",
-                note: "note2",
-                amount: "300.00",
-                tax: "20.00",
-                total: "320.00"
-            },
-            {
-                id: "18",
-                date: "2007-09-01",
-                name: "test3",
-                note: "note3",
-                amount: "400.00",
-                tax: "30.00",
-                total: "430.00"
-            }
-        ],
-        colNames: ['Actions', 'Inv No', 'Date', 'Client', 'Amount', 'Tax', 'Total', 'Notes'],
-        colModel: [
-            {
-                name: 'act',
-                index: 'act',
-                sortable: false
-            },
-            {
-                name: 'id',
-                index: 'id'
-            },
-            {
-                name: 'date',
-                index: 'date',
-                editable: true
-            },
-            {
-                name: 'name',
-                index: 'name',
-                editable: true
-            },
-            {
-                name: 'amount',
-                index: 'amount',
-                align: "right",
-                editable: true
-            },
-            {
-                name: 'tax',
-                index: 'tax',
-                align: "right",
-                editable: true
-            },
-            {
-                name: 'total',
-                index: 'total',
-                align: "right",
-                editable: true
-            },
-            {
-                name: 'note',
-                index: 'note',
-                sortable: false,
-                editable: true
-            }
-        ]
-    }
-
-
-    $scope.getSelection = function(){
-        alert(jQuery('table').jqGrid('getGridParam', 'selarrrow'));
-    };
-
-    $scope.selectRow = function(row){
-       jQuery('table').jqGrid('setSelection', row);
-
-    }
 });
 "use strict";
 
