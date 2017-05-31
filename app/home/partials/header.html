@@ -1,4 +1,4 @@
-<header class="header-section text-center" ng-class="{'scrolled': scrollTop > 1}">
+<header class="header-section text-center" ng-class="{'scrolled':scrollTop >= 50, 'unscrolled':scrollTop < 50}">
 
     <a class="logo-text pull-left cursor-pointer" ui-sref="home">
         <span class="text-white">SHADOW</span><span class="text-grey margin-left-40">CORE</span>
@@ -14,13 +14,13 @@
 
     <!--<button class="btn btn-xs btn-default pull-right"><i class="fa fa-reorder"></i></button>-->
 
-    <div class="social-icons pull-right text-center">
+    <div class="social-icons top-social-icons pull-right text-center">
         <div><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
         <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
         <div><a ng-href="#"><i class="fa fa-2x fa-youtube-play"></i></a></div>
     </div>
 
-    <a class="scroll-top" href="#section1" du-smooth-scroll="" du-scrollspy="" offset="30">
+    <a class="scroll-top animated" ng-class="{'hide': scrollTop < 50}" href="#section1" du-smooth-scroll="" du-scrollspy="" offset="30">
         <i class="fa fa-angle-up"></i>
     </a>
 </header>
