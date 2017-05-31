@@ -93,6 +93,10 @@ body:not(.menu-on-top).desktop-detected {
     padding-top: 20px;
 }
 
+.padding-top-40 {
+    padding-top: 40px;
+}
+
 .padding-bottom-20 {
     padding-bottom: 20px;
 }
@@ -112,9 +116,11 @@ body:not(.menu-on-top).desktop-detected {
 .margin-top-20 {
     margin-top: 20px;
 }
+
 .margin-top-30 {
     margin-top: 30px;
 }
+
 .margin-left-10 {
     margin-left: 10px;
 }
@@ -191,6 +197,18 @@ body:not(.menu-on-top).desktop-detected {
 
 nav ul li.active > a:before {
     content: "";
+}
+
+.slick-dots {
+    position: absolute;
+    top: -100px;
+    text-align: left;
+    margin-left: -50px;
+    display: inline-table;
+}
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+    color: white;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -328,6 +346,10 @@ nav ul li.active > a:before {
     font-family: 'roboto_condensedlight';
 }
 
+.letter-spacing-8px {
+    letter-spacing: 8px;
+}
+
 /*--------------- home ----------------------------*/
 .landing-section {
     background: url("../img/temp/home_bg_1.png");
@@ -387,7 +409,7 @@ nav ul li.active > a:before {
 }
 
 .buy-section h1 {
-    font-size: 50px;
+    font-size: 102px;
 }
 
 .newsletter-section {
@@ -426,7 +448,76 @@ nav ul li.active > a:before {
 }
 
 .video-section .slick-prev, .video-section .slick-next {
-    margin-top: -95px;
+    margin-top: -110px;
+}
+
+.videos-wrapper {
+    padding-left: 230px;
+    padding-right: 230px;
+}
+
+.slick-prev:before {
+    background-image: url(../img/temp/arrow_left.png);
+    background-repeat: no-repeat;
+    font-size: 50px;
+    margin-left: -40px;
+    color: transparent;
+}
+
+.slick-next:before {
+    background-image: url(../img/temp/arrow_right.png);
+    background-repeat: no-repeat;
+    font-size: 50px;
+    margin-left: 40px;
+    color: transparent;
+}
+
+youtube {
+    position: relative;
+}
+
+youtube iframe {
+    width: 100%;
+    height: 250px;
+}
+
+.video-overlay {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 250px;
+    margin-top: 0px;
+}
+
+.video-overlay img {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.play-button {
+    background-image: url(../img/temp/play_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .4;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    opacity: 1;
+}
+
+.border-dashed {
+    border-style: dashed;
+    border-color: grey;
+}
+
+.video-description {
+    font-size: 13px;
 }
 
 /*--------------- about ----------------------------*/
