@@ -47,6 +47,7 @@ class RestHandler implements IPayPalHandler
      */
     public function handle($httpConfig, $request, $options)
     {
+
         $credential = $this->apiContext->getCredential();
         $config = $this->apiContext->getConfig();
 
@@ -71,9 +72,6 @@ class RestHandler implements IPayPalHandler
             (isset($options['path']) ? $options['path'] : '')
         );
 
-        // Overwrite Expect Header to disable 100 Continue Issue
-        $httpConfig->addHeader("Expect", null);
-
         if (!array_key_exists("User-Agent", $httpConfig->getHeaders())) {
             $httpConfig->addHeader("User-Agent", PayPalUserAgent::getValue(PayPalConstants::SDK_NAME, PayPalConstants::SDK_VERSION));
         }
@@ -82,7 +80,7 @@ class RestHandler implements IPayPalHandler
             $httpConfig->addHeader('Authorization', "Bearer " . $credential->getAccessToken($config), false);
         }
 
-        if (($httpConfig->getMethod() == 'POST' || $httpConfig->getMethod() == 'PUT') && !is_null($this->apiContext->getRequestId())) {
+        if ($httpConfig->getMethod() == 'POST' || $httpConfig->getMethod() == 'PUT') {
             $httpConfig->addHeader('PayPal-Request-Id', $this->apiContext->getRequestId());
         }
         // Add any additional Headers that they may have provided
@@ -104,7 +102,7 @@ class RestHandler implements IPayPalHandler
     {
         if (isset($config['service.EndPoint'])) {
             return $config['service.EndPoint'];
-        } elseif (isset($config['mode'])) {
+        } else if (isset($config['mode'])) {
             switch (strtoupper($config['mode'])) {
                 case 'SANDBOX':
                     return PayPalConstants::REST_SANDBOX_ENDPOINT;

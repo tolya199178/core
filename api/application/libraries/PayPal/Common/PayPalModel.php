@@ -1,7 +1,6 @@
 <?php
 
 namespace PayPal\Common;
-
 use PayPal\Validation\JsonValidator;
 use PayPal\Validation\ModelAccessorValidator;
 
@@ -68,9 +67,7 @@ class PayPalModel
     public static function getList($data)
     {
         // Return Null if Null
-        if ($data === null) {
-            return null;
-        }
+        if ($data === null) { return null; }
 
         if (is_a($data, get_class(new \stdClass()))) {
             //This means, root element is object
@@ -176,9 +173,9 @@ class PayPalModel
         foreach ($param as $k => $v) {
             if ($v instanceof PayPalModel) {
                 $ret[$k] = $v->toArray();
-            } elseif (sizeof($v) <= 0 && is_array($v)) {
+            } else if (sizeof($v) <= 0 && is_array($v)) {
                 $ret[$k] = array();
-            } elseif (is_array($v)) {
+            } else if (is_array($v)) {
                 $ret[$k] = $this->_convertToArray($v);
             } else {
                 $ret[$k] = $v;
@@ -207,9 +204,9 @@ class PayPalModel
                 // If the value is an array, it means, it is an object after conversion
                 if (is_array($v)) {
                     // Determine the class of the object
-                    if (($clazz = ReflectionUtil::getPropertyClass(get_class($this), $k)) != null) {
+                    if (($clazz = ReflectionUtil::getPropertyClass(get_class($this), $k)) != null){
                         // If the value is an associative array, it means, its an object. Just make recursive call to it.
-                        if (empty($v)) {
+                        if (empty($v)){
                             if (ReflectionUtil::isPropertyClassArray(get_class($this), $k)) {
                                 // It means, it is an array of objects.
                                 $this->assignValue($k, array());
