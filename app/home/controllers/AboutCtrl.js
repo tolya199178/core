@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('app.home').controller('HomeAboutController', function ($scope, $window) {
+angular.module('app.home').controller('HomeAboutController', function ($scope, $state, $window) {
     $scope.leftMenus = [
         {id: 1, title: "High Concept", state: "high_concept"},
         {id: 2, title: "Visual Style", state: "visual_style"},
@@ -12,6 +12,7 @@ angular.module('app.home').controller('HomeAboutController', function ($scope, $
         {id: 8, title: "Risks", state: "risks"},
         {id: 9, title: "Extras", state: "extras"}
     ];
+    $state.go("about." + $scope.leftMenus[0].state);
     $scope.scrollDown = function () {
         $window.scrollTo(0, angular.element('.content-section').offset().top - 100);
     };
