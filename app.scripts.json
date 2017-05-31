@@ -36,7 +36,8 @@
       "angular-datatables.bootstrap",
       "slick-carousel",
       "angular-slick",
-      "angular-smart-table"
+      "angular-smart-table",
+      "angular-scroll"
     ],
     "vendor.ui": [
       "select2",
@@ -163,6 +164,7 @@
     "fullcalendar": "smartadmin-plugin/fullcalendar/jquery.fullcalendar.min.js",
     "smartwidgets": "smartadmin-plugin/smartwidgets/jarvis.widget.min.js",
     "notification": "smartadmin-plugin/notification/SmartNotification.min.js",
-    "angular-smart-table": "bower_components/angular-smart-table/dist/smart-table.min.js"
+    "angular-smart-table": "bower_components/angular-smart-table/dist/smart-table.min.js",
+    "angular-scroll": "bower_components/angular-scroll/angular-scroll.min.js"
   }
 }

@@ -1,9 +1,8 @@
 <header class="header-section text-center" ng-class="{'scrolled': scrollTop > 1}">
 
-    <div class="logo-text pull-left">
-        <span class="text-white">SHADOW</span>
-        <span class="text-grey">CORE</span>
-    </div>
+    <a class="logo-text pull-left cursor-pointer" ui-sref="home">
+        <span class="text-white">SHADOW</span><span class="text-grey margin-left-40">CORE</span>
+    </a>
 
     <div class="top-menu">
         <div class="display-inline" ui-sref-active="active"><a ui-sref="home">HOME</a></div>
@@ -20,4 +19,8 @@
         <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
         <div><a ng-href="#"><i class="fa fa-2x fa-youtube-play"></i></a></div>
     </div>
+
+    <a class="scroll-top" href="#section1" du-smooth-scroll="" du-scrollspy="" offset="30">
+        <i class="fa fa-angle-up"></i>
+    </a>
 </header>
