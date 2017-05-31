@@ -35,7 +35,7 @@ class Mailbox_model extends CI_Model
             $emailOptions = [
                     'to' => $email,
                     'from' => $data['from_email'],
-                    'message' => $data['content'],
+                    'message' => $data['message'],
                     'subject' => $data['subject']
             ];
             if (send_email($emailOptions)) {

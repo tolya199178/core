@@ -9,23 +9,26 @@
                 <div jarvis-widget id="standard-datatable-widget" data-widget-color="darken" data-widget-editbutton="false" data-widget-deletebutton="false">
                     <header>
                         <span class="widget-icon"> <i class="fa fa-table"></i> </span>
-                        <h2>Subscribers Management</h2>
+                        <h2>Newsletter User</h2>
                     </header>
                     <div>
                         <div class="widget-body no-padding">
                             <div class="table-responsive">
                                 <table st-table="tableData" st-safe-src="safeData" st-select-mode="multiple" class="table table-bordered">
                                     <thead>
-                                    <tr style="text-align: center;">
+                                    <tr>
                                         <th rowspan="2">No</th>
                                         <th rowspan="2"><input type="checkbox" ng-change="checkAll();" ng-model="allCheck"></th>
-                                        <th st-sort="email">email</th>
-                                        <th rowspan="2">Reg Date</th>
+                                        <th st-sort="email">Email</th>
+                                        <th st-sort="created">Created Date</th>
                                         <th rowspan="2">Action</th>
                                     </tr>
                                     <tr>
                                         <th class="padding-5">
                                             <input class="form-control" st-search="email"/>
+                                        </th>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="purchased_date"/>
                                         </th>
                                     </tr>
                                     </thead>
@@ -34,15 +37,15 @@
                                         <td>{{$index + 1}}</td>
                                         <td><input type="checkbox" ng-model="row.checked"></td>
                                         <td>{{row.email}}</td>
-                                        <td>{{row.regdate}}</td>
+                                        <td>{{row.created}}</td>
                                         <td class="text-center controls-td">
-                                            <a ng-click="deleteRow(row.id,$index)">Delete</a>
+                                            <a ng-click="deleteRow(row.id, $index)">Delete</a>
                                         </td>
                                     </tr>
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <td colspan="8" class="text-center">
+                                        <td colspan="5" class="text-center">
                                             <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
                                         </td>
                                     </tr>
@@ -56,7 +59,6 @@
         </div>
     </section>
 </div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -83,13 +85,13 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label">Content</label>
                         <div class="col-md-9">
-                            <textarea class="form-control" placeholder="Content" ng-model="email.content" rows="5"></textarea>
+                            <textarea class="form-control" placeholder="Content" ng-model="email.message" rows="5"></textarea>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" ng-click="sendMail()" ng-disabled="!getCheckedEmails().length || email.subject=='' || email.content==''">Send</button>
+                <button type="button" class="btn btn-primary" ng-click="sendMail()" ng-disabled="!getCheckedEmails().length || email.subject=='' || email.message==''">Send</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
             </div>
         </div>

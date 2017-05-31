@@ -23,21 +23,6 @@
                         deferred.reject(err);
                     });
                     return deferred.promise;
-                },
-                sendMail: function (data) {
-                    var url = ServerURL + 'buyers/sendmail';
-                    var deferred = $q.defer();
-                    $http({
-                        method: 'POST',
-                        url: url,
-                        headers: {'Content-Type': 'multipart/form-data'},
-                        data: data
-                    }).then(function (res) {
-                        deferred.resolve(res);
-                    }, function (err) {
-                        deferred.reject(err);
-                    });
-                    return deferred.promise;
                 }
             };
         }]);

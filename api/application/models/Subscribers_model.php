@@ -16,47 +16,32 @@ class Subscribers_model extends CI_Model
     {
         $this->db->select("*");
         $this->db->from($this->table);
-        $this->db->order_by("regdate", "desc");
+        $this->db->order_by("created", "desc");
         $query = $this->db->get();
         return $query->result();
     }
 
-    public function saveMail($data)
-    {
-        //$row['purchased'] = date('Y-m-d h:i:s');
-        $insertData = [
-                'subject' => $data['subject'],
-                'content' => $data['content'],
-                'mail_flag' => 'subscribers',
-                'senddate' => date('Y-m-d h:i:s'),
-                'receive_emails' => $data['emailstr']
-        ];
-        $result = $this->db->insert('sendmails', $insertData);
-    }
-
-    public function saveRow($data)
-    {
-
-        $rowId = $data['id'];
-
-        $cols = array('title', 'content', 'imageurl');
-        $row = array();
-        foreach ($cols as $col) {
-            $row[$col] = isset($data[$col]) ? $data[$col] : '';
-        }
-
-        if ($rowId != '0') {
-            $this->db->where('id', $rowId);
-            $result = $this->db->update($this->table, $row);
+    public function saveRow($data){
+        if(!$this->checkEmail($data['email'])){
+            $this->db->insert($this->table, $data);
+            $result = ['status'=>'Success', 'id'=>$this->db->insert_id()];
+            return $result;
         } else {
-            $row['posted'] = date('Y-m-d h:i:s');
-            $this->db->insert($this->table, $row);
-            $result = ['id'=>$this->db->insert_id(), 'posted'=>$row['posted']];
+            return ['status'=>'Already Exist'];
         }
-
-        return $result;
     }
 
+    private function checkEmail($email){
+        $this->db->select("*");
+        $this->db->from($this->table);
+        $this->db->where("email", $email);
+        $query = $this->db->get();
+        if($query->num_rows() > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public function deleteRowById($rowId)
     {

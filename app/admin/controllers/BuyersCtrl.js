@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('app.admin').controller('BuyersController', function ($scope, $filter, $timeout, BuyersService) {
+angular.module('app.admin').controller('BuyersController', function ($scope, $filter, $timeout, BuyersService, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
     $scope.allCheck = false;
     $scope.email = {
         subject: '',
-        content: ''
+        message: ''
     };
 
     $scope.getData = function () {
@@ -46,17 +46,19 @@ angular.module('app.admin').controller('BuyersController', function ($scope, $fi
 
     $scope.initMail = function () {
         $scope.email.subject = '';
-        $scope.email.content = '';
+        $scope.email.message = '';
     };
 
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            message: $scope.email.message,
+            mail_flag: 'buyers'
         };
-        BuyersService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();
