@@ -1,7 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /*from email address */
-define('SITE_FROM_EMAIL', 'edmondd729@gmail.com');
+define('SITE_FROM_EMAIL', 'contact@serebrumlab.com');
 /*site name */
 define('SITE_NAME', 'Shadow Core');
 /*smtp host setting */

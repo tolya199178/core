@@ -23,6 +23,7 @@ class Mailbox_model extends CI_Model
 
     public function saveMail($data)
     {
+        $data['senddate'] = date('Y-m-d h:i:s');
         $result = $this->db->insert($this->table, $data);
         return $result;
     }
@@ -31,14 +32,11 @@ class Mailbox_model extends CI_Model
         $emailstr = '';
         $flag = false;
         foreach($data['to_emails'] as $email){
-            $to      = $email;
-            $subject = $data['subject'];
-            $message = $data['content'];
-
             $emailOptions = [
-                    'to' => $to,
-                    'message' => $message,
-                    'subject' => $subject
+                    'to' => $email,
+                    'from' => $data['from_email'],
+                    'message' => $data['content'],
+                    'subject' => $data['subject']
             ];
             if (send_email($emailOptions)) {
                 $flag = true;

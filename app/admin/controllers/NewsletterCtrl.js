@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.admin').controller('NewsletterController', function ($scope, $filter, $timeout, NewsletterService) {
+angular.module('app.admin').controller('NewsletterController', function ($scope, $filter, $timeout, NewsletterService, MailboxService) {
     $scope.tableData = $scope.safeData = [];
     $scope.currRow = {};
     $scope.loading = true;
@@ -52,11 +52,13 @@ angular.module('app.admin').controller('NewsletterController', function ($scope,
     $scope.sendMail = function () {
         $scope.loading = true;
         var data = {
-            emails: $scope.getCheckedEmails(),
+            to_emails: $scope.getCheckedEmails(),
+            from_email: MailboxService.supportEmail,
             subject: $scope.email.subject,
-            content: $scope.email.content
+            content: $scope.email.content,
+            mail_flag: 'newsletter'
         };
-        NewsletterService.sendMail(data).then(function () {
+        MailboxService.post(data).then(function () {
             $('#myModal').modal('hide');
             $scope.loading = false;
             //$scope.getData();
