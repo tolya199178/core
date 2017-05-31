@@ -9,11 +9,11 @@
         </div>
     </div>
     <div class="row margin-0 text-center">
-        <div class="arrow-wrapper cursor-pointer" ng-click="scrollDown();">
+        <a class="arrow-wrapper cursor-pointer" href="#section4" du-smooth-scroll="" du-scrollspy="" offset="30" class="">
             <i class="fa fa-angle-down arrow-down"></i>
-        </div>
+        </a>
     </div>
-    <div class="row margin-0 padding-20 bg-black">
+    <div class="row margin-0 padding-20 bg-black" id="section4">
         <div class="col-xs-12 text-center">
             <div class="container padding-20 months-wrapper">
                 <span class="cursor-pointer padding-10 text-white" ng-repeat="item in months" ng-click="getData(item)">{{item.str}}</span>

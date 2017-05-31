@@ -229,15 +229,108 @@ nav ul li.active > a:before {
 
 /*---------------------------------------------------------------------------*/
 
-.header-section {
-    padding: 10px;
+@keyframes animation1 {
+    from {
+        background-color: transparent;
+        height: 90px;
+    }
+    to {
+        background: rgba(0, 0, 0, 0.85);
+        height: 60px;
+    }
 }
 
-.footer-section {
-    background: black;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid grey;
+@keyframes animation2 {
+    from {
+        background: rgba(0, 0, 0, 0.85);
+        height: 60px;
+    }
+    to {
+        background-color: transparent;
+        height: 90px;
+    }
+}
+
+@keyframes animation3 {
+    from {
+        padding-top: 32px;
+    }
+    to {
+        padding-top: 10px;
+    }
+}
+
+@keyframes animation4 {
+    from {
+        padding-top: 10px;
+    }
+    to {
+        padding-top: 32px;
+    }
+}
+
+@keyframes animation5 {
+    from {
+        margin-top: 32px;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
+@keyframes animation6 {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 32px;
+    }
+}
+
+.header-section {
+    padding: 10px;
+    height: 90px;
+    background: transparent;
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+}
+
+.header-section.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    animation-name: animation1;
+    animation-duration: 1s;
+    height: 60px;
+}
+
+.header-section.unscrolled {
+    background: transparent;
+    animation-name: animation2;
+    animation-duration: 1s;
+}
+
+.header-section.scrolled .top-menu, .header-section.scrolled .logo-text {
+    padding-top: 10px;
+    animation-name: animation3;
+    animation-duration: 1s;
+}
+
+.header-section.unscrolled .top-menu, .header-section.unscrolled .logo-text {
+    padding-top: 32px;
+    animation-name: animation4;
+    animation-duration: 1s;
+}
+
+.header-section.scrolled .top-social-icons {
+    margin-top: 0;
+    animation-name: animation5;
+    animation-duration: 1s;
+}
+
+.header-section.unscrolled .top-social-icons {
+    margin-top: 32px;
+    animation-name: animation6;
+    animation-duration: 1s;
 }
 
 .social-icons {
@@ -267,29 +360,6 @@ nav ul li.active > a:before {
     color: inherit;
     margin-top: -17px;
     margin-left: -17px;
-}
-
-.header-section {
-    height: 90px;
-    background: transparent;
-    position: fixed;
-    z-index: 2000;
-    width: 100%;
-}
-
-@keyframes fade {
-    from {
-        background-color: transparent;
-    }
-    to {
-        background: rgba(0, 0, 0, 0.85);
-    }
-}
-
-.header-section.scrolled {
-    background: rgba(0, 0, 0, 0.85);
-    animation-name: fade;
-    animation-duration: 1s;
 }
 
 .logo-text {
@@ -324,6 +394,13 @@ nav ul li.active > a:before {
 .top-menu .active a, .bottom-menu .active a {
     color: #959595;
     font-weight: bold;
+}
+
+.footer-section {
+    background: black;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid grey;
 }
 
 .bottom-menu {
@@ -369,7 +446,7 @@ nav ul li.active > a:before {
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    color: white!important;
+    color: white !important;
     font-size: x-large;
     padding-top: 2px;
     cursor: pointer;
@@ -379,7 +456,7 @@ nav ul li.active > a:before {
 
 .scroll-top:hover {
     opacity: .5;
-    color: white!important;
+    color: white !important;
 }
 
 /*--------------- home ----------------------------*/
