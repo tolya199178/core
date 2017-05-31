@@ -24,7 +24,7 @@ class Users extends Base_Controller
     }
     public function setpassword_post()
     {
-        $data = json_decode(file_get_contents('php://input'), true);
+        $data = $_POST;
 
         $result = $this->model->setPassword($data['oldPwd'], $data['newPwd']);
         $this->set_response($result, 200);
