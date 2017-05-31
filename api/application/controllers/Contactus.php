@@ -22,7 +22,6 @@ class Contactus extends Base_Controller
     public function index_post()
     {
         $data = $_POST;
-        console.log($data);
         $this->set_response($data, 200);
         return;
         $result = $this->model->addRow($data);
