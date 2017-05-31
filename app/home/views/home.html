@@ -29,9 +29,9 @@
                         <youtube id="video.id" video="{{video.code}}" image="video.image"></youtube>
                         <div class="margin-top-20">
                             <h4 class="text-condensed-light Bold">{{video.name}}</h4>
-                            <div class="text-condensed-light text-grey margin-top-10"><i class="fa fa-clock-o"></i> {{video.duration}}</div>
+                            <div class="text-condensed-light text-grey font-bold margin-top-10"><i class="fa fa-clock-o"></i> {{video.duration}}</div>
                             <hr class="hr border-dashed"/>
-                            <h5 class="text-condensed-light text-grey video-description">{{video.description}}</h5>
+                            <h5 class="text-condensed-light text-grey font-bold video-description">{{video.description}}</h5>
                         </div>
                     </div>
                 </slick>
@@ -54,16 +54,16 @@
         <div class="col-xs-12">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 text-center padding-20 text-white">
+                    <div class="col-xs-12 text-center padding-20 margin-top-40 text-white">
                         <h2 class="sub-title">C H A R A C T E R S</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-40">
                     <div class="col-sm-6">
                         <img class="character-img img-responsive margin-auto" ng-src="{{characters[currSlideInd].image}}">
                     </div>
-                    <div class="col-sm-6">
-                        <h3 class="font-roboto-condensed text-white">TESLA</h3> {{slickConfig}}
+                    <div class="col-sm-6 padding-top-40">
+                        <h3 class="font-roboto-condensed text-white margin-top-40">TESLA</h3> {{slickConfig}}
                         <slick lazy-load="ondemand"
                                slides-to-show="1"
                                slides-to-scroll="1"
@@ -83,14 +83,14 @@
                             </div>
                         </slick>
                         <div>
-                            <div class="font-roboto-condensed font-15px text-grey pull-left cursor-pointer slick-prev-label">
+                            <div class="font-roboto-condensed font-15px text-white pull-left cursor-pointer slick-prev-label">
                                 <img ng-src="./styles/img/temp/arrow_left.png" class="margin-right-13">
                                 PREVIOUS:
-                                <span class="text-white">{{characters[currSlideInd - 1 < 0 ? characters.length - 1 : currSlideInd - 1]['category']}}</span>
+                                <span class="text-grey">{{characters[currSlideInd - 1 < 0 ? characters.length - 1 : currSlideInd - 1]['category']}}</span>
                             </div>
-                            <div class="font-roboto-condensed font-15px text-grey pull-right cursor-pointer slick-next-label">
+                            <div class="font-roboto-condensed font-15px text-white pull-right cursor-pointer slick-next-label">
                                 NEXT:
-                                <span class="text-white margin-right-13">{{characters[currSlideInd > characters.length - 2 ? 0 : currSlideInd + 1]['category']}}</span>
+                                <span class="text-grey margin-right-13">{{characters[currSlideInd > characters.length - 2 ? 0 : currSlideInd + 1]['category']}}</span>
                                 <img ng-src="./styles/img/temp/arrow_right.png">
                             </div>
                         </div>
@@ -118,7 +118,7 @@
     <div class="row margin-0">
         <div class="col-xs-12 padding-0 bg-black">
             <div class="social-section container text-center text-white padding-20 margin-top-20 margin-bottom-40">
-                <h2 class="text-condensed-light margin-top-40 margin-bottom-40">SHADOWCORE SOCIAL</h2>
+                <h2 class="sub-title margin-top-40 margin-bottom-40">SHADOWCORE SOCIAL</h2>
                 <div class="social-icons text-center padding-left-50">
                     <div><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
                     <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>

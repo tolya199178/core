@@ -58,7 +58,7 @@ body:not(.menu-on-top).desktop-detected {
 }
 
 .text-grey {
-    color: grey;
+    color: #8C8C8C;
 }
 
 .display-inline-block {
@@ -169,6 +169,10 @@ body:not(.menu-on-top).desktop-detected {
     font-size: 15px;
 }
 
+.font-bold {
+    font-weight: bold;
+}
+
 .input2 {
     border: 1px solid grey;
     text-align: center;
@@ -213,7 +217,7 @@ nav ul li.active > a:before {
 
 .slick-dots {
     position: absolute;
-    top: -100px;
+    top: -140px;
     text-align: left;
     margin-left: -50px;
     display: inline-table;
@@ -430,8 +434,8 @@ nav ul li.active > a:before {
 
 .btn-white-border:hover {
     background: transparent;
-    border-color: grey;
-    color: grey;
+    border-color: #8C8C8C;
+    color: #8C8C8C;
 }
 
 .sub-title {
@@ -561,16 +565,16 @@ nav ul li.active > a:before {
 }
 
 .newsletter-section .email-box::-webkit-input-placeholder {
-    color: #aaa;
+    color: #ccc;
 }
 
 .newsletter-section .email-box:active, .newsletter-section .email-box:focus {
     outline: 0;
 }
 
-.character-img {
+/*.character-img {
     max-height: 500px;
-}
+}*/
 
 .video-section .slick-prev, .video-section .slick-next {
     margin-top: -110px;
@@ -613,7 +617,6 @@ nav ul li.active > a:before {
     opacity: 1;
 }
 
-
 youtube {
     position: relative;
 }
@@ -642,7 +645,6 @@ youtube iframe {
     background-image: url(../img/temp/play_button.png);
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .4;
     position: absolute;
     width: 100%;
     height: 250px;
@@ -650,7 +652,7 @@ youtube iframe {
 }
 
 .play-button:hover {
-    opacity: 1;
+    background-size: 50px;
 }
 
 .border-dashed {
