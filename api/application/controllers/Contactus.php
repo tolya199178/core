@@ -26,6 +26,27 @@ class Contactus extends Base_Controller
         $this->set_response($result, 200);
     }
 
+    public function send_post()
+    {
+        $data = json_decode(file_get_contents('php://input'), true);
+
+        $to      = $data['email'];
+        $subject = 'From ' . $to;
+        $message = $data['content'];
+
+        $emailOptions = [
+                'to' => $to,
+                'message' => $message,
+                'subject' => $subject
+        ];
+        if (send_email($emailOptions)) {
+            $result = $this->model->addRow($data);
+            $this->set_response('Success', 200);
+        } else {
+            $this->set_response('Failed', 401);
+        }
+    }
+
     public function sendmail_post()
     {
         $data = json_decode(file_get_contents('php://input'), true);

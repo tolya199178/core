@@ -20,7 +20,7 @@ if (!function_exists('send_email')) {
 
         $CI->email->initialize($config);*/
 
-        $CI->email->from(SITE_FROM_EMAIL, SITE_NAME);
+        $CI->email->from($options['from'], SITE_NAME);
         $CI->email->to($options['to']);
         $CI->email->subject($options['subject']);
         $CI->email->message($options['message']);
