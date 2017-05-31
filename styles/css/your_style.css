@@ -226,6 +226,7 @@ nav ul li.active > a:before {
 .slick-dots li button:before, .slick-dots li.slick-active button:before {
     color: white;
 }
+
 .slick-dots li {
     margin: 0;
 }
@@ -398,7 +399,7 @@ nav ul li.active > a:before {
     letter-spacing: 0.2em;
 }
 
-.top-menu .active a, .bottom-menu .active a,.top-menu div a:hover {
+.top-menu .active a, .top-menu div a:hover {
     color: #959595;
     font-weight: bold;
     font-size: 14px;
@@ -409,6 +410,7 @@ nav ul li.active > a:before {
     text-align: center;
     padding-top: 20px;
 }
+
 .footer-section .footer-border {
     border-top: 1px solid grey;
     width: 1360px;
@@ -429,6 +431,10 @@ nav ul li.active > a:before {
     letter-spacing: 0.2em;
 }
 
+.bottom-menu .active a, .bottom-menu div a:hover {
+    color: #8C8C8C;
+}
+
 .btn-white-border {
     background: transparent;
     border-radius: 0;
@@ -440,10 +446,15 @@ nav ul li.active > a:before {
     width: 216px;
 }
 
-.btn-white-border:hover {
-    background: transparent;
-    border-color: #8C8C8C;
-    color: #8C8C8C;
+.btn-white-border:hover, .btn-white-border:active, .btn-white-border:focus {
+    background: transparent !important;
+    border-color: #8C8C8C !important;
+    color: #8C8C8C !important;
+}
+
+.btn-white-border:active, .btn-white-border:focus {
+    border-color: white !important;
+    color: white !important;
 }
 
 .sub-title {
