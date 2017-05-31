@@ -102,6 +102,7 @@ class paypal extends CI_Controller
         } catch (Exception $ex) {
             // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
             //ResultPrinter::printError("Created Payment Order Using PayPal. Please visit the URL to Approve.", "Payment", null, $request, $ex);
+            echo "Created Payment Order Using PayPal. Please visit the URL to Approve.";
             exit(1);
         }
         $approvalUrl = $payment->getApprovalLink();
