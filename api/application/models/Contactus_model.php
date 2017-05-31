@@ -32,10 +32,9 @@ class Contactus_model extends CI_Model
                 'from_email' => $data['email'],
                 'to_emails' => [SITE_FROM_EMAIL],
                 'message' => $data['message'],
-                'subject' => $data['subject'],
+                'subject' => 'From '.$data['email'],
                 'mail_flag' => 'contactus'
         ];
-
         if($this->mailbox_model->sendMail($emailOptions)){
             return true;
         } else {
