@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb34592-9400-4091-bb44-ac455c734829" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin/controllers/NewsletterCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin/services/NewsletterService.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin/views/newsletter.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/controllers/Buyers.php" afterPath="$PROJECT_DIR$/api/application/controllers/Buyers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/controllers/Contactus.php" afterPath="$PROJECT_DIR$/api/application/controllers/Contactus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/models/Buyers_model.php" afterPath="$PROJECT_DIR$/api/application/models/Buyers_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/models/Contactus_model.php" afterPath="$PROJECT_DIR$/api/application/models/Contactus_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/application/models/Mailbox_model.php" afterPath="$PROJECT_DIR$/api/application/models/Mailbox_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/controllers/BuyersCtrl.js" afterPath="$PROJECT_DIR$/app/admin/controllers/BuyersCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/controllers/ContactUsCtrl.js" afterPath="$PROJECT_DIR$/app/admin/controllers/ContactUsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/controllers/SubscribersCtrl.js" afterPath="$PROJECT_DIR$/app/admin/controllers/SubscribersCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/module.js" afterPath="$PROJECT_DIR$/app/admin/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/services/BuyersService.js" afterPath="$PROJECT_DIR$/app/admin/services/BuyersService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/services/ContactusService.js" afterPath="$PROJECT_DIR$/app/admin/services/ContactusService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/services/SubscribersService.js" afterPath="$PROJECT_DIR$/app/admin/services/SubscribersService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views/buyers.html" afterPath="$PROJECT_DIR$/app/admin/views/buyers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views/contact-us.html" afterPath="$PROJECT_DIR$/app/admin/views/contact-us.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views/subscribers.html" afterPath="$PROJECT_DIR$/app/admin/views/subscribers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/layout/partials/navigation.tpl.html" afterPath="$PROJECT_DIR$/app/layout/partials/navigation.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/app.js" afterPath="$PROJECT_DIR$/build/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/api/application/controllers/Newsletter.php" afterPath="$PROJECT_DIR$/api/application/controllers/Subscribers.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/api/application/models/Newsletter_model.php" afterPath="$PROJECT_DIR$/api/application/models/Subscribers_model.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,6 +44,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ContactusService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/services/ContactusService.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contactus_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Contactus_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/application/models/Contactus_model.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="466">
@@ -173,7 +159,6 @@
         <option value="$PROJECT_DIR$/api/application/helpers/custom_helper.php" />
         <option value="$PROJECT_DIR$/app/admin/controllers/NewsletterCtrl.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/admin/services/BuyersService.js" />
         <option value="$PROJECT_DIR$/api/application/models/Mailbox_model.php" />
         <option value="$PROJECT_DIR$/api/application/controllers/Buyers.php" />
@@ -192,6 +177,7 @@
         <option value="$PROJECT_DIR$/app/admin/services/ContactusService.js" />
         <option value="$PROJECT_DIR$/api/application/controllers/Contactus.php" />
         <option value="$PROJECT_DIR$/api/application/models/Contactus_model.php" />
+        <option value="$PROJECT_DIR$/app/app.js" />
       </list>
     </option>
   </component>
@@ -564,12 +550,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496174488110</updated>
       <workItem from="1496174489313" duration="20899000" />
-      <workItem from="1496202643547" duration="10292000" />
+      <workItem from="1496202643547" duration="10340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31191000" />
+    <option name="totallyTimeSpent" value="31239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -803,14 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1031,6 +1009,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>

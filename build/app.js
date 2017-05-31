@@ -379,9 +379,9 @@ angular.module('app', [
     })
     .constant('APP_CONFIG', window.appConfig)
 
-    // .constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
+    .constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
     // .constant('ServerURL', 'http://localhost/shadowcore/api/')
-    .constant('ServerURL', 'http://127.0.0.5/')
+    // .constant('ServerURL', 'http://127.0.0.5/')
 
     .run(function ($rootScope, $state, $stateParams, $window) {
         $rootScope.$state = $state;
@@ -11878,6 +11878,24 @@ angular.module('SmartAdmin.Forms').directive('smartJcrop', function ($q) {
 });
 'use strict';
 
+angular.module('SmartAdmin.Forms').directive('smartDropzone', function () {
+    return function (scope, element, attrs) {
+        var config, dropzone;
+
+        config = scope[attrs.smartDropzone];
+
+        // create a Dropzone for the element with the given options
+        dropzone = new Dropzone(element[0], config.options);
+
+        // bind the given event handlers
+        angular.forEach(config.eventHandlers, function (handler, event) {
+            dropzone.on(event, handler);
+        });
+    };
+});
+
+'use strict';
+
 angular.module('SmartAdmin.Forms').directive('smartClockpicker', function () {
     return {
         restrict: 'A',
@@ -12198,24 +12216,6 @@ angular.module('SmartAdmin.Forms').directive('smartXeditable', function($timeout
 
     }
 });
-'use strict';
-
-angular.module('SmartAdmin.Forms').directive('smartDropzone', function () {
-    return function (scope, element, attrs) {
-        var config, dropzone;
-
-        config = scope[attrs.smartDropzone];
-
-        // create a Dropzone for the element with the given options
-        dropzone = new Dropzone(element[0], config.options);
-
-        // bind the given event handlers
-        angular.forEach(config.eventHandlers, function (handler, event) {
-            dropzone.on(event, handler);
-        });
-    };
-});
-
 'use strict';
 
 angular.module('SmartAdmin.Forms').directive('smartValidateForm', function (formsCommon) {
