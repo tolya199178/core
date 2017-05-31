@@ -103,8 +103,10 @@ angular.module('app', [
             $rootScope.$apply();
         });
 
-        $rootScope.$on('$stateChangeSuccess', function() {
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            if (toState.name.substr(0, 6) != 'about.') {
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+            }
         });
 
     })
