@@ -1876,15 +1876,6 @@ angular.module('app.ui').config(function($stateProvider){
             }
         })
 });
-(function(){
-    "use strict";
-
-    angular.module('SmartAdmin', [
-        "SmartAdmin.Forms",
-        "SmartAdmin.Layout",
-        "SmartAdmin.UI",
-    ]);
-})();
 "use strict";
 
 angular.module('app.widgets', ['ui.router'])
@@ -1909,6 +1900,15 @@ angular.module('app.widgets', ['ui.router'])
 
 });
 
+(function(){
+    "use strict";
+
+    angular.module('SmartAdmin', [
+        "SmartAdmin.Forms",
+        "SmartAdmin.Layout",
+        "SmartAdmin.UI",
+    ]);
+})();
     "use strict";
 
 
@@ -12205,6 +12205,24 @@ angular.module('SmartAdmin.Forms').directive('smartXeditable', function($timeout
 });
 'use strict';
 
+angular.module('SmartAdmin.Forms').directive('smartDropzone', function () {
+    return function (scope, element, attrs) {
+        var config, dropzone;
+
+        config = scope[attrs.smartDropzone];
+
+        // create a Dropzone for the element with the given options
+        dropzone = new Dropzone(element[0], config.options);
+
+        // bind the given event handlers
+        angular.forEach(config.eventHandlers, function (handler, event) {
+            dropzone.on(event, handler);
+        });
+    };
+});
+
+'use strict';
+
 angular.module('SmartAdmin.Forms').directive('smartValidateForm', function (formsCommon) {
     return {
         restrict: 'A',
@@ -12269,24 +12287,6 @@ angular.module('SmartAdmin.Forms').directive('smartValidateForm', function (form
 
         }
     }
-});
-
-'use strict';
-
-angular.module('SmartAdmin.Forms').directive('smartDropzone', function () {
-    return function (scope, element, attrs) {
-        var config, dropzone;
-
-        config = scope[attrs.smartDropzone];
-
-        // create a Dropzone for the element with the given options
-        dropzone = new Dropzone(element[0], config.options);
-
-        // bind the given event handlers
-        angular.forEach(config.eventHandlers, function (handler, event) {
-            dropzone.on(event, handler);
-        });
-    };
 });
 
 'use strict';
