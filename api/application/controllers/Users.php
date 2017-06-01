@@ -27,6 +27,9 @@ class Users extends Base_Controller
         $data = json_decode(file_get_contents('php://input'), true);
 
         $result = $this->model->setPassword($data['oldPwd'], $data['newPwd']);
-        $this->set_response($result, 200);
+        if($result)
+            $this->set_response($result, 200);
+        else
+            $this->set_response('The current password is incorrect.', 401);
     }
 }

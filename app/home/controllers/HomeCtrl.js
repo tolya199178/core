@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('app.home').controller('HomeController', function ($scope, $window, ServerURL) {
+angular.module('app.home').controller('HomeController', function ($scope, $window, ServerURL, SubscribersService) {
     $scope.screenWidth = $window.innerWidth;
 
     $scope.videos = [
@@ -91,6 +91,21 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
     $scope.shop = function () {
         $window.open(ServerURL + "paypal/order", "_blank");
     };
+
+    $scope.subscriber  = {
+        email: ''
+    }
+    $scope.onSubscriber = function(){
+        if($scope.subscriber.email == '')
+            return;
+        SubscribersService.post($scope.subscriber).then(function (re) {
+            if(re.data.status == 'Success'){
+                alert('Success');
+            } else {
+                alert('Aleardy Exist');
+            }
+        });
+    }
 
     $scope.currSlideInd = 0;
 });

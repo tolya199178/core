@@ -23,6 +23,7 @@ class Subscribers_model extends CI_Model
 
     public function saveRow($data){
         if(!$this->checkEmail($data['email'])){
+            $data['created'] = date('Y-m-d h:i:s');
             $this->db->insert($this->table, $data);
             $result = ['status'=>'Success', 'id'=>$this->db->insert_id()];
             return $result;
