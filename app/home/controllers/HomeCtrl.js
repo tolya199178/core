@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('app.home').controller('HomeController', function ($scope, $window, ServerURL, SubscribersService) {
+angular.module('app.home').controller('HomeController', function ($scope, $window, $timeout, ServerURL, SubscribersService) {
     $scope.screenWidth = $window.innerWidth;
 
     $scope.videos = [
@@ -92,21 +92,30 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
         $window.open(ServerURL + "paypal/order", "_blank");
     };
 
-    $scope.subscriber  = {
+    $scope.subscriber = {
         email: ''
     }
-    $scope.onSubscriber = function(){
-        if($scope.subscriber.email == '')
-            return;
-        SubscribersService.post($scope.subscriber).then(function (re) {
-            if(re.data.status == 'Success'){
-                alert('Success');
-            } else {
-                alert('Aleardy Exist');
-            }
-        });
+    $scope.onSubscriber = function () {
+        if (!$scope.dataform.email.$error.email && !$scope.dataform.email.$error.required) {
+            SubscribersService.post($scope.subscriber).then(function (re) {
+                if (re.data.status == 'Success') {
+                    alert('Success');
+                } else {
+                    alert('Aleardy Exist');
+                }
+            });
+        }
     }
 
     $scope.currSlideInd = 0;
 
+    $timeout(function () {
+        var maxHeight = 0;
+        angular.element('.videos-wrapper h4').each(function () {
+            if (maxHeight < angular.element(this).height()) {
+                maxHeight = angular.element(this).height();
+            }
+        });
+        angular.element('.videos-wrapper h4').css('height', maxHeight);
+    }, 100);
 });
