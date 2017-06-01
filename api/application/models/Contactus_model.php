@@ -23,10 +23,11 @@ class Contactus_model extends CI_Model
 
     public function addRow($data)
     {
-        $this->load->model('mailbox_model');
 
         $data['contacted'] = date('Y-m-d h:i:s');
         $this->db->insert($this->table, $data);
+
+        $this->load->model('mailbox_model');
 
         $emailOptions = [
                 'from_email' => $data['email'],

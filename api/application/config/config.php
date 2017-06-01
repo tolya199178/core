@@ -30,7 +30,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost') {
 } else if ($_SERVER['SERVER_NAME'] === '127.0.0.5') {
     $config['base_url'] = 'http://127.0.0.5/';
 } else {
-    $config['base_url'] = 'http://serebrumlab.com/api/';
+    $config['base_url'] = 'http://serebrumlab.com/shadowcore/api/';
 }
 
 

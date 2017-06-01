@@ -17,12 +17,7 @@
                 post: function (data) {
                     var url = ServerURL + 'contactus';
                     var deferred = $q.defer();
-                    $http({
-                        method: 'POST',
-                        url: url,
-                        headers: {'Content-Type': 'multipart/form-data'},
-                        data: data
-                    }).then(function (res) {
+                    $http.post(url, data).then(function (res) {
                         deferred.resolve(res);
                     }, function (err) {
                         deferred.reject(err);

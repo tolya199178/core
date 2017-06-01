@@ -1,0 +1,129 @@
+<loading visible="loading"></loading>
+<div id="content">
+    <!--<div class="margin-bottom-10">
+        <div class="btn-group dropdown" data-dropdown>
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a ng-click="getData()">Buyers</a></li>
+                <li><a ng-click="getData()">Contact Us</a></li>
+                <li><a ng-click="getData()">Join the Team</a></li>
+            </ul>
+        </div>
+        <button class="btn btn-danger pull-right" ng-click="deleteMails()" ng-disabled="!getCheckedIds().length">Delete</button>
+    </div>-->
+    <section widget-grid id="widget-grid">
+        <div class="row">
+            <article class="col-sm-12">
+                <div jarvis-widget id="standard-datatable-widget" data-widget-color="darken" data-widget-editbutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-envelope"></i> </span>
+                        <h2>Mails</h2>
+                    </header>
+                    <div>
+                        <div class="widget-body no-padding">
+                            <div class="table-responsive">
+                                <table st-table="tableData" st-safe-src="safeData" st-select-mode="multiple" class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <!--<th rowspan="2"><input type="checkbox" ng-change="checkAll();" ng-model="allCheck"></th>-->
+                                        <th st-sort="from_email">From</th>
+                                        <th st-sort="to_emails">To</th>
+                                        <th st-sort="subject">Subject</th>
+                                        <th st-sort="mail_flag">Related</th>
+                                        <th rowspan="2">Action</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="from_email"/>
+                                        </th>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="to_emails"/>
+                                        </th>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="subject"/>
+                                        </th>
+                                        <th class="padding-5">
+                                            <input class="form-control" st-search="mail_flag"/>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr st-select-row="row" st-select-mode="single" ng-repeat="row in tableData" ng-dblclick="detailsView(row)">
+                                        <td>{{$index + 1}}</td>
+                                        <!--<td><input type="checkbox" ng-model="row.checked"></td>-->
+                                        <td>{{row.from_email}}</td>
+                                        <td>{{row.to_emails}}</td>
+                                        <td>{{row.subject}}</td>
+                                        <td>{{row.mail_flag}}</td>
+                                        <td class="text-center controls-td">
+                                            <a ng-click="deleteRow(row.id)">Delete</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td colspan="6" class="text-center">
+                                            <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Email Details</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">From Email</label>
+                        <div class="col-md-9 margin-top-5">
+                            {{selectedRow.from_email}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">To Emails</label>
+                        <div class="col-md-9 margin-top-5">
+                            {{selectedRow.to_emails}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Subject</label>
+                        <div class="col-md-9 margin-top-5">
+                            {{selectedRow.subject}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Message</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" placeholder="Content" ng-model="selectedRow.message" rows="5">
+                                {{selectedRow.message}}
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Related</label>
+                        <div class="col-md-9 margin-top-5">
+                            {{selectedRow.mail_flag}}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

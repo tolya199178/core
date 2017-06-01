@@ -34,19 +34,19 @@
                 <hr/>
                 <form>
                     <div>
-                        <input type="text" placeholder="First Name" class="input2">
+                        <input type="text" placeholder="First Name" ng-model="sendData.firstname" class="input2">
                     </div>
                     <div class="padding-top-15">
-                        <input type="text" placeholder="Last Name" class="input2">
+                        <input type="text" placeholder="Last Name" ng-model="sendData.lastname" class="input2">
                     </div>
                     <div class="padding-top-15">
-                        <input type="text" placeholder="Email" class="input2">
+                        <input type="text" placeholder="Email" ng-model="sendData.email" class="input2">
                     </div>
                     <div class="padding-top-15">
-                        <textarea placeholder="Message" class="input2" rows="5"></textarea>
+                        <textarea placeholder="Message" ng-model="sendData.message" class="input2" rows="5"></textarea>
                     </div>
                     <div class="padding-top-15">
-                        <button class="btn btn-primary btn-white-border">Send > </button>
+                        <button class="btn btn-primary btn-white-border" ng-click="onSend()">Send > </button>
                     </div>
                 </form>
             </div>

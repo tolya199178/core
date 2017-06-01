@@ -21,7 +21,7 @@ class News extends Base_Controller
 
     public function index_post()
     {
-        $data = $_POST;
+        $data = json_decode(file_get_contents('php://input'), true);
 
         $result = $this->model->saveRow($data);
         $this->set_response($result, 200);

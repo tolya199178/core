@@ -77,15 +77,15 @@ angular.module('app.admin', ['ui.router']).config(function ($stateProvider) {
                 }
             }
         })
-        .state('app.admin.mails', {
-            url: '/mails',
+        .state('app.admin.mailbox', {
+            url: '/mailbox',
             data: {
                 title: 'Mail Manage'
             },
             views: {
                 "content@app": {
-                    templateUrl: 'app/admin/views/mails.html',
-                    controller: 'MailsController'
+                    templateUrl: 'app/admin/views/mailbox.html',
+                    controller: 'MailboxController'
                 }
             }
         })

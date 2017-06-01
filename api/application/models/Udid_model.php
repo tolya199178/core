@@ -28,6 +28,19 @@ class Udid_model extends CI_Model
         return $newData;
     }
 
+    public function getUdid5()
+    {
+        $sql = "SELECT * FROM ".$this->table." WHERE allocated_user<>'' ORDER BY `created` Limit 5";
+        $query = $this->db->query($sql);
+        $newData = [];
+        foreach ($query->result_array() as $row)
+        {
+            $row['udid'] = $this->encrypt->decode($row['udid']);
+            $newData[] = $row;
+        }
+        return $newData;
+    }
+
     public function saveRow($data)
     {
 
@@ -48,11 +61,20 @@ class Udid_model extends CI_Model
         } else {
             $row['created'] = date('Y-m-d h:i:s');
             $this->db->insert($this->table, $row);
+
+            $udids = $this->getUdid5();
+            if(count($udids) == 5){
+                $this->load->model('buyers_model');
+                $this->buyers_model->sendUdids($udids);
+            }
+
             $result = ['id'=>$this->db->insert_id(), 'created'=>$row['created']];
         }
 
         return $result;
     }
+
+
 
 
     public function deleteRowById($rowId)
