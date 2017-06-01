@@ -105,9 +105,10 @@
                 <h2 class="sub-title margin-bottom-40 padding-top-20">N E W S L E T T E R</h2>
                 <h5 class="text-condensed-light margin-top-40 margin-bottom-40 padding-top-20">Step into the cyberpunk world of tomorrow with regular updates from us.</h5>
                 <div class="margin-bottom-40 margin-top-40">
-                    <div>
-                        <input type="text" class="text-condensed-light email-box" ng-model="subscriber.email" placeholder="Your e-mail here">
-                    </div>
+                    <form name="dataform">
+                        <input type="email" name="email" class="text-condensed-light email-box" ng-class="{'has-error': !dataform.email.$valid}" ng-model="subscriber.email" placeholder="Your e-mail here">
+                        <p class="margin-top-5" ng-if="!dataform.email.$valid">The email format is invalid.</p>
+                    </form>
                     <div class="margin-top-40">
                         <button class="btn btn-primary btn-white-border" ng-click="onSubscriber()">SUBMIT</button>
                     </div>

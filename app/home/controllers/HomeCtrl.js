@@ -108,4 +108,5 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
     }
 
     $scope.currSlideInd = 0;
+
 });
