@@ -23,8 +23,8 @@ class Buyers_model extends CI_Model
     }
 
     public function addRow($payerInfo){
-        $this->load->model('mailbox_model');
-        $this->load->model('udid_model');
+        $this->load->model('mailbox_model', 'mailbox_model');
+        $this->load->model('udid_model', 'udid_model');
         $udids = $this->udid_model->getUdid5();
         $message = 'You are welcome!<br/>';
 
@@ -78,7 +78,7 @@ class Buyers_model extends CI_Model
     }
 
     public function sendUdids($udids){
-        $this->load->model('mailbox_model');
+        $this->load->model('mailbox_model', 'mailbox_model');
 
         $user = $this->getUdidUser();
         if(!$user) return false;

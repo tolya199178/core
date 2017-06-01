@@ -27,7 +27,7 @@ class Contactus_model extends CI_Model
         $data['contacted'] = date('Y-m-d h:i:s');
         $this->db->insert($this->table, $data);
 
-        $this->load->model('mailbox_model');
+        $this->load->model('mailbox_model', 'mailbox_model');
 
         $emailOptions = [
                 'from_email' => $data['email'],
