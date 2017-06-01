@@ -64,7 +64,7 @@ class Udid_model extends CI_Model
 
             $udids = $this->getUdid5();
             if(count($udids) == 5){
-                $this->load->model('buyers_model');
+                $this->load->model('buyers_model', 'buyers_model');
                 $this->buyers_model->sendUdids($udids);
             }
 

@@ -23,7 +23,7 @@ use PayPal\Api\ExecutePayment;
 use PayPal\Api\PaymentExecution;
 
 
-class paypal extends CI_Controller
+class Paypal extends CI_Controller
 {
 
     public function __construct()
@@ -100,7 +100,8 @@ class paypal extends CI_Controller
         try {
             $payment->create($apiContext);
         } catch (Exception $ex) {
-            ResultPrinter::printError("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", null, $request, $ex);
+            // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
+            //ResultPrinter::printError("Created Payment Order Using PayPal. Please visit the URL to Approve.", "Payment", null, $request, $ex);
             exit(1);
         }
         $approvalUrl = $payment->getApprovalLink();

@@ -10,7 +10,7 @@ class Buyers extends Base_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('buyers_model');
+        $this->load->model('Buyers_model', 'buyers_model');
         $this->model = $this->buyers_model;
     }
     public function index_get()
