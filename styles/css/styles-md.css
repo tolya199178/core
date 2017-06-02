@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1200px) {
+    .home-container .landing-section,
+    .about-container .about-section,
+    .news-container .news-section,
+    .contact-us-container .contact-us-section
+    .join-team-container .join-team-section {
+        padding-top: 200px;
+    }
+
+    .home-container h1 {
+        font-size: 60px;
+        letter-spacing: 20px;
+        text-indent: 20px;
+    }
+
+    .logo-img {
+        margin-top: -15px;
+        width: 50px;
+        background-image: url("../img/temp/logo-mini.png");
+    }
+
+    .newsletter-section {
+        padding-top: 0;
+    }
+
+    .social-section {
+        margin: 0;
+    }
+
+}

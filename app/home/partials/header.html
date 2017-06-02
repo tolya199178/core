@@ -1,18 +1,24 @@
-<header class="header-section text-center" ng-class="{'scrolled':scrollTop >= 50, 'unscrolled':scrollTop < 50}">
+<header class="header-section text-center" ng-class="{'scrolled':scrollTop >= 50, 'unscrolled':scrollTop < 50}" ng-init="menuVisible = false;">
 
     <a class="logo-text pull-left cursor-pointer" ui-sref="home">
-        <img class="logo-img" src="./styles/img/temp/logo.png">
+        <div class="logo-img"></div>
+        <!--<img class="logo-img" src="./styles/img/temp/logo.png">-->
         <!--<span class="text-white margin-left-25">SHADOW</span><span class="text-grey margin-left-40">CORE</span>-->
     </a>
 
-    <div class="top-menu">
-        <div class="display-inline" ui-sref-active="active"><a ui-sref="home">HOME</a></div>
-        <div class="display-inline" ui-sref-active="active"><a ui-sref="about">ABOUT</a></div>
-        <div class="display-inline" ui-sref-active="active"><a ui-sref="news">NEWS</a></div>
-        <div class="display-inline" ui-sref-active="active"><a ui-sref="contactUs">CONTACT US</a></div>
-        <div class="display-inline" ui-sref-active="active"><a ui-sref="joinTeam">JOIN TEAM</a></div>
+    <div class="menu-btn">
+        <button class="btn btn-default" ng-click="menuVisible = !menuVisible"><i class="fa fa-2x fa-reorder"></i></button>
     </div>
 
+    <div class="top-menu" ng-class="{'top-menu-show':menuVisible}">
+        <div ui-sref-active="active"><a ui-sref="home">HOME</a></div>
+        <div ui-sref-active="active"><a ui-sref="about">ABOUT</a></div>
+        <div ui-sref-active="active"><a ui-sref="news">NEWS</a></div>
+        <div ui-sref-active="active"><a ui-sref="contactUs">CONTACT US</a></div>
+        <div ui-sref-active="active"><a ui-sref="joinTeam">JOIN TEAM</a></div>
+    </div>
+
+    <div class="top-menu-behind" ng-click="menuVisible = false;" ng-show="menuVisible"></div>
     <!--<button class="btn btn-xs btn-default pull-right"><i class="fa fa-reorder"></i></button>-->
 
     <div class="social-icons top-social-icons pull-right text-center">

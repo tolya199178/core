@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1400px) {
+    .home-container .landing-section,
+    .about-container .about-section,
+    .news-container .news-section,
+    .contact-us-container .contact-us-section
+    .join-team-container .join-team-section {
+        padding-top: 200px;
+    }
+
+    .home-container h1 {
+        /*font-size: 60px;*/
+        letter-spacing: 50px;
+        text-indent: 50px;
+    }
+    .buy-content {
+        padding-top: 20px;
+    }
+    .newsletter-title {
+        margin-bottom: 0;
+    }
+    .newsletter-content {
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .newsletter-btn-wrapper {
+        margin-top: 0;
+    }
+    .newsletter-input-wrapper {
+        margin-top: 10px;
+    }
+}

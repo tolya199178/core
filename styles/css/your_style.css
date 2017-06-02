@@ -117,6 +117,10 @@ body:not(.menu-on-top).desktop-detected {
     margin: 0;
 }
 
+.margin-10 {
+    margin: 10px;
+}
+
 .margin-20 {
     margin: 20px;
 }
@@ -299,6 +303,24 @@ nav ul li.active > a:before {
     }
 }
 
+@keyframes animation7 {
+    from {
+        margin-top: 25px;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
+@keyframes animation8 {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 25px;
+    }
+}
+
 .header-section {
     padding: 10px;
     height: 90px;
@@ -345,6 +367,18 @@ nav ul li.active > a:before {
     animation-duration: 1s;
 }
 
+.header-section.scrolled .menu-btn {
+    margin-top: 0;
+    animation-name: animation7;
+    animation-duration: 1s;
+}
+
+.header-section.unscrolled .menu-btn {
+    margin-top: 25px;
+    animation-name: animation8;
+    animation-duration: 1s;
+}
+
 .social-icons {
     margin-top: 32px;
     margin-right: 40px;
@@ -376,6 +410,10 @@ nav ul li.active > a:before {
 
 .logo-img {
     margin-top: -15px;
+    width: 222px;
+    height: 50px;
+    background-image: url("../img/temp/logo.png");
+    background-repeat: no-repeat;
 }
 
 .logo-text {
@@ -394,8 +432,18 @@ nav ul li.active > a:before {
 
 .top-menu {
     display: inline-block;
-    padding-top: 47px;
+    padding-top: 32px;
     text-align: center;
+}
+
+.menu-btn {
+    float: right;
+    margin-top: 25px;
+    display: none;
+}
+
+.top-menu div {
+    display: inline-block;
 }
 
 .top-menu div a {
@@ -421,7 +469,7 @@ nav ul li.active > a:before {
 
 .footer-section .footer-border {
     border-top: 1px solid grey;
-    width: 1360px;
+    width: 80vw;
     margin: auto;
 }
 
@@ -558,7 +606,9 @@ nav ul li.active > a:before {
     min-height: 300px;
 
 }
-
+.buy-content {
+    padding-top: 40px;
+}
 .buy-section h1 {
     font-size: 102px;
 }
@@ -574,6 +624,17 @@ nav ul li.active > a:before {
     color: white;
 }
 
+.newsletter-title {
+    margin-bottom: 40px;
+}
+.newsletter-content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+.newsletter-btn-wrapper,.newsletter-input-wrapper {
+    margin-top: 40px;
+}
 .newsletter-section h1 {
     font-size: 50px;
 }
@@ -620,14 +681,19 @@ nav ul li.active > a:before {
     margin-top: -110px;
 }
 
+.videos-title {
+    padding: 40px;
+    margin-top: 30px;
+}
+
 .videos-wrapper {
-    padding-left: 230px;
-    padding-right: 230px;
+    width: 75vw;
 }
 
 .slick-prev:before {
     background-image: url(../img/temp/arrow_left.png);
     background-repeat: no-repeat;
+    background-position: center;
     font-size: 50px;
     margin-left: -40px;
     color: transparent;
@@ -636,6 +702,7 @@ nav ul li.active > a:before {
 .slick-next:before {
     background-image: url(../img/temp/arrow_right.png);
     background-repeat: no-repeat;
+    background-position: center;
     font-size: 50px;
     margin-left: 40px;
     color: transparent;
@@ -814,73 +881,4 @@ youtube iframe {
     font-size: 80px;
     letter-spacing: 30px;
     text-indent: 30px;
-}
-
-/*--------------- media queries ----------------------------*/
-
-@media only screen and (max-width: 1200px) {
-    .home-container .landing-section,
-    .about-container .about-section,
-    .news-container .news-section,
-    .contact-us-container .contact-us-section
-    .join-team-container .join-team-section {
-        padding-top: 200px;
-    }
-
-    .home-container h1 {
-        font-size: 60px;
-        letter-spacing: 20px;
-        text-indent: 20px;
-    }
-}
-
-@media only screen and (max-width: 960px) {
-    .home-container .landing-section,
-    .about-container .about-section,
-    .news-container .news-section,
-    .contact-us-container .contact-us-section,
-    .join-team-container .join-team-section {
-        padding-top: 150px;
-    }
-
-    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1, .join-team-section h1 {
-        font-size: 40px;
-        letter-spacing: 10px;
-        text-indent: 10px;
-    }
-
-    .buy-section {
-        padding-top: 25px;
-    }
-
-    .buy-section h1 {
-        font-size: 40px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .btn-white-border {
-        font-size: 12px;
-    }
-
-    .home-container .landing-section, .about-container .about-section, .news-container .news-section, .contact-us-container .contact-us-section, .join-team-container .join-team-section {
-        padding-top: 100px;
-    }
-
-    .home-container h1, .about-section h1, .news-section h1, .contact-us-section h1, .join-team-section h1 {
-        font-size: 30px;
-        letter-spacing: 0;
-    }
-
-    .newsletter-section {
-        padding-top: 20px;
-    }
-
-    .social-icons {
-        display: none;
-    }
-
-    .top-menu div a {
-        margin: 0px 5px;
-    }
 }
