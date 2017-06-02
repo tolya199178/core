@@ -18,4 +18,14 @@ class User_model extends Base_model
             return false;
         }
     }
+    public function login($password){
+        $sql = "SELECT * FROM users WHERE `name`='admin' AND password=MD5('".$password."')";
+        $rst = $this->db->query($sql);
+        $row = $rst->result_array();
+        if(count($row) > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
