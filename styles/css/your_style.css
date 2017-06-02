@@ -375,8 +375,6 @@ nav ul li.active > a:before {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
     margin-top: -15px;
 }
 
@@ -499,7 +497,7 @@ nav ul li.active > a:before {
     background-repeat: no-repeat;
     height: 50vw;
     text-align: center;
-    padding-top: 400px;
+    padding-top: 20vw;
     color: white;
     min-height: 400px;
 }
@@ -555,7 +553,7 @@ nav ul li.active > a:before {
     background-repeat: no-repeat;
     height: 35vw;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 4vw;
     color: white;
     min-height: 300px;
 
@@ -581,28 +579,30 @@ nav ul li.active > a:before {
 }
 
 .newsletter-section .email-box {
-    background: transparent;
-    border: 0;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    /*background: transparent;*/
+    /*border: 0;*/
+    /*border-top: 1px solid white;*/
+    /*border-bottom: 1px solid white;*/
     text-align: center;
     padding: 10px;
     width: 500px;
     max-width: calc(100vw - 60px);
     height: 60px;
-    -webkit-transition: background 0.4s ease-in-out;
-    transition: background 0.4s ease-in-out;
+    /*-webkit-transition: background 0.4s ease-in-out;
+    transition: background 0.4s ease-in-out;*/
 }
 
-/* When the input field gets focus, change its width to 100% */
-.newsletter-section .email-box:focus {
+/*.newsletter-section .email-box:focus {
     background: rgba(255, 255, 255, .1);
-}
+}*/
 .newsletter-section .email-box.has-error {
-    border-color: darkred;
-    background: rgba(255, 255, 255, .1);
+    /*border-color: darkred;*/
+
 }
 
+.newsletter-section .email-box.has-error:focus {
+    /*background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, darkred 4%);*/
+}
 
 .newsletter-section .email-box::-webkit-input-placeholder {
     color: #ccc;
