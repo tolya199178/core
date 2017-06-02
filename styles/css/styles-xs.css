@@ -74,7 +74,7 @@
     }
 
     .video-section .slick-prev, .video-section .slick-next {
-        margin-top: -160px;
+        margin-top: -125px;
     }
 
     .slick-prev:before {
@@ -90,4 +90,11 @@
         letter-spacing: 5px;
     }
 
+    .footer-border {
+        width: 100vw !important;
+    }
+
+    .bottom-menu div a {
+        letter-spacing: 0;
+    }
 }
