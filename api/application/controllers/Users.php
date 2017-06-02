@@ -19,8 +19,17 @@ class Users extends Base_Controller
      */
     public function index_get()
     {
-
         $this->set_response('aaa', 200);
+    }
+    public function login_get()
+    {
+        $password = $this->input->get('password');
+        $result = $this->model->login($password);
+        if($result)
+            $this->set_response($result, 200);
+        else
+            $this->set_response('The current password is incorrect.', 401);
+
     }
     public function setpassword_post()
     {

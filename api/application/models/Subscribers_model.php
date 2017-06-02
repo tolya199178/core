@@ -25,10 +25,9 @@ class Subscribers_model extends CI_Model
         if(!$this->checkEmail($data['email'])){
             $data['created'] = date('Y-m-d h:i:s');
             $this->db->insert($this->table, $data);
-            $result = ['status'=>'Success', 'id'=>$this->db->insert_id()];
-            return $result;
+            return true;
         } else {
-            return ['status'=>'Already Exist'];
+            return false;
         }
     }
 

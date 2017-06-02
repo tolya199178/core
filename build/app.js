@@ -312,20 +312,20 @@ angular.module('app', [
     // App
     'app.auth',
     'app.layout',
-    //'app.chat',
-    //'app.dashboard',
-    //'app.calendar',
-    //'app.inbox',
-    //'app.graphs',
-    //'app.tables',
-    //'app.forms',
-    //'app.ui',
-    //'app.widgets',
-    //'app.maps',
-    //'app.appViews',
-    //'app.misc',
-    //'app.smartAdmin',
-    //'app.eCommerce'
+    'app.forms',
+    // 'app.chat',
+    // 'app.dashboard',
+    // 'app.calendar',
+    // 'app.inbox',
+    // 'app.graphs',
+    // 'app.tables',
+    // 'app.ui',
+    // 'app.widgets',
+    // 'app.maps',
+    // 'app.appViews',
+    // 'app.misc',
+    // 'app.smartAdmin',
+    // 'app.eCommerce',
     'app.home',
     'app.admin',
     'slick',
@@ -379,8 +379,13 @@ angular.module('app', [
     })
     .constant('APP_CONFIG', window.appConfig)
 
+<<<<<<< HEAD
     //.constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
     .constant('ServerURL', 'http://127.0.0.5/')
+=======
+    .constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
+    // .constant('ServerURL', 'http://127.0.0.5/')
+>>>>>>> fbf49a8743e6b978cf5c616854e8fe5c2a626c91
     // .constant('ServerURL', 'http://localhost/shadowcore/api/')
 
     .run(function ($rootScope, $state, $stateParams, $window) {
@@ -393,9 +398,14 @@ angular.module('app', [
             $rootScope.$apply();
         });
 
-        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams, $state) {
             if (toState.name.substr(0, 6) != 'about.') {
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
+            }
+            if (toState.name.substr(0, 9) == 'app.admin') {
+                if(localStorage.isLogin != 'true'){
+                    $rootScope.$state.go('login');
+                }
             }
         });
 
@@ -650,102 +660,69 @@ angular.module('app.appViews', ['ui.router'])
 
 angular.module('app.auth', [
     'ui.router'
-//        ,
-//        'ezfb',
-//        'googleplus'
-]).config(function ($stateProvider
-//        , ezfbProvider
-//        , GooglePlusProvider
-    ) {
-//        GooglePlusProvider.init({
-//            clientId: authKeys.googleClientId
-//        });
-//
-//        ezfbProvider.setInitParams({
-//            appId: authKeys.facebookAppId
-//        });
-    $stateProvider.state('realLogin', {
-        url: '/real-login',
+]).config(function ($stateProvider) {
+    $stateProvider
+        .state('login', {
+            url: '/login',
+            views: {
+                root: {
+                    templateUrl: 'app/auth/views/login.html',
+                    controller: 'LoginCtrl'
+                }
+            },
+            data: {
+                title: 'Login',
+                htmlId: 'extr-page'
+            },
+            resolve: {
+                srcipts: function (lazyScript) {
+                    return lazyScript.register([
+                        'build/vendor.ui.js'
+                    ])
 
-        views: {
-            root: {
-                templateUrl: "app/auth/login/login.html",
-                controller: 'LoginCtrl'
+                }
             }
-        },
-        data: {
-            title: 'Login',
-            rootId: 'extra-page'
-        }
+        })
 
-    })
-
-    .state('login', {
-        url: '/login',
-        views: {
-            root: {
-                templateUrl: 'app/auth/views/login.html'
+        .state('register', {
+            url: '/register',
+            views: {
+                root: {
+                    templateUrl: 'app/auth/views/register.html'
+                }
+            },
+            data: {
+                title: 'Register',
+                htmlId: 'extr-page'
             }
-        },
-        data: {
-            title: 'Login',
-            htmlId: 'extr-page'
-        },
-        resolve: {
-            srcipts: function(lazyScript){
-                return lazyScript.register([
-                    'build/vendor.ui.js'
-                ])
+        })
 
+        .state('forgotPassword', {
+            url: '/forgot-password',
+            views: {
+                root: {
+                    templateUrl: 'app/auth/views/forgot-password.html'
+                }
+            },
+            data: {
+                title: 'Forgot Password',
+                htmlId: 'extr-page'
             }
-        }
-    })
+        })
 
-    .state('register', {
-        url: '/register',
-        views: {
-            root: {
-                templateUrl: 'app/auth/views/register.html'
+        .state('lock', {
+            url: '/lock',
+            views: {
+                root: {
+                    templateUrl: 'app/auth/views/lock.html'
+                }
+            },
+            data: {
+                title: 'Locked Screen',
+                htmlId: 'lock-page'
             }
-        },
-        data: {
-            title: 'Register',
-            htmlId: 'extr-page'
-        }
-    })
-
-    .state('forgotPassword', {
-        url: '/forgot-password',
-        views: {
-            root: {
-                templateUrl: 'app/auth/views/forgot-password.html'
-            }
-        },
-        data: {
-            title: 'Forgot Password',
-            htmlId: 'extr-page'
-        }
-    })
-
-    .state('lock', {
-        url: '/lock',
-        views: {
-            root: {
-                templateUrl: 'app/auth/views/lock.html'
-            }
-        },
-        data: {
-            title: 'Locked Screen',
-            htmlId: 'lock-page'
-        }
-    })
-
-
-}).constant('authKeys', {
-    googleClientId: '',
-    facebookAppId: ''
-});
-
+        })
+})
 
 
 "use strict";
@@ -3228,6 +3205,16 @@ angular
                         deferred.reject(err);
                     });
                     return deferred.promise;
+                },
+                login: function (password) {
+                    var url = ServerURL + 'users/login?password='+password;
+                    var deferred = $q.defer();
+                    $http.get(url).then(function (res) {
+                        deferred.resolve(res);
+                    }, function (err) {
+                        deferred.reject(err);
+                    });
+                    return deferred.promise;
                 }
             };
         }]);
@@ -3278,47 +3265,29 @@ angular.module('app.auth').directive('loginInfo', function(User){
 
 "use strict";
 
-angular.module('app.auth').controller('LoginCtrl', function ($scope, $state, GooglePlus, User, ezfb) {
-
-    $scope.$on('event:google-plus-signin-success', function (event, authResult) {
-        if (authResult.status.method == 'PROMPT') {
-            GooglePlus.getUser().then(function (user) {
-                User.username = user.name;
-                User.picture = user.picture;
-                $state.go('app.dashboard');
+angular.module('app.auth').controller('LoginCtrl', function ($scope, $state, UsersService) {
+    $scope.password = '';
+    localStorage.isLogin = '';
+    $scope.login = function () {
+        if($('#login-form').valid()){
+            UsersService.login($scope.password).then(function (res) {
+                localStorage.isLogin = true;
+                $state.go('app.admin');
             });
         }
-    });
-
-    $scope.$on('event:facebook-signin-success', function (event, authResult) {
-        ezfb.api('/me', function (res) {
-            User.username = res.name;
-            User.picture = 'https://graph.facebook.com/' + res.id + '/picture';
-            $state.go('app.dashboard');
-        });
-    });
+    }
 })
 
 
 
 'use strict';
 
-angular.module('app.auth').factory('User', function ($http, $q, APP_CONFIG) {
-    var dfd = $q.defer();
+angular.module('app.auth').factory('User', ['$http', '$q', 'ServerURL', function ($http, $q, ServerURL) {
+        return {
 
-    var UserModel = {
-        initialized: dfd.promise,
-        username: undefined,
-        picture: undefined
-    };
-     $http.get(APP_CONFIG.apiRootUrl + '/user.json').then(function(response){
-         UserModel.username = response.data.username;
-         UserModel.picture= response.data.picture;
-         dfd.resolve(UserModel)
-     });
+        };
+}]);
 
-    return UserModel;
-});
 
 "use strict";
 
@@ -3549,6 +3518,28 @@ angular.module('app.calendar').controller('CalendarCtrl', function ($scope, $log
 angular.module('app.calendar').factory('CalendarEvent', function($resource, APP_CONFIG){
     return $resource( APP_CONFIG.apiRootUrl + '/events.json', {_id:'@id'})
 });
+'use strict';
+
+angular.module('app.eCommerce').controller('OrdersDemoCtrl', function ($scope, orders) {
+
+    $scope.orders = orders.data;
+
+    $scope.tableOptions =  {
+        "data": orders.data.data,
+//            "bDestroy": true,
+        "iDisplayLength": 15,
+        columns: [
+            {data: "orderId"},
+            {data: "customerId"},
+            {data: "purchase"},
+            {data: "delivery"},
+            {data: "basePrice"},
+            {data: "postalZip"},
+            {data: "status"}
+        ],
+        "order": [[1, 'asc']]
+    }
+});
 "use strict";	
 
 angular.module('app').controller("ActivitiesCtrl", function ActivitiesCtrl($scope, $log, activityService){
@@ -3733,28 +3724,6 @@ angular.module('app').controller('TodoCtrl', function ($scope, $timeout, Todo) {
 
     };
 
-});
-'use strict';
-
-angular.module('app.eCommerce').controller('OrdersDemoCtrl', function ($scope, orders) {
-
-    $scope.orders = orders.data;
-
-    $scope.tableOptions =  {
-        "data": orders.data.data,
-//            "bDestroy": true,
-        "iDisplayLength": 15,
-        columns: [
-            {data: "orderId"},
-            {data: "customerId"},
-            {data: "purchase"},
-            {data: "delivery"},
-            {data: "basePrice"},
-            {data: "postalZip"},
-            {data: "status"}
-        ],
-        "order": [[1, 'asc']]
-    }
 });
 
 "use strict";

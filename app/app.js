@@ -22,20 +22,20 @@ angular.module('app', [
     // App
     'app.auth',
     'app.layout',
-    //'app.chat',
-    //'app.dashboard',
-    //'app.calendar',
-    //'app.inbox',
-    //'app.graphs',
-    //'app.tables',
-    //'app.forms',
-    //'app.ui',
-    //'app.widgets',
-    //'app.maps',
-    //'app.appViews',
-    //'app.misc',
-    //'app.smartAdmin',
-    //'app.eCommerce'
+    'app.forms',
+    // 'app.chat',
+    // 'app.dashboard',
+    // 'app.calendar',
+    // 'app.inbox',
+    // 'app.graphs',
+    // 'app.tables',
+    // 'app.ui',
+    // 'app.widgets',
+    // 'app.maps',
+    // 'app.appViews',
+    // 'app.misc',
+    // 'app.smartAdmin',
+    // 'app.eCommerce',
     'app.home',
     'app.admin',
     'slick',
@@ -89,8 +89,8 @@ angular.module('app', [
     })
     .constant('APP_CONFIG', window.appConfig)
 
-    //.constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
-    .constant('ServerURL', 'http://127.0.0.5/')
+    .constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
+    // .constant('ServerURL', 'http://127.0.0.5/')
     // .constant('ServerURL', 'http://localhost/shadowcore/api/')
 
     .run(function ($rootScope, $state, $stateParams, $window) {
@@ -103,9 +103,14 @@ angular.module('app', [
             $rootScope.$apply();
         });
 
-        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams, $state) {
             if (toState.name.substr(0, 6) != 'about.') {
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
+            }
+            if (toState.name.substr(0, 9) == 'app.admin') {
+                if(localStorage.isLogin != 'true'){
+                    $rootScope.$state.go('login');
+                }
             }
         });
 

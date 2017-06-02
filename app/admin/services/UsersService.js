@@ -18,6 +18,16 @@
                         deferred.reject(err);
                     });
                     return deferred.promise;
+                },
+                login: function (password) {
+                    var url = ServerURL + 'users/login?password='+password;
+                    var deferred = $q.defer();
+                    $http.get(url).then(function (res) {
+                        deferred.resolve(res);
+                    }, function (err) {
+                        deferred.reject(err);
+                    });
+                    return deferred.promise;
                 }
             };
         }]);

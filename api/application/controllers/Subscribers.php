@@ -25,6 +25,20 @@ class Subscribers extends Base_Controller
         $data = json_decode(file_get_contents('php://input'), true);
 
         $result = $this->model->saveRow($data);
+
+        if($result){
+            $this->load->model('mailbox_model');
+            $emailOptions = [
+                    'to_emails' => [$data['email']],
+                    'from_email' => SITE_FROM_EMAIL,
+                    'message' => 'Your email is successfully registered our site',
+                    'subject' => 'Welcome to shadowcore !!!',
+                    'mail_flag' => 'subscribers'
+            ];
+            $this->mailbox_model->sendMail($emailOptions);
+        }
+
+
         $this->set_response($result, 200);
     }
 
