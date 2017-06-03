@@ -1,11 +1,11 @@
-input::-webkit-input-placeholder {
+.email-box::-webkit-input-placeholder {
     font-family: 'roboto', sans-serif;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
 
-input {
+.email-box {
     margin: auto;
     display: block;
     border: none;
@@ -21,12 +21,12 @@ input {
     background-repeat: no-repeat;
     color: white;
 }
-input:focus, input:valid {
+.email-box:focus, .email-box:valid {
     box-shadow: none;
     outline: none;
     background-position: 0 0;
 }
-input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+.email-box:focus::-webkit-input-placeholder, .email-box:valid::-webkit-input-placeholder {
     color: white;
     font-size: 11px;
     -webkit-transform: translateY(-20px);

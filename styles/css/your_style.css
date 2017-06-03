@@ -190,6 +190,9 @@ body:not(.menu-on-top).desktop-detected {
     max-width: calc(100vw - 60px);
     color: white;
 }
+.input2:focus {
+    border-color: white;
+}
 
 /* for directives */
 .loading-sheath {

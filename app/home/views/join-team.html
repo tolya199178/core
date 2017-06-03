@@ -53,28 +53,23 @@
     <div class="row margin-0">
         <div class="col-xs-12 padding-0">
             <div class="newsletter-section">
-                <h2 class="sub-title margin-bottom-40 padding-top-20">N E W S L E T T E R</h2>
-                <h5 class="text-condensed-light margin-top-40 margin-bottom-40 padding-top-20">Step into the cyberpunk world of tomorrow with regular updates from us.</h5>
-                <div class="margin-bottom-40 margin-top-40">
+                <h2 class="sub-title padding-top-20">N E W S L E T T E R</h2>
+                <h5 class="text-condensed-light newsletter-content">Step into the cyberpunk world of tomorrow with regular updates from us.</h5>
+                <div class="newsletter-input-wrapper">
                     <form name="dataform">
-                        <input type="email" name="email" class="text-condensed-light email-box" ng-class="{'has-error': !dataform.email.$valid}" ng-model="subscriber.email" placeholder="Your e-mail here">
-                        <p class="margin-top-5" ng-if="!dataform.email.$valid">The email format is invalid.</p>
+                        <input type="email"
+                               placeholder="Your e-mail here"
+                               ng-model="subscriber.email"
+                               required=""
+                               name="email"
+                               class="text-condensed-light email-box"
+                               ng-class="{'has-error': dataform.email.$error.email}">
+                        <p class="margin-top-5" ng-if="!dataform.email.$error.email">&nbsp;</p>
+                        <p class="margin-top-5" ng-if="dataform.email.$error.email">The email format is invalid.</p>
                     </form>
-                    <div class="margin-top-40">
+                    <div class="newsletter-btn-wrapper">
                         <button class="btn btn-primary btn-white-border" ng-click="onSubscriber()">SUBMIT</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row margin-0">
-        <div class="col-xs-12 padding-0 bg-black">
-            <div class="social-section container text-center text-white padding-20">
-                <h2 class="text-condensed-light">SHADOWCORE SOCIAL</h2>
-                <div class="social-icons text-center">
-                    <div><a ng-href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
-                    <div><a ng-href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
-                    <div><a ng-href="#"><i class="fa fa-2x fa-youtube-play"></i></a></div>
                 </div>
             </div>
         </div>
