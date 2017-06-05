@@ -21,9 +21,10 @@ class Users extends Base_Controller
     {
         $this->set_response('aaa', 200);
     }
-    public function login_get()
+    public function login_post()
     {
-        $password = $this->input->get('password');
+        $data = json_decode(file_get_contents('php://input'), true);
+        $password = $data['password'];
         $result = $this->model->login($password);
         if($result)
             $this->set_response($result, 200);

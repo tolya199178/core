@@ -20,9 +20,15 @@
                     return deferred.promise;
                 },
                 login: function (password) {
-                    var url = ServerURL + 'users/login?password='+password;
+                    var url = ServerURL + 'users/login';
+                    var data = {password: password};
                     var deferred = $q.defer();
-                    $http.get(url).then(function (res) {
+                    $http({
+                        method: 'POST',
+                        url: url,
+                        headers: {'Content-Type': 'multipart/form-data'},
+                        data: data
+                    }).then(function (res) {
                         deferred.resolve(res);
                     }, function (err) {
                         deferred.reject(err);
