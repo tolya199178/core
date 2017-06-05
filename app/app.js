@@ -89,7 +89,7 @@ angular.module('app', [
     })
     .constant('APP_CONFIG', window.appConfig)
 
-    .constant('ServerURL', 'http://serebrumlab.com/shadowcore/api/')
+    .constant('ServerURL', 'https://serebrumlab.com/shadowcore/api/')
     // .constant('ServerURL', 'http://127.0.0.5/')
     // .constant('ServerURL', 'http://localhost/shadowcore/api/')
 
