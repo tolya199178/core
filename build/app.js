@@ -3202,9 +3202,15 @@ angular
                     return deferred.promise;
                 },
                 login: function (password) {
-                    var url = ServerURL + 'users/login?password='+password;
+                    var url = ServerURL + 'users/login';
+                    var data = {password: password};
                     var deferred = $q.defer();
-                    $http.get(url).then(function (res) {
+                    $http({
+                        method: 'POST',
+                        url: url,
+                        headers: {'Content-Type': 'multipart/form-data'},
+                        data: data
+                    }).then(function (res) {
                         deferred.resolve(res);
                     }, function (err) {
                         deferred.reject(err);
@@ -6663,6 +6669,43 @@ angular.module('app.chat').directive('chatWidget', function (ChatApi) {
 });
 "use strict";
 
+angular.module('app').factory('Todo', function (Restangular, APP_CONFIG, $httpBackend) {
+
+    var normalize = function(todo) {
+        if(!todo._id){
+            todo._id = _.unique('todo')
+        }
+        todo.toggle = function(){
+            if (!todo.completedAt) {
+                todo.state = 'Completed';
+                todo.completedAt = JSON.stringify(new Date());
+            } else {
+                todo.state = 'Critical';
+                todo.completedAt = null;
+            }
+        };
+
+        todo.setState = function(state){
+            todo.state = state;
+            if (state == 'Completed') {
+                todo.completedAt = JSON.stringify(new Date());
+            } else {
+                todo.completedAt = null;
+            }
+        };
+
+        return todo;
+    };
+
+    var Todo = Restangular.all(APP_CONFIG.apiRootUrl + '/todos.json');
+
+    Restangular.extendModel(APP_CONFIG.apiRootUrl + '/todos.json', normalize);
+    Todo.normalize = normalize;
+
+    return Todo
+});
+"use strict";
+
  angular.module('app').directive('todoList', function ($timeout, Todo) {
 
     return {
@@ -6703,43 +6746,6 @@ angular.module('app.chat').directive('chatWidget', function (ChatApi) {
 
         }
     }
-});
-"use strict";
-
-angular.module('app').factory('Todo', function (Restangular, APP_CONFIG, $httpBackend) {
-
-    var normalize = function(todo) {
-        if(!todo._id){
-            todo._id = _.unique('todo')
-        }
-        todo.toggle = function(){
-            if (!todo.completedAt) {
-                todo.state = 'Completed';
-                todo.completedAt = JSON.stringify(new Date());
-            } else {
-                todo.state = 'Critical';
-                todo.completedAt = null;
-            }
-        };
-
-        todo.setState = function(state){
-            todo.state = state;
-            if (state == 'Completed') {
-                todo.completedAt = JSON.stringify(new Date());
-            } else {
-                todo.completedAt = null;
-            }
-        };
-
-        return todo;
-    };
-
-    var Todo = Restangular.all(APP_CONFIG.apiRootUrl + '/todos.json');
-
-    Restangular.extendModel(APP_CONFIG.apiRootUrl + '/todos.json', normalize);
-    Todo.normalize = normalize;
-
-    return Todo
 });
 'use strict';
 

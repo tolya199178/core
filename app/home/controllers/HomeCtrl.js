@@ -98,10 +98,24 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
     $scope.onSubscriber = function () {
         if (!$scope.dataform.email.$error.email && !$scope.dataform.email.$error.required) {
             SubscribersService.post($scope.subscriber).then(function (re) {
-                if (re.data.status == 'Success') {
-                    alert('Success');
+                if (re.data) {
+                    $.bigBox({
+                        title: 'Success',
+                        content: 'Your email is successfully register our site',
+                        color: "#6d97b8",
+                        icon: "fa fa-key shake animated",
+                        number: '',
+                        timeout: 6000
+                    });
                 } else {
-                    alert('Aleardy Exist');
+                    $.bigBox({
+                        title: 'Success',
+                        content: 'Your email is successfully register our site',
+                        color: "#C46A69",
+                        icon: "fa fa-warning shake animated",
+                        number: '',
+                        timeout: 6000
+                    });
                 }
             });
         }
