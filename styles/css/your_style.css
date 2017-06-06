@@ -191,6 +191,10 @@ body:not(.menu-on-top).desktop-detected {
     color: white;
 }
 
+.text-center2 {
+    text-align-last: center;
+}
+
 .input2:focus {
     border-color: white;
 }
