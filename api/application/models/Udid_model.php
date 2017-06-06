@@ -41,6 +41,14 @@ class Udid_model extends CI_Model
         return $newData;
     }
 
+    public function setUdidAllocated($idAry, $email){
+        $idStr = implode(',', $idAry);
+        $datestr = date('Y-m-d H:i:s');
+        $sql = "UPDATE ".$this->table." SET allocated_user='".$email."', allocated_date='".$datestr."' WHERE `id` IN(".$idStr.")";
+        $this->db->query($sql);
+        return true;
+    }
+
     public function saveRow($data)
     {
 

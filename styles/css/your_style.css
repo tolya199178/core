@@ -191,8 +191,17 @@ body:not(.menu-on-top).desktop-detected {
     color: white;
 }
 
+.input2 > option{
+    color: #000;
+}
+
 .text-center2 {
     text-align-last: center;
+}
+
+.contact-us-success{
+    margin: 70px 0 30px 0;
+    color: #fff;
 }
 
 .input2:focus {

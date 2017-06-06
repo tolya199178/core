@@ -32,10 +32,12 @@
                     <p class="text-white">hello@shadowcore.com</p>
                 </div>
                 <hr/>
-                <form>
+                <form ng-if="isContact">
                     <div>
-                        <select class="input2 text-center2">
-                            <option>Technical Issue</option>
+                        <select class="input2 text-center2" ng-model="sendData.subject">
+                            <option value="Technical Issue">Technical Issue</option>
+                            <option value="Technical Issue1">Technical Issue1</option>
+                            <option value="Technical Issue2">Technical Issue2</option>
                         </select>
                     </div>
                     <div class="padding-top-15">
@@ -54,6 +56,9 @@
                         <button class="btn btn-primary btn-white-border" ng-click="onSend()">Send&nbsp;&nbsp;></button>
                     </div>
                 </form>
+                <div ng-if="!isContact" class="contact-us-success">
+                    <h1>Thank you! We'll be in touch.</h1>
+                </div>
             </div>
         </div>
     </div>
