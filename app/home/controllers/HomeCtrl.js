@@ -101,7 +101,7 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
                 if (re.data) {
                     $.bigBox({
                         title: 'Success',
-                        content: 'Your email is successfully register our site',
+                        content: 'Your email is successfully registered in our site',
                         color: "#6d97b8",
                         icon: "fa fa-key shake animated",
                         number: '',
@@ -109,8 +109,8 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
                     });
                 } else {
                     $.bigBox({
-                        title: 'Success',
-                        content: 'Your email is successfully register our site',
+                        title: 'Failed',
+                        content: 'Your email is already registered in our site',
                         color: "#C46A69",
                         icon: "fa fa-warning shake animated",
                         number: '',

@@ -26,15 +26,18 @@ class Buyers_model extends CI_Model
         $this->load->model('mailbox_model', 'mailbox_model');
         $this->load->model('udid_model', 'udid_model');
         $udids = $this->udid_model->getUdid5();
-        $message = 'You are welcome!<br/>';
+        $message = 'You are welcome!\n';
+        $udidAry = [];
 
         if(count($udids) == 5){
             foreach ($udids as $row){
-                $message .= $row['udid'] . '<br/>';
+                $udidAry[] = $row['id'];
+                $message .= $row['udid'] . '\n';
             }
         }
 
         $this->db->insert($this->table, $payerInfo);
+        $user_id = $this->db->insert_id();
 
         $emailOptions = [
                 'to_emails' => [$payerInfo['email']],
@@ -46,8 +49,8 @@ class Buyers_model extends CI_Model
 
         if($this->mailbox_model->sendMail($emailOptions)){
             if(count($udids) == 5){
-                $user_id = $this->db->insert_id();
                 $this->setUdidFlag($user_id);
+                $this->udid_model->setUdidAllocated($udidAry, $payerInfo['email']);
             }
             return true;
         } else {
