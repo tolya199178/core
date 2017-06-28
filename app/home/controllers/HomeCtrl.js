@@ -10,42 +10,42 @@ angular.module('app.home').controller('HomeController', function ($scope, $windo
             duration: "25:46",
             description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
             image: "./styles/img/temp/home/video_overlay1.jpg",
-            code: "Q7HGmUBQOHM"
+            code: "Q7HGmUBQOHM_"
         }, {
             id: 2,
             name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
             duration: "17:46",
             description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
             image: "./styles/img/temp/home/video_overlay2.jpg",
-            code: "du1IFCWaD5k"
+            code: "du1IFCWaD5k_"
         }, {
             id: 3,
             name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
             duration: "47:46",
             description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
             image: "./styles/img/temp/home/video_overlay3.jpg",
-            code: "C5Qp1hlXLko"
+            code: "C5Qp1hlXLko_"
         }, {
             id: 4,
             name: "FIRST PUBLIC GAMEPLAY IS ON EVERYTHING!",
             duration: "25:46",
             description: "Navigating the next frontier of multiplayer has never felt so real and connected, delivered online and in VR.",
             image: "./styles/img/temp/home/video_overlay1.jpg",
-            code: "Q7HGmUBQOHM"
+            code: "Q7HGmUBQOHM_"
         }, {
             id: 5,
             name: "VOLUPTATEM ACCUSANTIUM DOLOREMQUE.",
             duration: "17:46",
             description: "A \"Ghost in the Shell\"-inspired theme coupled with action gameplay, intuitive controls, challenging enemies, and industrial atmosphere.",
             image: "./styles/img/temp/home/video_overlay2.jpg",
-            code: "du1IFCWaD5k"
+            code: "du1IFCWaD5k_"
         }, {
             id: 6,
             name: "TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILL.",
             duration: "47:46",
             description: "Team up and become the adrenaline-charged mercenaries of your own sci-fi adventure set in the industrial post-apocalyptic world of the future.",
             image: "./styles/img/temp/home/video_overlay3.jpg",
-            code: "C5Qp1hlXLko"
+            code: "C5Qp1hlXLko_"
         }
     ];
 
